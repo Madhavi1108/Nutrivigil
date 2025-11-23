@@ -18,7 +18,6 @@ export const analyzeFood = async (req, res) => {
     const base64 = imageToBase64(imagePath);
     const mimeType = getMimeType(imagePath);
 
-    // Identify food
     const identify = await geminiModel.generateContent({
       contents: [
         {
