@@ -1,85 +1,140 @@
-# NutriVigil
 
-A full-stack application that analyzes food images and provides health safety recommendations based on user's health conditions.
+<!-- HEADER BANNER -->
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=20&duration=5000&pause=1000&color=36BCF7FF&background=00000000&center=false&vCenter=false&lines=%F0%9F%8D%B0+Welcome+to+NutriVigil!;Smarter+Health-Proof+Eating+Starts+Here" alt="Welcome animation for NutriVigil: Smarter, Health-Proof Eating" />
+</p>
 
-## Project Structure
+<p align="center">
+  <img src="https://img.shields.io/badge/Live%20Demo-00C853?style=for-the-badge&logo=google-chrome&logoColor=white" />
+  <img src="https://img.shields.io/badge/Powered%20by-Gemini%20API-6772E5?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/API%20Ninjas-008CDD?style=for-the-badge&logo=code&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express%20Backend-FFCA28?style=for-the-badge&logo=express&logoColor=black" />
+</p>
 
+---
+
+<p align="center" style="font-size:1.3em">
+  <strong>🥗 NutriVigil: Upload. Analyze. Decide. Eat Wisely.</strong><br>
+  <em>Your next-gen app for food image analysis and custom health safety guidance.</em>
+</p>
+
+---
+
+<div align="center">
+  <img src="https://i.postimg.cc/GpTdqbfH/nutrivigil-food-analysis.png" width="45%" alt="Food Analysis View"/>
+  &nbsp;
+  <img src="https://i.postimg.cc/SKRGpNZS/nutrivigil-trafficlights.png" width="45%" alt="Traffic Light Decision System"/>
+</div>
+
+---
+
+## 🚀 Why NutriVigil?
+
+> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=00C853&center=true&vCenter=true&width=600&lines=No+nutrition+guesswork.;Just+upload%2C+select%2C+and+get+actionable+advice+instantly." />
+
+- 🍽️ **AI Food Analysis:** Snap/upload food, get smart analysis via Gemini API.
+- 🩺 **Personalized Safety:** Choose conditions (Diabetes, Hypertension, etc.), receive customized warnings & insights.
+- 🚦 **Traffic Light System:** See immediate safety status—green, yellow, or red—at a glance.
+- 📋 **Detailed Recommendations:** Nutrition facts plus actionable health suggestions.
+- 📱 **Modern UI:** Mobile-first, smooth & responsive experience.
+
+---
+
+## 🛠️ Tech Power-Ups
+
+| Frontend              | Backend                    | Integrations           |
+|:---------------------:|:-------------------------:|:---------------------:|
+| ⚛️ React (Vite)       | 🖥️ Node.js + Express      | 🤖 Gemini AI (Google) |
+| 🎨 Modern CSS         | 🔗 Multer (uploads)       | 🥗 API Ninjas (Nutrition) |
+| 🗂️ Lucide Icons       | 🧠 AI-driven Analysis     | 🔒 Axios (API calls)  |
+
+
+---
+
+## 🗺️ Architecture Flow
+
+```mermaid
+graph TD
+  U[🧑 User] -->|Upload, Select, Analyze| A[⚛️ NutriVigil Frontend]
+  A -->|API Calls| B[🖥️ Express Backend]
+  B -->|AI Analysis| C[🤖 Gemini Google API]
+  B -->|Nutrition Data| D[🥗 API Ninjas]
+  A -->|Results, UX| E[📱 Responsive UI]
+
+  classDef frontend fill:#61dafb,stroke:#222,stroke-width:2px;
+  classDef backend fill:#2ecc40,stroke:#222,stroke-width:2px;
+  classDef ai fill:#6772e5,stroke:#222,stroke-width:2px;
+  classDef api fill:#f44336,stroke:#222,stroke-width:2px;
+  classDef ui fill:#FFCA28,stroke:#222,stroke-width:2px;
+
+  class A frontend
+  class B backend
+  class C ai
+  class D api
+  class E ui
 ```
-Nutri-Guard/
-├── server/          # Node.js/Express backend
-└── client/          # React/Vite frontend
+
+---
+
+## 🌐 Project Structure
+
+```shell
+NutriVigil/
+ ├─ client/      # React + Vite + Modern CSS (Frontend)
+ ├─ server/      # Node.js + Express + Multer (Backend)
+ └─ README.md
 ```
 
-## Setup Instructions
+---
 
-### Backend Setup
+## ⚡ Quickstart
 
-1. Navigate to the server directory:
-   ```bash
-   cd server
-   ```
+```bash
+# 1. Clone
+git clone https://github.com/<your-username>/NutriVigil.git && cd NutriVigil
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+# 2. Install dependencies
+cd client && npm i
+cd ../server && npm i
 
-3. Create a `.env` file in the `server` directory with your API keys:
-   ```
-   GEMINI_API_KEY=your_gemini_api_key_here
-   NINJA_API_KEY=your_ninja_api_key_here
-   ```
+# 3. Configure .env in server (see .env.example for secrets)
 
-4. Start the server:
-   ```bash
-   npm start
-   ```
-   Or for development with auto-reload:
-   ```bash
-   npm run dev
-   ```
+# 4. Run
+cd client && npm run dev
+cd ../server && npm run dev
+```
 
-The server will run on `http://localhost:3000`
+---
 
-### Frontend Setup
+## 🔑 API Keys Required
 
-1. Navigate to the client directory:
-   ```bash
-   cd client
-   ```
+1. **Gemini API Key**: Get yours from [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. **API Ninjas Key**: Get yours from [API Ninjas Nutrition](https://api-ninjas.com/api/nutrition)
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+---
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+## 💡 Inspired By
 
-The client will run on `http://localhost:5173`
+> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=800&color=00C853&center=true&vCenter=true&width=600&lines=Google+Health+AI+%7C+MyFitnessPal+" />
 
-## API Keys Required
+---
 
-1. **Gemini API Key**: Get it from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. **API Ninjas Key**: Get it from [API Ninjas](https://api-ninjas.com/api/nutrition)
+## ✨ Features
 
-## Features
+- 📤 Upload food images for AI-powered analysis
+- 🏷️ Select health conditions (Diabetes, Hypertension, etc.)
+- 🧠 Get smart nutritional breakdown & traffic light status
+- 🗒️ Receive tailored recommendations and suggestions
 
-- Upload food images for analysis
-- Select health conditions (Diabetes, Hypertension, etc.)
-- Get AI-powered nutritional analysis
-- Traffic light system (Green/Yellow/Red) for quick safety assessment
-- Detailed recommendations and suggestions
+---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 **Backend:**
 - Node.js
 - Express
 - Multer (file uploads)
-- Google Gemini 1.5 Flash (AI analysis)
+- Google Gemini 2.5 pro (AI)
 - API Ninjas (nutrition data)
 - Axios
 
@@ -87,8 +142,8 @@ The client will run on `http://localhost:5173`
 - React
 - Vite
 - Axios
-- Lucide React (icons)
-- Modern CSS with mobile-first design
+- Lucide React
+- Modern CSS (mobile-first)
 
-
-
+---
+````
