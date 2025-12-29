@@ -1,22 +1,25 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const HEALTH_CONDITIONS = [
-  "Diabetes",
-  "Hypertension",
-  "Heart Disease",
-  "Kidney Disease",
-  "High Cholesterol",
-  "Celiac Disease",
-  "Lactose Intolerance",
-  "None",
+  "diabetes",
+  "hypertension",
+  "heart",
+  "kidney",
+  "cholesterol",
+  "celiac",
+  "lactose",
+  "none",
 ];
 
 const STORAGE_KEY = "nutriguard";
 
 function Profile() {
   const { theme } = useTheme();
+  const { t } = useTranslation();
+
   const [condition, setCondition] = useState("");
   const [saved, setSaved] = useState(false);
 
@@ -27,7 +30,7 @@ function Profile() {
 
   useEffect(() => {
     if (condition) {
-      localStorage.setItem(STORAGE_KEY, condition);
+      localStorage.setItem(STORAGE_KEY, condition);      
       setSaved(true);
       const timer = setTimeout(() => setSaved(false), 2000);
       return () => clearTimeout(timer);
@@ -57,12 +60,12 @@ function Profile() {
               ? "bg-gradient-to-r from-blue-300 to-cyan-400 drop-shadow-[0_0_15px_rgba(0,170,255,0.5)]"
               : "bg-gradient-to-r from-blue-600 to-cyan-600"
           }`}>
-            My Profile
+            <h1>{t("profile.title")}</h1>
           </h1>
           <p className={`text-sm mt-1 transition-colors ${
             theme === 'dark' ? "text-gray-400" : "text-gray-600"
           }`}>
-            Manage your health preferences
+            <p>{t("profile.subtitle")}</p>
           </p>
         </motion.header>
 
@@ -79,7 +82,8 @@ function Profile() {
             <label className={`font-medium text-sm transition-colors ${
               theme === 'dark' ? "text-gray-300" : "text-gray-700"
             }`}>
-              Health Condition
+              {t("profile.healthCondition")}
+
             </label>
 
             <motion.select
@@ -92,10 +96,10 @@ function Profile() {
               }`}
               whileFocus={{ scale: 1.02 }}
             >
-              <option value="">Select a condition...</option>
+              <option value="">{t("profile.selectCondition")}</option>
               {HEALTH_CONDITIONS.map((cond) => (
                 <option key={cond} value={cond} className="text-black">
-                  {cond}
+                  {t(`conditions.${cond}`)}
                 </option>
               ))}
             </motion.select>
@@ -109,7 +113,7 @@ function Profile() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  ✓ Saved automatically
+                  {t("profile.saved")}
                 </motion.p>
               )}
             </AnimatePresence>
@@ -129,14 +133,12 @@ function Profile() {
             <h3 className={`text-base font-semibold mb-2 transition-colors ${
               theme === 'dark' ? "text-blue-300" : "text-blue-700"
             }`}>
-              Why set your condition?
+              {t("profile.whyTitle")}
             </h3>
             <p className={`text-sm leading-relaxed transition-colors ${
               theme === 'dark' ? "text-gray-300" : "text-gray-700"
             }`}>
-              This helps NutriGuard give you accurate, personalized food safety
-              recommendations based on your health condition. Saved locally, not
-              uploaded.
+              {t("profile.whyDesc")}
             </p>
           </motion.div>
         </motion.div>

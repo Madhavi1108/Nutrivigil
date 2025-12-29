@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Sun, Moon, Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "../contexts/ThemeContext";
 import { useState } from "react";
 import nutrivigile from "../assets/nutrivigile.jpeg";
@@ -9,6 +10,11 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
 
   const navItem = (path, label, isMobile = false) => (
     <motion.div
@@ -52,7 +58,11 @@ const Navbar = () => {
               theme === "dark" ? "text-[#667eea]" : "text-[#667eea]"
             }`}
           >
-            <div className={`flex gap-3 ${theme == "dark" ? "text-[#667eea]" : "text-black"}`}>
+            <div
+              className={`flex gap-3 ${
+                theme == "dark" ? "text-[#667eea]" : "text-black"
+              }`}
+            >
               {" "}
               <img className="w-8 h-8" src={nutrivigile} alt="image"></img>{" "}
               NutriVigil
@@ -62,8 +72,8 @@ const Navbar = () => {
 
         <div className="flex items-center gap-6">
           <div className="hidden md:flex gap-6">
-            {navItem("/", "Home")}
-            {navItem("/profile", "My Profile")}
+            {navItem("/", t("nav.home"))}
+            {navItem("/profile", t("nav.profile"))}
           </div>
 
           {/* Theme Toggle */}
@@ -84,7 +94,22 @@ const Navbar = () => {
               <Moon className="w-5 h-5 text-blue-600" />
             )}
           </motion.button>
-
+          <select
+            value={i18n.language}
+            onChange={changeLanguage}
+            className={`px-2 py-2 rounded-lg text-sm border cursor-pointer transition-colors
+    ${
+      theme === "dark"
+        ? "bg-[#1e1e2e] text-white border-white/20"
+        : "bg-white text-gray-900 border-gray-300"
+    }
+  `}
+          >
+            <option value="en">EN</option>
+            <option value="hi">HI</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+          </select>
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -120,8 +145,8 @@ const Navbar = () => {
           }`}
         >
           <div className="px-6 py-4 flex flex-col gap-3">
-            {navItem("/", "Home", true)}
-            {navItem("/profile", "My Profile", true)}
+            {navItem("/",t("nav.home"), true)}
+            {navItem("/profile",t("nav.profile"), true)}
           </div>
         </div>
       )}

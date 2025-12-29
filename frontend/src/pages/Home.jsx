@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { Camera, Brain, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function Home() {
   const { theme } = useTheme();
+  const { t } = useTranslation();
+
   const staggerParent = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.15 } },
@@ -36,11 +39,11 @@ function Home() {
       >
         <motion.h1
           className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-4 flex flex-wrap justify-center drop-shadow-xl transition-colors ${
-            theme === 'dark' ? "text-white" : "text-gray-900"
+            theme === "dark" ? "text-white" : "text-gray-900"
           }`}
           variants={staggerParent}
         >
-          {"NutriVigil".split(" ").map((word, i) => (
+          {t("appName").split(" ").map((word, i) => (
             <motion.span key={i} className="mr-3" variants={fadeUp}>
               {word}
             </motion.span>
@@ -49,30 +52,30 @@ function Home() {
 
         <motion.p
           className={`text-lg md:text-xl mb-8 drop-shadow-md transition-colors ${
-            theme === 'dark' ? "text-white/90" : "text-blue-800"
+            theme === "dark" ? "text-white/90" : "text-blue-800"
           }`}
           variants={fadeUp}
         >
-          Your Personal AI Health Scanner
+          {t("tagline")}
         </motion.p>
 
         <motion.div variants={fadeUp}>
           <Link
             to="/scan"
             className={`inline-block px-12 py-4 backdrop-blur-2xl focus:border-b-blue-800 focus:ring border text-lg font-semibold rounded-xl shadow-xl hover:shadow-3xl transition-all duration-300 hover:scale-105 ${
-              theme === 'dark'
+              theme === "dark"
                 ? "bg-[#3b3b49]/30 border-white/20 text-white"
                 : "bg-white/80 border-gray-300 text-indigo-600 hover:bg-white"
             }`}
           >
-            Start Scanning
+            {t("startScanning")}
           </Link>
         </motion.div>
       </motion.div>
 
       <motion.div
         className={`max-w-[900px] w-full rounded-3xl p-12 shadow-2xl border transition-colors ${
-          theme === 'dark'
+          theme === "dark"
             ? "bg-[#161625] border-gray-800"
             : "bg-white/90 border-gray-200"
         }`}
@@ -82,13 +85,13 @@ function Home() {
       >
         <motion.h2
           className={`text-center text-3xl md:text-4xl font-bold mb-10 transition-colors ${
-            theme === 'dark' ? "text-white" : "text-gray-900"
+            theme === "dark" ? "text-white" : "text-gray-900"
           }`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          How it Works
+          {t("howItWorks")}
         </motion.h2>
 
         <motion.div
@@ -100,24 +103,24 @@ function Home() {
           {[
             {
               icon: <Camera size={32} className="text-indigo-400" />,
-              title: "1. Upload Photo",
-              desc: "Take a picture of your food and upload to the app",
+              title: t("steps.upload.title"),
+              desc: t("steps.upload.desc"),
             },
             {
               icon: <Brain size={32} className="text-indigo-400" />,
-              title: "2. AI Analysis",
-              desc: "Our AI identifies nutrition",
+              title: t("steps.analysis.title"),
+              desc: t("steps.analysis.desc"),
             },
             {
               icon: <Shield size={32} className="text-indigo-400" />,
-              title: "3. Safety Score",
-              desc: "Instant health recommendations",
+              title: t("steps.safety.title"),
+              desc: t("steps.safety.desc"),
             },
           ].map((step, index) => (
             <motion.div
               key={index}
               className={`text-center p-8 rounded-2xl border transition-all duration-300 cursor-pointer shadow-lg ${
-                theme === 'dark'
+                theme === "dark"
                   ? "bg-[#1e1e2e] border-gray-700 hover:border-blue-500/60 hover:bg-[#25253a]"
                   : "bg-gray-50 border-gray-200 hover:border-blue-400 hover:bg-white"
               }`}
@@ -126,7 +129,7 @@ function Home() {
             >
               <motion.div
                 className={`w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center shadow-inner border transition-colors ${
-                  theme === 'dark'
+                  theme === "dark"
                     ? "bg-[#0f0f1f] border-gray-600"
                     : "bg-gray-100 border-gray-300"
                 }`}
@@ -136,14 +139,18 @@ function Home() {
                 {step.icon}
               </motion.div>
 
-              <h3 className={`text-lg font-semibold mb-2 transition-colors ${
-                theme === 'dark' ? "text-white" : "text-gray-900"
-              }`}>
+              <h3
+                className={`text-lg font-semibold mb-2 transition-colors ${
+                  theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
+              >
                 {step.title}
               </h3>
-              <p className={`text-sm leading-relaxed transition-colors ${
-                theme === 'dark' ? "text-gray-400" : "text-gray-600"
-              }`}>
+              <p
+                className={`text-sm leading-relaxed transition-colors ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 {step.desc}
               </p>
             </motion.div>
