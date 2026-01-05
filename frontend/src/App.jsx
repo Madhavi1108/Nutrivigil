@@ -20,7 +20,8 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col relative overflow-hidden">
+        <div className="min-h-screen flex flex-col relative overflow-x-hidden">
+
         <Navbar />
 
         <Routes>

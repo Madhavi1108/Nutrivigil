@@ -7,6 +7,7 @@ import { useState } from "react";
 import nutrivigile from "../assets/nutrivigile.jpeg";
 import LanguagePicker from "./LanguagePicker";
 
+
 const Navbar = () => {
   const { pathname } = useLocation();
   const { theme, toggleTheme } = useTheme();
@@ -25,7 +26,7 @@ const Navbar = () => {
     >
       <Link
         to={path}
-        className={`text-[15px] font-medium px-4 py-2 rounded-lg transition-all duration-300 no-underline block ${pathname === path
+        className={`text-sm sm:text-[15px] font-medium px-4 py-2 rounded-lg transition-all duration-300 no-underline block ${pathname === path
           ? theme === "dark"
             ? "text-blue-400 bg-white/10 border border-white/20"
             : "text-blue-600 bg-blue-50 border border-blue-200"
@@ -34,6 +35,10 @@ const Navbar = () => {
             : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
           }`}
       >
+
+
+
+        
         {label}
       </Link>
     </motion.div>
@@ -49,17 +54,17 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
             className={`text-xl font-bold no-underline transition-colors ${theme === "dark" ? "text-[#667eea]" : "text-[#667eea]"
               }`}
           >
-            <div
-              className={`flex gap-3 ${theme == "dark" ? "text-[#667eea]" : "text-black"
-                }`}
-            >
+              <div className={`flex items-center gap-2 sm:gap-3 truncate ${theme == "dark" ? "text-[#667eea]" : "text-black"}`}>
+
               {" "}
               <img className="w-8 h-8" src={nutrivigile} alt="logo"></img>{" "}
               {t('appName')}
@@ -76,7 +81,7 @@ const Navbar = () => {
           {/* Theme Toggle */}
           <motion.button
             onClick={toggleTheme}
-            className={`p-2 rounded-lg  cursor-pointer transition-all duration-300 flex items-center justify-center border ${theme === "dark"
+            className={`p-2 min-h-[44px] min-w-[44px] rounded-lg  cursor-pointer transition-all duration-300 flex items-center justify-center border ${theme === "dark"
               ? "bg-white/10  hover:bg-white/20 border-white/20"
               : "bg-gray-100 hover:bg-gray-200 border-gray-300"
               }`}
@@ -90,11 +95,14 @@ const Navbar = () => {
               <Moon className="w-5 h-5 text-blue-600" />
             )}
           </motion.button>
-          <LanguagePicker />
+          <div className="block">
+  <LanguagePicker />
+</div>
+
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-all duration-300 flex items-center justify-center border ${theme === "dark"
+            className={`md:hidden p-2 min-h-[44px] min-w-[44px] rounded-lg transition-all duration-300 flex items-center justify-center border ${theme === "dark"
               ? "bg-white/10 hover:bg-white/20 border-white/20"
               : "bg-gray-100 hover:bg-gray-200 border-gray-300"
               }`}
@@ -121,7 +129,9 @@ const Navbar = () => {
           className={`md:hidden border-t transition-colors ${theme === "dark" ? "border-white/10" : "border-gray-200"
             }`}
         >
-          <div className="px-6 py-4 flex flex-col gap-3">
+
+            <div className="px-4 py-4 flex flex-col gap-2">
+
             {navItem("/", t("nav.home"), true)}
             {navItem("/profile", t("nav.profile"), true)}
           </div>

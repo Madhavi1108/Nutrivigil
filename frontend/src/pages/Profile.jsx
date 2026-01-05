@@ -38,9 +38,10 @@ function Profile() {
   }, [condition]);
 
   return (
-    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-10 px-5">
+    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-10 px-4 sm:px-6">
       <motion.div
-        className={`w-full max-w-[600px] rounded-3xl p-12 backdrop-blur-2xl border transition-colors ${
+        className={`w-full max-w-[600px] rounded-3xl p-6 sm:p-8 md:p-12
+ backdrop-blur-2xl border transition-colors ${
           theme === 'dark'
             ? "bg-black/40 border-blue-400/10 shadow-[0_0_140px_-30px_rgba(30,144,255,0.35)]"
             : "bg-white/90 border-blue-300/30 shadow-xl"
@@ -60,7 +61,7 @@ function Profile() {
               ? "bg-gradient-to-r from-blue-300 to-cyan-400 drop-shadow-[0_0_15px_rgba(0,170,255,0.5)]"
               : "bg-gradient-to-r from-blue-600 to-cyan-600"
           }`}>
-            <h1>{t("profile.title")}</h1>
+            {t("profile.title")}
           </h1>
           <p className={`text-sm mt-1 transition-colors ${
             theme === 'dark' ? "text-gray-400" : "text-gray-600"
