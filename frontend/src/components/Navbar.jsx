@@ -10,8 +10,8 @@ import LanguagePicker from "./LanguagePicker";
 const Navbar = () => {
   const { pathname } = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t } = useThemeTranslation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItem = (path, label, isMobile = false) => (
     <motion.div
@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -80 }}
+      initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       className={`sticky top-0 z-50 backdrop-blur-xl border-b transition-colors duration-300
@@ -56,18 +56,14 @@ const Navbar = () => {
         {/* Logo */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link to="/" className="flex items-center gap-3 no-underline">
-            <img
-              src={nutrivigile}
-              alt="logo"
-              className="w-8 h-8 rounded"
-            />
+            <img src={nutrivigile} alt="logo" className="w-8 h-8 rounded" />
             <span className="text-lg font-bold text-[#667eea]">
               {t("appName")}
             </span>
           </Link>
         </motion.div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
           {navItem("/", t("nav.home"))}
           {navItem("/profile", t("nav.profile"))}
@@ -81,7 +77,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle theme"
-            className={`p-2 rounded-lg border transition-all
+            className={`p-2 min-h-[44px] min-w-[44px] rounded-lg border transition-all duration-300 flex items-center justify-center
               ${
                 theme === "dark"
                   ? "bg-white/10 hover:bg-white/20 border-white/20"
@@ -103,7 +99,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle menu"
-            className={`md:hidden p-2 rounded-lg border transition-all
+            className={`md:hidden p-2 min-h-[44px] min-w-[44px] rounded-lg border transition-all duration-300 flex items-center justify-center
               ${
                 theme === "dark"
                   ? "bg-white/10 hover:bg-white/20 border-white/20"
