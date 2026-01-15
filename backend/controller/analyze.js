@@ -3,6 +3,7 @@ import fs from "fs";
 import { geminiModel } from "../services/googleservices.js";
 import imageToBase64 from "../utils/imgconversion.js";
 import getMimeType from "../utils/getmemetype.js";
+import { parseGeminiJson } from "../utils/parseGeminiJson.js";
 
 export const analyzeFood = async (req, res) => {
   try {
@@ -26,14 +27,22 @@ export const analyzeFood = async (req, res) => {
       `;
 
       const result = await geminiModel.generateContent(followUpPrompt);
-      let responseText = result.response.candidates[0].content.parts[0].text;
+      const responseText = result.response.candidates[0].content.parts[0].text;
       
-      responseText = responseText.replace(/```json/g, "").replace(/```/g, "").trim();
-      
-      return res.json({ 
-        food_name: existingFoodName, 
-        ...JSON.parse(responseText) 
-      });
+      try {
+        const parsedData = parseGeminiJson(responseText);
+        return res.json({ 
+          food_name: existingFoodName, 
+          ...parsedData 
+        });
+      } catch (parseError) {
+        console.error("Follow-up query JSON parse error:", parseError);
+        return res.status(500).json({
+          error: "Failed to parse AI response",
+          message: parseError.message,
+          raw: responseText.substring(0, 200)
+        });
+      }
     }
     if (!req.file)
       return res.status(400).json({ error: "No image file provided" });
@@ -92,34 +101,29 @@ export const analyzeFood = async (req, res) => {
       contents: [{ role: "user", parts: [{ text: analysisPrompt }] }],
     });
 
-    let analysisText =  analysis.response.candidates[0].content.parts[0].text || "";
-
-    // Remove formatting
-    analysisText = analysisText
-      .replace(/```json/g, "")
-      .replace(/```/g, "")
-      .trim();
+    const analysisText = analysis.response.candidates[0].content.parts[0].text || "";
 
     let cleanJson;
 
     try {
-      cleanJson = JSON.parse(analysisText);
-    } catch (e) {
-      console.error("JSON parse error:", e);
-      return res.status(500).json({
-        error: "Failed to parse AI response JSON",
-        raw: analysisText,
+      cleanJson = parseGeminiJson(analysisText);
+      
+      res.json({
+        food_name: foodName,
+        nutrition: nutritionData,
+        ...cleanJson,
       });
+    } catch (parseError) {
+      console.error("Analysis JSON parse error:", parseError);
+      res.status(500).json({
+        error: "Failed to parse AI response",
+        message: parseError.message,
+        raw: analysisText.substring(0, 200)
+      });
+    } finally {
+      //delete upload
+      fs.unlinkSync(imagePath);
     }
-
-    //delete upload
-    fs.unlinkSync(imagePath);
-
-    res.json({
-      food_name: foodName,
-      nutrition: nutritionData,
-      ...cleanJson,
-    });
   } 
   
   catch (err) {
