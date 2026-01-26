@@ -73,21 +73,17 @@ graph TD
 git clone https://github.com/Gagan021-5/Nutrivigil.git
 cd Nutrivigil
 
----
 ```
-
 ### 4️⃣ Add Backend/Frontend Installation
 
 ```markdown
 ### 📦 Step 2: Install Dependencies
 
 #### Backend
-```bash
 cd backend
 npm install
 
 #### Frontend
-```bash
 cd frontend
 npm install
 
@@ -100,14 +96,10 @@ npm install
 ### ▶️ Step 3: Run the Application
 
 #### Start Backend Server
-
-```bash
 cd backend
 npm start
 
 #### Start Frontend Server
-
-```bash
 cd frontend
 npm run dev
 
