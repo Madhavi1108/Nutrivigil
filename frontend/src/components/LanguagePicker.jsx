@@ -9,6 +9,9 @@ const languages = [
     { code: "hi", name: "Hindi", nativeName: "हिन्दी" },
     { code: "es", name: "Spanish", nativeName: "Español" },
     { code: "fr", name: "French", nativeName: "Français" },
+    { code: "de", name: "German", nativeName: "Deutsch" },
+    { code: "ar", name: "Arabic", nativeName: "العربية", dir: "rtl" },
+    { code: "zh", name: "Chinese", nativeName: "中文" },
 ];
 
 const LanguagePicker = () => {
@@ -126,9 +129,11 @@ const LanguagePicker = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className={`absolute sm:right-0 left-0 sm:left-auto mt-2 w-full sm:w-64 max-w-[90vw] rounded-xl shadow-xl border overflow-hidden z-50 ${theme === "dark"
-                            ? "bg-[#1e1e2e] border-white/10"
-                            : "bg-white border-gray-200"
+                        className={`absolute mt-2 w-full sm:w-64 max-w-[90vw] rounded-xl shadow-xl border overflow-hidden z-50
+                            ltr:left-0 ltr:sm:right-0 ltr:sm:left-auto
+                            rtl:right-0 rtl:sm:left-0 rtl:sm:right-auto ${theme === "dark"
+                                ? "bg-[#1e1e2e] border-white/10"
+                                : "bg-white border-gray-200"
                             }`}
                     >
                         <div className={`p-2 border-b ${theme === "dark" ? "border-white/10" : "border-gray-100"}`}>
