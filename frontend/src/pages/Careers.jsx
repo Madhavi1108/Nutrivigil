@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Rocket, Heart, Users, Globe, Code, Brain, Palette, Shield, TrendingUp, Coffee, Home, Zap, Award } from 'lucide-react';
+import { ArrowLeft, Rocket, Heart, Users, Globe, Code, Brain, Palette, TrendingUp, Coffee, Home, Zap, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Careers = () => {
