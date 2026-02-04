@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Target, Heart, Zap, Shield, Users, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Target, Heart, Zap, Shield, Users, TrendingUp, Linkedin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const missionCards = [
@@ -39,6 +40,25 @@ const About = () => {
     }
   ];
 
+  // Team (placeholder)
+  const team = [
+    {
+      name: 'Dr. Priya Sharma',
+      role: 'Nutrition Scientist',
+      bio: 'PhD in Nutritional Sciences. Focused on dietary safety for chronic conditions.'
+    },
+    {
+      name: 'Carlos Mendes',
+      role: 'Lead ML Engineer',
+      bio: 'Builds the food analysis models and optimizes inference for low-latency.'
+    },
+    {
+      name: 'Aisha Khan',
+      role: 'Product Designer',
+      bio: 'Designs intuitive experiences that help users make healthier choices.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#0a0e1a] text-white">
       {/* Hero Section */}
@@ -74,16 +94,20 @@ const About = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {missionCards.map((card, index) => (
-              <div 
+              <motion.div 
                 key={index}
-                className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.12 }}
+                className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 hover:border-purple-500 transition-all duration-300 transform-gpu hover:scale-105"
               >
                 <div className="text-purple-400 mb-4">
                   {card.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{card.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{card.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -97,8 +121,12 @@ const About = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <div 
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
                 className="flex items-start gap-4 p-6 bg-[#0a0e1a] rounded-lg border border-gray-800 hover:border-purple-500/50 transition-all"
               >
                 <div className="text-purple-400 mt-1">
@@ -108,7 +136,7 @@ const About = () => {
                   <h3 className="font-semibold mb-2">{feature.title}</h3>
                   <p className="text-sm text-gray-400">{feature.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -141,6 +169,42 @@ const About = () => {
                 99.2% Accuracy
               </span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Meet the Team</h2>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {team.map((member, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: idx * 0.08 }}
+                className="bg-[#1a1f2e] p-6 rounded-xl border border-gray-800"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold">
+                    {member.name.split(' ').map(n => n[0]).slice(0,2).join('')}
+                  </div>
+                  <div>
+                    <div className="font-semibold">{member.name}</div>
+                    <div className="text-sm text-gray-400">{member.role}</div>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm text-gray-400">{member.bio}</p>
+                <div className="mt-4">
+                  <a href="#" className="inline-flex items-center gap-2 text-sm text-purple-300 hover:underline">
+                    <Linkedin className="w-4 h-4" /> View profile
+                  </a>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
