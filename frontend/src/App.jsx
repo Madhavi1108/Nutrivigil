@@ -21,6 +21,7 @@ import HealthProfile from "./pages/HealthProfile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
+import FAQ from "./pages/FAQ";
 import Footer from "./components/Footer";
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
 
         <Footer />

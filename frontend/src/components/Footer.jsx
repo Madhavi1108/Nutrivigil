@@ -52,6 +52,7 @@ const Footer = () => {
       { name: 'Privacy Policy', icon: ShieldCheck , href: '/privacy-policy'},
       { name: 'Terms of Service', icon: Scale , href: '/terms'},
       { name: 'Cookie Policy', icon: Cookie , href: '/cookies'},
+      { name: 'FAQ', icon: Info , href: '/faq'},
     ]
   };
 
