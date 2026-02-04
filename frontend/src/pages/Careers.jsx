@@ -168,7 +168,7 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-[#0a0e1a] p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all group cursor-pointer"
+                                className="bg-[#0a0e1a] p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all group"
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="text-purple-400 mt-1 group-hover:scale-110 transition-transform">
