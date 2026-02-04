@@ -37,16 +37,16 @@ const Footer = () => {
   // ✅ Footer navigation data (translated using keys)
   const footerLinks = {
     product: [
-      { name: 'AI Scanner', icon: Scan , href: '/scanner'},
-      { name: 'Nutrition Decoded', icon: Heart , href: '/nutrition-decoded'},
-      { name: 'Safety Signals', icon: Shield , href: '/safety-signals'},
-      { name: 'Health Profile', icon: User , href: '/health-profile'},
+      { name: 'AI Scanner', key: 'aiScanner', icon: Scan , href: '/scanner'},
+      { name: 'Nutrition Decoded', key: 'nutritionDecoded', icon: Heart , href: '/nutrition-decoded'},
+      { name: 'Safety Signals', key: 'safetySignals', icon: Shield , href: '/safety-signals'},
+      { name: 'Health Profile', key: 'healthProfile', icon: User , href: '/health-profile'},
     ],
     company: [
-      { name: 'About Us', icon: Info , href: '/about'},
-      { name: 'Our Mission', icon: Target , href: '/mission'},
-      { name: 'Careers', icon: Briefcase , href: '/careers'},
-      { name: 'Contact', icon: MessageCircle , href: '/contact'},
+      { name: 'About Us', key: 'aboutUs', icon: Info , href: '/about'},
+      { name: 'Our Mission', key: 'ourMission', icon: Target , href: '/mission'},
+      { name: 'Careers', key: 'careers', icon: Briefcase , href: '/careers'},
+      { name: 'Contact', key: 'contact', icon: MessageCircle , href: '/contact'},
     ],
     legal: [
       { name: 'Privacy Policy', icon: ShieldCheck , href: '/privacy-policy'},
