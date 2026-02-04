@@ -190,6 +190,7 @@ const FAQ = () => {
                                 onClick={() => {
                                     setActiveCategory(category.id);
                                     setOpenQuestion(null);
+                                    setSearchQuery('');
                                 }}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
                                     activeCategory === category.id
