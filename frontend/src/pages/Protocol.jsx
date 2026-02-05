@@ -421,7 +421,7 @@ const Protocol = () => {
                             Set up your health profile and receive personalized nutrition recommendations
                         </p>
                         <Link 
-                            to="/scanner" 
+                            to="/scan" 
                             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                         >
                             <Zap className="w-5 h-5" />
