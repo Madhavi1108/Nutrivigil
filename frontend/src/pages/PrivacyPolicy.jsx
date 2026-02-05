@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Lock, Eye, UserCheck, Globe, Cookie, Trash2, Download, Mail, AlertCircle, ChevronDown, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Shield, Lock, Eye, UserCheck, Globe, Cookie, AlertCircle, ChevronDown, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const PrivacyPolicy = () => {
