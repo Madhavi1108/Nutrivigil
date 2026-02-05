@@ -141,7 +141,7 @@ const HowItWorks = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="flex items-start gap-4 p-6 bg-white/5 border-white/10 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2"
+                                className="flex items-start gap-4 p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
                             >
                                 <div className="text-purple-400 mt-1">
                                     {feature.icon}
