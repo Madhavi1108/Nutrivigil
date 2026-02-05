@@ -152,7 +152,7 @@ const Mission = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white/5 border-white/10 p-8 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2"
+                                className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="text-purple-400 mt-1">
