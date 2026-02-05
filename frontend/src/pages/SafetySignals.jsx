@@ -67,7 +67,7 @@ const SafetySignals = () => {
                             {/* Traffic Light Visual */}
                             <div className="mx-auto max-w-md">
                                 <div className="flex items-center justify-center gap-8">
-                                    <div className="w-24 rounded-3xl p-4 bg-white/5 border-white/10 border backdrop-blur-xl flex flex-col items-center gap-4">
+                                    <div className="w-24 rounded-3xl p-4 bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center gap-4">
                                         <div className="w-14 h-14 rounded-full bg-green-600/90 flex items-center justify-center shadow-lg">
                                             <CheckCircle className="w-6 h-6 text-white" />
                                         </div>
