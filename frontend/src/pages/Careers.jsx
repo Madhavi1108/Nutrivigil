@@ -212,7 +212,7 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                                className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2"
+                                className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
                             >
                                 <div className="text-purple-400 mb-4">
                                     {benefit.icon}
