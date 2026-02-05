@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, AlertTriangle, XCircle, ArrowLeft, Apple, Coffee, Pizza, Activity, Heart } from 'lucide-react';
+import { CheckCircle, AlertTriangle, XCircle, ArrowLeft, Apple, Coffee, Pizza, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SafetySignals = () => {
