@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Heart, Users, TrendingUp, Globe, Target, Zap, Shield, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Mission = () => {
+    const { theme } = useTheme();
     const stats = [
         {
             icon: <Users className="w-8 h-8" />,
@@ -55,14 +57,20 @@ const Mission = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     {/* Back Button */}
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -78,10 +86,14 @@ const Mission = () => {
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Our Mission
                             </h1>
-                            <p className="text-2xl sm:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-semibold mb-4">
+                            <p className={`text-2xl sm:text-3xl max-w-4xl mx-auto leading-relaxed font-semibold mb-4 ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                            }`}>
                                 Empowering everyone to make informed, healthier food choices through accessible AI-powered nutrition analysis.
                             </p>
-                            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                            <p className={`text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>
                                 We believe that understanding what you eat should be simple, instant, and personalized to your unique health needs. 
                                 NutriVigil bridges the gap between complex nutritional data and everyday food decisions.
                             </p>
@@ -91,7 +103,9 @@ const Mission = () => {
             </section>
 
             {/* Stats Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+            <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#0a0e1a]' : 'bg-gray-50'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Impact</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -102,7 +116,9 @@ const Mission = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white/5 border-white/10 p-8 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
+                                className={`p-8 rounded-xl border text-center hover:border-purple-500 transition-all duration-300 ${
+                                    theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                                }`}
                             >
                                 <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center text-white`}>
                                     {stat.icon}
@@ -110,7 +126,9 @@ const Mission = () => {
                                 <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
                                     {stat.number}
                                 </div>
-                                <div className="text-gray-400 text-sm">{stat.label}</div>
+                                <div className={`text-sm ${
+                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                }`}>{stat.label}</div>
                             </motion.div>
                         ))}
                     </div>
@@ -120,9 +138,13 @@ const Mission = () => {
             {/* Mission Statement Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 sm:p-12 border border-purple-500/20">
+                    <div className={`rounded-2xl p-8 sm:p-12 border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20' : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-200'
+                    }`}>
                         <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">Why We Built NutriVigil</h2>
-                        <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed">
+                        <div className={`max-w-4xl mx-auto space-y-6 text-lg leading-relaxed ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                        }`}>
                             <p>
                                 Every year, millions struggle with diet-related health conditions like diabetes, hypertension, 
                                 and heart disease. Yet understanding food labels and making safe dietary choices remains complex and time-consuming.
@@ -141,7 +163,9 @@ const Mission = () => {
             </section>
 
             {/* Values Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1f2e]">
+            <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Core Values</h2>
                     <div className="grid md:grid-cols-2 gap-8">
@@ -152,7 +176,9 @@ const Mission = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
+                                className={`p-8 rounded-xl border hover:border-purple-500/50 transition-all duration-300 ${
+                                    theme === 'dark' ? 'bg-[#0a0e1a] border-gray-800' : 'bg-white border-gray-200'
+                                }`}
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="text-purple-400 mt-1">
@@ -160,7 +186,9 @@ const Mission = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                                        <p className="text-gray-400 leading-relaxed">{value.description}</p>
+                                        <p className={`leading-relaxed ${
+                                            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                        }`}>{value.description}</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -173,7 +201,9 @@ const Mission = () => {
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold mb-6">Join Our Mission</h2>
-                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    <p className={`text-xl mb-8 max-w-2xl mx-auto ${
+                        theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
                         Be part of the movement towards healthier, more informed eating habits.
                     </p>
                     <Link 

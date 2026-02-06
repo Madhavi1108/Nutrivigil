@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Cookie, Shield, BarChart3, Settings, Globe, CheckCircle, XCircle, Info } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const CookiePolicy = () => {
+    const { theme } = useTheme();
     const cookieTypes = [
         {
             icon: <CheckCircle className="w-8 h-8" />,
@@ -60,13 +62,19 @@ const CookiePolicy = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -84,10 +92,14 @@ const CookiePolicy = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Cookie Policy
                             </h1>
-                            <p className="text-gray-400 text-lg mb-2">
+                            <p className={`text-lg mb-2 ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>
                                 Last Updated: February 4, 2026
                             </p>
-                            <p className="text-gray-300 max-w-3xl mx-auto">
+                            <p className={`max-w-3xl mx-auto ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                            }`}>
                                 Learn how NutriVigil uses cookies to improve your experience
                             </p>
                         </motion.div>
@@ -100,12 +112,16 @@ const CookiePolicy = () => {
                 <div className="max-w-5xl mx-auto space-y-12">
                     
                     {/* What Are Cookies */}
-                    <div className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800">
+                    <div className={`p-8 rounded-xl border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                    }`}>
                         <div className="flex items-start gap-4 mb-6">
                             <Info className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                             <div>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">What Are Cookies?</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         Cookies are small text files that are placed on your device (computer, smartphone, or tablet) 
                                         when you visit a website. They help websites remember your preferences, improve functionality, 
@@ -131,7 +147,9 @@ const CookiePolicy = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    className="bg-[#1a1f2e] p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all"
+                                    className={`p-6 rounded-xl border hover:border-purple-500/50 transition-all duration-300 ${
+                                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                                    }`}
                                 >
                                     <div className="flex items-start gap-6">
                                         {/* Icon */}
@@ -156,13 +174,21 @@ const CookiePolicy = () => {
                                                 )}
                                             </div>
                                             
-                                            <p className="text-gray-400 mb-4">{cookie.description}</p>
+                                            <p className={`mb-4 ${
+                                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                            }`}>{cookie.description}</p>
                                             
-                                            <div className="bg-[#0a0e1a] p-4 rounded-lg border border-gray-700">
-                                                <p className="text-sm font-semibold text-gray-300 mb-2">Examples:</p>
+                                            <div className={`p-4 rounded-lg border transition-colors duration-300 ${
+                                                theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700' : 'bg-gray-50 border-gray-200'
+                                            }`}>
+                                                <p className={`text-sm font-semibold mb-2 ${
+                                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                                }`}>Examples:</p>
                                                 <ul className="space-y-2">
                                                     {cookie.examples.map((example, idx) => (
-                                                        <li key={idx} className="text-sm text-gray-400 flex items-start gap-2">
+                                                        <li key={idx} className={`text-sm flex items-start gap-2 ${
+                                                            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                                        }`}>
                                                             <span className="text-purple-400 mt-1">•</span>
                                                             <span>{example}</span>
                                                         </li>
@@ -177,21 +203,29 @@ const CookiePolicy = () => {
                     </div>
 
                     {/* Third-Party Cookies */}
-                    <div className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800">
+                    <div className={`p-8 rounded-xl border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                    }`}>
                         <div className="flex items-start gap-4 mb-6">
                             <Globe className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                             <div className="flex-1">
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">Third-Party Cookies</h2>
-                                <p className="text-gray-300 mb-6 leading-relaxed">
+                                <p className={`mb-6 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     We use some third-party services that may place cookies on your device. 
                                     These services help us provide better functionality and analyze usage patterns.
                                 </p>
                                 
                                 <div className="space-y-4">
                                     {thirdPartyCookies.map((service, index) => (
-                                        <div key={index} className="bg-[#0a0e1a] p-5 rounded-lg border border-gray-700">
-                                            <h3 className="font-bold text-white mb-2">{service.name}</h3>
-                                            <p className="text-sm text-gray-400 mb-3">{service.purpose}</p>
+                                        <div key={index} className={`p-5 rounded-lg border transition-colors duration-300 ${
+                                            theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700' : 'bg-gray-50 border-gray-200'
+                                        }`}>
+                                            <h3 className="font-bold mb-2">{ service.name}</h3>
+                                            <p className={`text-sm mb-3 ${
+                                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                            }`}>{service.purpose}</p>
                                             <a 
                                                 href={service.moreInfo}
                                                 target="_blank"
@@ -209,12 +243,16 @@ const CookiePolicy = () => {
                     </div>
 
                     {/* How to Control Cookies */}
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 p-8 rounded-xl border border-purple-500/20">
+                    <div className={`p-8 rounded-xl border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20' : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-200'
+                    }`}>
                         <div className="flex items-start gap-4">
                             <Settings className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                             <div>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">How to Control Cookies</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         You have the right to decide whether to accept or reject cookies. You can control and 
                                         manage cookies in several ways:
@@ -226,8 +264,10 @@ const CookiePolicy = () => {
                                                 <span className="text-purple-400 font-bold text-sm">1</span>
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold text-white mb-1">Browser Settings</h3>
-                                                <p className="text-sm text-gray-400">
+                                                <h3 className="font-semibold mb-1">Browser Settings</h3>
+                                                <p className={`text-sm ${
+                                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                                }`}>
                                                     Most browsers allow you to refuse cookies or delete specific cookies through 
                                                     their settings menu. Check your browser's help section for instructions.
                                                 </p>
@@ -239,8 +279,10 @@ const CookiePolicy = () => {
                                                 <span className="text-purple-400 font-bold text-sm">2</span>
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold text-white mb-1">Cookie Preferences</h3>
-                                                <p className="text-sm text-gray-400">
+                                                <h3 className="font-semibold mb-1">Cookie Preferences</h3>
+                                                <p className={`text-sm ${
+                                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                                }`}>
                                                     You can manage your cookie preferences in your NutriVigil account settings. 
                                                     Essential cookies cannot be disabled as they're necessary for the site to function.
                                                 </p>
@@ -252,8 +294,10 @@ const CookiePolicy = () => {
                                                 <span className="text-purple-400 font-bold text-sm">3</span>
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold text-white mb-1">Third-Party Opt-Out</h3>
-                                                <p className="text-sm text-gray-400">
+                                                <h3 className="font-semibold mb-1">Third-Party Opt-Out</h3>
+                                                <p className={`text-sm ${
+                                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                                }`}>
                                                     For third-party cookies (like Google Analytics), you can opt out through 
                                                     their respective privacy settings or use browser extensions like Privacy Badger.
                                                 </p>
@@ -261,7 +305,9 @@ const CookiePolicy = () => {
                                         </div>
                                     </div>
 
-                                    <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mt-6">
+                                    <div className={`rounded-lg p-4 mt-6 border transition-colors duration-300 ${
+                                        theme === 'dark' ? 'bg-yellow-500/10 border-yellow-500/30' : 'bg-yellow-50 border-yellow-200'
+                                    }`}>
                                         <p className="text-sm text-yellow-200">
                                             <strong>Note:</strong> Disabling certain cookies may affect the functionality 
                                             of NutriVigil and limit your ability to use some features.
@@ -273,9 +319,13 @@ const CookiePolicy = () => {
                     </div>
 
                     {/* Updates to Policy */}
-                    <div className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800">
+                    <div className={`p-8 rounded-xl border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                    }`}>
                         <h2 className="text-2xl font-bold mb-4 text-purple-400">Updates to This Policy</h2>
-                        <div className="space-y-4 text-gray-300 leading-relaxed">
+                        <div className={`space-y-4 leading-relaxed ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                        }`}>
                             <p>
                                 We may update this Cookie Policy from time to time to reflect changes in our practices 
                                 or for legal, regulatory, or operational reasons.
@@ -292,13 +342,21 @@ const CookiePolicy = () => {
                     </div>
 
                     {/* Contact Section */}
-                    <div className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800">
+                    <div className={`p-8 rounded-xl border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                    }`}>
                         <h2 className="text-2xl font-bold mb-4 text-purple-400">Questions About Cookies?</h2>
-                        <p className="text-gray-300 mb-6 leading-relaxed">
+                        <p className={`mb-6 leading-relaxed ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                        }`}>
                             If you have questions about our use of cookies or this Cookie Policy, please contact us:
                         </p>
-                        <div className="bg-[#0a0e1a] p-6 rounded-lg border border-gray-700">
-                            <div className="space-y-2 text-gray-300">
+                        <div className={`p-6 rounded-lg border transition-colors duration-300 ${
+                            theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700' : 'bg-gray-50 border-gray-200'
+                        }`}>
+                            <div className={`space-y-2 ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                            }`}>
                                 <p><strong>Email:</strong> privacy@nutrivigil.com</p>
                                 <p><strong>Support:</strong> support@nutrivigil.com</p>
                             </div>
@@ -309,14 +367,18 @@ const CookiePolicy = () => {
                     <div className="flex flex-wrap gap-4 justify-center pt-6">
                         <Link 
                             to="/privacy-policy"
-                            className="px-6 py-3 bg-[#1a1f2e] hover:bg-[#252a3a] border border-gray-700 rounded-lg transition-all flex items-center gap-2"
+                            className={`px-6 py-3 border rounded-lg transition-all duration-300 flex items-center gap-2 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] hover:bg-[#252a3a] border-gray-700' : 'bg-white hover:bg-gray-50 border-gray-300'
+                            }`}
                         >
                             <Shield className="w-4 h-4" />
                             Privacy Policy
                         </Link>
                         <Link 
                             to="/terms"
-                            className="px-6 py-3 bg-[#1a1f2e] hover:bg-[#252a3a] border border-gray-700 rounded-lg transition-all flex items-center gap-2"
+                            className={`px-6 py-3 border rounded-lg transition-all duration-300 flex items-center gap-2 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] hover:bg-[#252a3a] border-gray-700' : 'bg-white hover:bg-gray-50 border-gray-300'
+                            }`}
                         >
                             <Info className="w-4 h-4" />
                             Terms of Service

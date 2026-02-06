@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Navbar from "./components/Navbar";
+import LanguageModal from "./components/LanguageModal";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import ScanPage from "./pages/ScanPage";

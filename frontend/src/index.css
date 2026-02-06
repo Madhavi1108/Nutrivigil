@@ -1,20 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
+/* Global smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
   transition: background 0.5s ease, color 0.3s ease;
 }
 
 /* Dark Theme (Default) */
-[data-theme="dark"] body {
+[data-theme="dark"] body,
+body.dark-theme {
   background: radial-gradient(circle at 20% 20%, #1b1c1f, #010102 70%) fixed;
   color: white;
 }
 
-[data-theme="dark"] body::before {
+[data-theme="dark"] body::before,
+body.dark-theme::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -24,14 +34,18 @@ body {
       radial-gradient(500px at 10% 90%, rgba(255, 91, 91, 0.15), transparent 70%);
   z-index: -1;
   filter: blur(40px);
+  transition: opacity 0.5s ease;
 }
 
-[data-theme="light"] body {
+/* Light Theme */
+[data-theme="light"] body,
+body.light-theme {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) fixed;
   color: #1a1a1a;
 }
 
-[data-theme="light"] body::before {
+[data-theme="light"] body::before,
+body.light-theme::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -41,18 +55,7 @@ body {
       radial-gradient(500px at 10% 90%, rgba(118, 75, 162, 0.15), transparent 70%);
   z-index: -1;
   filter: blur(40px);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: 
-      radial-gradient(600px at 50% 10%, rgba(77, 91, 255, 0.35), transparent 70%),
-      radial-gradient(500px at 10% 90%, rgba(255, 91, 91, 0.15), transparent 70%);
-  z-index: -1;
-  filter: blur(40px);
+  transition: opacity 0.5s ease;
 }
 
 body::after {

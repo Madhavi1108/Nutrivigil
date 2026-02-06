@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Search, ChevronDown, HelpCircle, Camera, Shield, Heart, Smartphone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const FAQ = () => {
+    const { theme } = useTheme();
     const [activeCategory, setActiveCategory] = useState('general');
     const [openQuestion, setOpenQuestion] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
@@ -137,13 +139,19 @@ const FAQ = () => {
     const filteredFAQs = getFilteredFAQs();
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -158,20 +166,26 @@ const FAQ = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Frequently Asked Questions
                             </h1>
-                            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+                            <p className={`max-w-2xl mx-auto mb-8 ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                            }`}>
                                 Find answers to common questions about NutriVigil
                             </p>
 
                             {/* Search Bar */}
                             <div className="max-w-2xl mx-auto">
                                 <div className="relative">
-                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                                    <Search className={`absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
+                                        theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                                    }`} />
                                     <input
                                         type="text"
                                         placeholder="Search questions..."
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
-                                        className="w-full pl-12 pr-4 py-4 bg-[#1a1f2e] border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-all"
+                                        className={`w-full pl-12 pr-4 py-4 border rounded-xl transition-all duration-300 focus:outline-none focus:border-purple-500 ${
+                                            theme === 'dark' ? 'bg-[#1a1f2e] border-gray-700 text-white placeholder-gray-400' : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
+                                        }`}
                                         aria-label="Search questions"
                                     />
                                 </div>
@@ -182,7 +196,9 @@ const FAQ = () => {
             </section>
 
             {/* Category Tabs */}
-            <section className="sticky top-0 z-10 bg-[#0a0e1a]/95 backdrop-blur-sm border-b border-gray-800 py-4 px-4 sm:px-6 lg:px-8">
+            <section className={`sticky top-0 z-10 backdrop-blur-sm border-b py-4 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#0a0e1a]/95 border-gray-800' : 'bg-white/95 border-gray-200'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <div className="flex gap-2 overflow-x-auto pb-2 [-webkit-scrollbar]:hidden [scrollbar-width:none]">
                         {categories.map((category) => (
@@ -193,10 +209,10 @@ const FAQ = () => {
                                     setOpenQuestion(null);
                                     setSearchQuery('');
                                 }}
-                                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all duration-300 ${
                                     activeCategory === category.id
                                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                                        : 'bg-[#1a1f2e] text-gray-400 hover:text-white hover:bg-[#252a3a]'
+                                        : theme === 'dark' ? 'bg-[#1a1f2e] text-gray-400 hover:text-white hover:bg-[#252a3a]' : 'bg-gray-100 text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                                 }`}
                             >
                                 {category.icon}
@@ -218,11 +234,15 @@ const FAQ = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.3, delay: index * 0.05 }}
-                                    className="bg-[#1a1f2e] rounded-xl border border-gray-800 overflow-hidden hover:border-purple-500/50 transition-all"
+                                    className={`rounded-xl border overflow-hidden hover:border-purple-500/50 transition-all duration-300 ${
+                                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                                    }`}
                                 >
                                     <button
                                         onClick={() => toggleQuestion(index)}
-                                        className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#252a3a] transition-colors"
+                                        className={`w-full px-6 py-5 flex items-center justify-between text-left transition-colors duration-300 ${
+                                            theme === 'dark' ? 'hover:bg-[#252a3a]' : 'hover:bg-gray-50'
+                                        }`}
                                     >
                                         <span className="font-semibold text-lg pr-4">{faq.question}</span>
                                         <ChevronDown
@@ -241,7 +261,9 @@ const FAQ = () => {
                                                 transition={{ duration: 0.3 }}
                                                 className="overflow-hidden"
                                             >
-                                                <div className="px-6 pb-5 text-gray-300 leading-relaxed border-t border-gray-800 pt-4">
+                                                <div className={`px-6 pb-5 leading-relaxed border-t pt-4 transition-colors duration-300 ${
+                                                    theme === 'dark' ? 'text-gray-300 border-gray-800' : 'text-gray-700 border-gray-200'
+                                                }`}>
                                                     {faq.answer}
                                                 </div>
                                             </motion.div>
@@ -252,9 +274,13 @@ const FAQ = () => {
                         </div>
                     ) : (
                         <div className="text-center py-16">
-                            <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-                            <h3 className="text-xl font-semibold text-gray-400 mb-2">No results found</h3>
-                            <p className="text-gray-500">Try adjusting your search query</p>
+                            <Search className={`w-16 h-16 mx-auto mb-4 ${
+                                theme === 'dark' ? 'text-gray-600' : 'text-gray-400'
+                            }`} />
+                            <h3 className={`text-xl font-semibold mb-2 ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>No results found</h3>
+                            <p className={theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}>Try adjusting your search query</p>
                         </div>
                     )}
                 </div>
@@ -263,9 +289,13 @@ const FAQ = () => {
             {/* Still Have Questions Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 sm:p-12 border border-purple-500/20 text-center">
+                    <div className={`rounded-2xl p-8 sm:p-12 border text-center transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20' : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-200'
+                    }`}>
                         <h2 className="text-3xl font-bold mb-4">Still Have Questions?</h2>
-                        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                        <p className={`mb-8 max-w-2xl mx-auto ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                        }`}>
                             Can't find the answer you're looking for? Our support team is here to help!
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -281,7 +311,9 @@ const FAQ = () => {
                                 href="https://github.com/Gagan021-5/Nutrivigil/discussions" 
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-2 bg-[#1a1f2e] hover:bg-[#252a3a] text-white font-semibold px-8 py-4 rounded-lg border border-gray-700 transition-all"
+                                className={`inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-lg border transition-all duration-300 ${
+                                    theme === 'dark' ? 'bg-[#1a1f2e] hover:bg-[#252a3a] text-white border-gray-700' : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                                }`}
                             >
                                 Community Discussions
                             </a>

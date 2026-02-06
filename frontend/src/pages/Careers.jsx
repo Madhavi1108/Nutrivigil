@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Rocket, Heart, Users, Globe, Code, Brain, Palette, TrendingUp, Coffee, Home, Zap, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Careers = () => {
+    const { theme } = useTheme();
     const openPositions = [
         {
             title: "Senior AI/ML Engineer",
@@ -96,14 +98,20 @@ const Careers = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     {/* Back Button */}
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -119,7 +127,9 @@ const Careers = () => {
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Careers at NutriVigil
                             </h1>
-                            <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                            }`}>
                                 Join our mission to revolutionize nutrition and health technology. 
                                 Build products that impact millions of lives worldwide.
                             </p>
@@ -140,13 +150,17 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
+                                className={`p-6 rounded-xl border text-center hover:border-purple-500 transition-all duration-300 ${
+                                    theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                                }`}
                             >
                                 <div className="text-purple-400 mb-4 flex justify-center">
                                     {value.icon}
                                 </div>
                                 <h3 className="text-lg font-bold mb-2">{value.title}</h3>
-                                <p className="text-sm text-gray-400">{value.description}</p>
+                                <p className={`text-sm ${
+                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                }`}>{value.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -154,10 +168,14 @@ const Careers = () => {
             </section>
 
             {/* Open Positions Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1f2e]">
+            <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Open Positions</h2>
-                    <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+                    <p className={`text-center mb-12 max-w-2xl mx-auto ${
+                        theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
                         We're looking for talented individuals who are passionate about health tech and AI.
                     </p>
                     <div className="grid md:grid-cols-2 gap-6">
@@ -168,7 +186,9 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2 group"
+                                className={`p-6 rounded-xl border hover:border-purple-500/50 transition-all duration-300 group ${
+                                    theme === 'dark' ? 'bg-[#0a0e1a] border-gray-800' : 'bg-white border-gray-200'
+                                }`}
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="text-purple-400 mt-1 group-hover:scale-110 transition-transform">
@@ -189,7 +209,9 @@ const Careers = () => {
                                                 {position.type}
                                             </span>
                                         </div>
-                                        <p className="text-sm text-gray-400 leading-relaxed">
+                                        <p className={`text-sm leading-relaxed ${
+                                            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                        }`}>
                                             {position.description}
                                         </p>
                                     </div>
@@ -212,13 +234,17 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                                className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
+                                className={`p-6 rounded-xl border hover:border-purple-500/50 transition-all duration-300 ${
+                                    theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                                }`}
                             >
                                 <div className="text-purple-400 mb-4">
                                     {benefit.icon}
                                 </div>
                                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-                                <p className="text-sm text-gray-400">{benefit.description}</p>
+                                <p className={`text-sm ${
+                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                }`}>{benefit.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -226,11 +252,17 @@ const Careers = () => {
             </section>
 
             {/* Culture Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1f2e]">
+            <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
+            }`}>
                 <div className="max-w-7xl mx-auto">
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 sm:p-12 border border-purple-500/20">
+                    <div className={`rounded-2xl p-8 sm:p-12 border transition-colors duration-300 ${
+                        theme === 'dark' ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20' : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-200'
+                    }`}>
                         <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">Our Culture</h2>
-                        <div className="max-w-4xl mx-auto space-y-4 text-lg text-gray-300 leading-relaxed">
+                        <div className={`max-w-4xl mx-auto space-y-4 text-lg leading-relaxed ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                        }`}>
                             <p>
                                 At NutriVigil, we believe in building more than just software—we're building a culture of innovation, 
                                 collaboration, and impact. Our team is <span className="text-purple-400 font-semibold">diverse, curious, and driven</span> by 
@@ -249,7 +281,9 @@ const Careers = () => {
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Make an Impact?</h2>
-                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    <p className={`text-xl mb-8 max-w-2xl mx-auto ${
+                        theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
                         Don't see a role that fits? We're always looking for exceptional talent. 
                         Send us your resume and let's talk!
                     </p>
@@ -263,7 +297,9 @@ const Careers = () => {
                         </a>
                         <Link 
                             to="/about" 
-                            className="inline-flex items-center justify-center gap-2 bg-[#1a1f2e] hover:bg-[#252a3a] text-white font-semibold px-8 py-4 rounded-lg border border-gray-700 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-400 focus-visible:ring-offset-[#0a0e1a]"
+                            className={`inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-lg border transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-400 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] hover:bg-[#252a3a] text-white border-gray-700 focus-visible:ring-offset-[#0a0e1a]' : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300 focus-visible:ring-offset-white'
+                            }`}
                         >
                             Learn About Our Team
                         </Link>

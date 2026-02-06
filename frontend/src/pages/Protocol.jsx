@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Activity, Heart, Droplet, Shield, Scale, AlertCircle, ChevronDown, CheckCircle, XCircle, Zap, Brain } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
+
+const Protocol = () => {
+    const { theme } = useTheme();
+    const [expandedProtocol, setExpandedProtocol] = useState(null);
 
 const protocols = [
     {
@@ -180,21 +185,24 @@ const protocols = [
     }
 ];
 
-const Protocol = () => {
-    const [openProtocol, setOpenProtocol] = useState(null);
-
     const toggleProtocol = (id) => {
-        setOpenProtocol(openProtocol === id ? null : id);
+        setExpandedProtocol(expandedProtocol === id ? null : id);
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -209,7 +217,9 @@ const Protocol = () => {
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Health Protocols
                             </h1>
-                            <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                            }`}>
                                 Evidence-based dietary guidelines tailored to your specific health conditions
                             </p>
                         </motion.div>
@@ -242,19 +252,23 @@ const Protocol = () => {
                                         </div>
                                         <div className="text-left">
                                             <h3 className="text-xl font-bold">{protocol.title}</h3>
-                                            <p className="text-sm text-gray-400">{protocol.description}</p>
+                                            <p className={`text-sm transition-colors duration-300 ${
+                                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                            }`}>{protocol.description}</p>
                                         </div>
                                     </div>
                                     <ChevronDown
-                                        className={`w-6 h-6 text-gray-400 transition-transform flex-shrink-0 ${
-                                            openProtocol === protocol.id ? 'rotate-180' : ''
+                                        className={`w-6 h-6 transition-all duration-300 flex-shrink-0 ${
+                                            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                        } ${
+                                            expandedProtocol === protocol.id ? 'rotate-180' : ''
                                         }`}
                                     />
                                 </button>
 
                                 {/* Protocol Content */}
                                 <AnimatePresence>
-                                    {openProtocol === protocol.id && (
+                                    {expandedProtocol === protocol.id && (
                                         <motion.div
                                             initial={{ height: 0, opacity: 0 }}
                                             animate={{ height: 'auto', opacity: 1 }}
@@ -262,18 +276,24 @@ const Protocol = () => {
                                             transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="px-6 pb-6 space-y-6 border-t border-gray-700/50">
+                                            <div className={`px-6 pb-6 space-y-6 border-t transition-colors duration-300 ${
+                                                theme === 'dark' ? 'border-gray-700/50' : 'border-gray-200/50'
+                                            }`}>
                                                 {/* Do's and Don'ts */}
                                                 <div className="grid md:grid-cols-2 gap-6 pt-6">
                                                     {/* Do's */}
-                                                    <div className="bg-white/5 border-white/10 p-5 rounded-3xl border backdrop-blur-xl">
+                                                    <div className={`p-5 rounded-3xl border backdrop-blur-xl transition-colors duration-300 ${
+                                                        theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-green-50 border-green-200'
+                                                    }`}>
                                                         <div className="flex items-center gap-2 mb-4">
                                                             <CheckCircle className="w-5 h-5 text-green-400" />
                                                             <h4 className="font-bold text-green-400">Recommended (Do's)</h4>
                                                         </div>
                                                         <ul className="space-y-2">
                                                             {protocol.dos.map((item, idx) => (
-                                                                <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
+                                                                <li key={idx} className={`text-sm flex items-start gap-2 transition-colors duration-300 ${
+                                                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                                                }`}>
                                                                     <span className="text-green-400 mt-1">✓</span>
                                                                     <span>{item}</span>
                                                                 </li>
@@ -282,14 +302,18 @@ const Protocol = () => {
                                                     </div>
 
                                                     {/* Don'ts */}
-                                                    <div className="bg-white/5 border-white/10 p-5 rounded-3xl border backdrop-blur-xl">
+                                                    <div className={`p-5 rounded-3xl border backdrop-blur-xl transition-colors duration-300 ${
+                                                        theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-red-50 border-red-200'
+                                                    }`}>
                                                         <div className="flex items-center gap-2 mb-4">
                                                             <XCircle className="w-5 h-5 text-red-400" />
                                                             <h4 className="font-bold text-red-400">Avoid (Don'ts)</h4>
                                                         </div>
                                                         <ul className="space-y-2">
                                                             {protocol.donts.map((item, idx) => (
-                                                                <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
+                                                                <li key={idx} className={`text-sm flex items-start gap-2 transition-colors duration-300 ${
+                                                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                                                }`}>
                                                                     <span className="text-red-400 mt-1">✗</span>
                                                                     <span>{item}</span>
                                                                 </li>
@@ -299,7 +323,9 @@ const Protocol = () => {
                                                 </div>
 
                                                 {/* Key Nutrients */}
-                                                <div className="bg-white/5 border-white/10 p-5 rounded-3xl border backdrop-blur-xl">
+                                                <div className={`p-5 rounded-3xl border backdrop-blur-xl transition-colors duration-300 ${
+                                                    theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-purple-50 border-purple-200'
+                                                }`}>
                                                     <h4 className="font-bold text-purple-400 mb-4 flex items-center gap-2">
                                                         <AlertCircle className="w-5 h-5" />
                                                         Key Nutrients to Monitor
@@ -307,8 +333,12 @@ const Protocol = () => {
                                                     <div className="grid sm:grid-cols-2 gap-3">
                                                         {protocol.nutrients.map((nutrient, idx) => (
                                                             <div key={idx} className="text-sm">
-                                                                <span className="font-semibold text-white">{nutrient.name}:</span>
-                                                                <span className="text-gray-400 ml-1">{nutrient.note}</span>
+                                                                <span className={`font-semibold transition-colors duration-300 ${
+                                                                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                                                                }`}>{nutrient.name}:</span>
+                                                                <span className={`ml-1 transition-colors duration-300 ${
+                                                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                                                }`}>{nutrient.note}</span>
                                                             </div>
                                                         ))}
                                                     </div>
@@ -324,7 +354,9 @@ const Protocol = () => {
             </section>
 
             {/* How We Help */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1f2e]/30">
+            <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#1a1f2e]/30' : 'bg-gray-50'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">How NutriVigil Helps</h2>
                     <div className="grid md:grid-cols-3 gap-8">
@@ -333,13 +365,17 @@ const Protocol = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
+                            className={`p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2 ${
+                                theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-gray-200'
+                            }`}
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Brain className="w-8 h-8" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">AI Protocol Analysis</h3>
-                            <p className="text-gray-400">
+                            <p className={`transition-colors duration-300 ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>
                                 Our AI cross-references food items with your selected health protocols to provide accurate recommendations
                             </p>
                         </motion.div>
@@ -349,13 +385,17 @@ const Protocol = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
+                            className={`p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2 ${
+                                theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-gray-200'
+                            }`}
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Heart className="w-8 h-8" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Personalized Recommendations</h3>
-                            <p className="text-gray-400">
+                            <p className={`transition-colors duration-300 ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>
                                 Get tailored nutrition advice based on your specific health conditions and dietary needs
                             </p>
                         </motion.div>
@@ -365,13 +405,17 @@ const Protocol = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
+                            className={`p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2 ${
+                                theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-gray-200'
+                            }`}
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Zap className="w-8 h-8" />
                             </div>
                             <h3 className="text-xl font-bold mb-3">Real-Time Safety Checks</h3>
-                            <p className="text-gray-400">
+                            <p className={`transition-colors duration-300 ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>
                                 Instant traffic light signals (Green/Yellow/Red) for every food you scan based on your protocols
                             </p>
                         </motion.div>
@@ -386,13 +430,15 @@ const Protocol = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-yellow-500/10 border-2 border-yellow-500/50 rounded-2xl p-8"
+                        className="bg-yellow-500/10 border-2 border-yellow-500/50 rounded-2xl p-8 transition-colors duration-300"
                     >
                         <div className="flex items-start gap-4">
                             <AlertCircle className="w-8 h-8 text-yellow-400 flex-shrink-0 mt-1" />
                             <div>
                                 <h3 className="text-2xl font-bold text-yellow-400 mb-3">Important Medical Disclaimer</h3>
-                                <div className="space-y-3 text-gray-300">
+                                <div className={`space-y-3 transition-colors duration-300 ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         <strong>NutriVigil provides educational information and general guidance only.</strong> Our recommendations are based on evidence-based dietary guidelines but should not replace professional medical advice, diagnosis, or treatment.
                                     </p>
@@ -415,9 +461,11 @@ const Protocol = () => {
             {/* CTA Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-12 text-center border border-purple-500/20">
+                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-12 text-center border border-purple-500/20 transition-colors duration-300">
                         <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-                        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                        <p className={`text-xl mb-8 max-w-2xl mx-auto transition-colors duration-300 ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
+                        }`}>
                             Set up your health profile and receive personalized nutrition recommendations
                         </p>
                         <Link 

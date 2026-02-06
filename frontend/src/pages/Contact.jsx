@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Mail, MapPin, Clock, Send, Github, Linkedin, Twitter, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Contact = () => {
+    const { theme } = useTheme();
+    
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -152,13 +155,19 @@ const Contact = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -173,7 +182,9 @@ const Contact = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Get in Touch
                             </h1>
-                            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                            <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                            }`}>
                                 Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
                             </p>
                         </motion.div>
@@ -191,14 +202,18 @@ const Contact = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
-                                className="bg-[#1a1f2e] p-8 rounded-2xl border border-gray-800"
+                                className={`p-8 rounded-2xl border transition-colors duration-300 ${
+                                    theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
+                                }`}
                             >
                                 <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
                                 
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     {/* Name Field */}
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                                        <label htmlFor="name" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
+                                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                        }`}>
                                             Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -207,9 +222,9 @@ const Contact = () => {
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
-                                            className={`w-full px-4 py-3 bg-[#0a0e1a] border ${
-                                                errors.name ? 'border-red-500' : 'border-gray-700'
-                                            } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors`}
+                                            className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors ${
+                                                errors.name ? 'border-red-500' : theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
+                                            }`}
                                             placeholder="Your name"
                                         />
                                         {errors.name && (
@@ -219,7 +234,9 @@ const Contact = () => {
 
                                     {/* Email Field */}
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                                        <label htmlFor="email" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
+                                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                        }`}>
                                             Email <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -228,9 +245,9 @@ const Contact = () => {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
-                                            className={`w-full px-4 py-3 bg-[#0a0e1a] border ${
-                                                errors.email ? 'border-red-500' : 'border-gray-700'
-                                            } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors`}
+                                            className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors ${
+                                                errors.email ? 'border-red-500' : theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
+                                            }`}
                                             placeholder="your.email@example.com"
                                         />
                                         {errors.email && (
@@ -240,7 +257,9 @@ const Contact = () => {
 
                                     {/* Subject Field */}
                                     <div>
-                                        <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                                        <label htmlFor="subject" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
+                                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                        }`}>
                                             Subject
                                         </label>
                                         <input
@@ -249,14 +268,18 @@ const Contact = () => {
                                             name="subject"
                                             value={formData.subject}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-[#0a0e1a] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                                            className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors ${
+                                                theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
+                                            }`}
                                             placeholder="What is this about?"
                                         />
                                     </div>
 
                                     {/* Message Field */}
                                     <div>
-                                        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                                        <label htmlFor="message" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
+                                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                        }`}>
                                             Message <span className="text-red-500">*</span>
                                         </label>
                                         <textarea
@@ -265,9 +288,9 @@ const Contact = () => {
                                             value={formData.message}
                                             onChange={handleChange}
                                             rows="6"
-                                            className={`w-full px-4 py-3 bg-[#0a0e1a] border ${
-                                                errors.message ? 'border-red-500' : 'border-gray-700'
-                                            } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none`}
+                                            className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none ${
+                                                errors.message ? 'border-red-500' : theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
+                                            }`}
                                             placeholder="Tell us how we can help you..."
                                         ></textarea>
                                         {errors.message && (
@@ -330,23 +353,29 @@ const Contact = () => {
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                                    className="bg-[#1a1f2e] p-6 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all"
+                                    className={`p-6 rounded-2xl border transition-all hover:border-purple-500/50 ${
+                                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
+                                    }`}
                                 >
                                     <div className="flex items-start gap-4">
                                         <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center text-white flex-shrink-0`}>
                                             {info.icon}
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-white mb-1">{info.title}</h3>
+                                            <h3 className="font-semibold mb-1">{info.title}</h3>
                                             {info.link ? (
                                                 <a 
                                                     href={info.link}
-                                                    className="text-gray-400 hover:text-purple-400 transition-colors"
+                                                    className={`transition-colors ${
+                                                        theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                                                    }`}
                                                 >
                                                     {info.content}
                                                 </a>
                                             ) : (
-                                                <p className="text-gray-400">{info.content}</p>
+                                                <p className={`transition-colors duration-300 ${
+                                                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                                }`}>{info.content}</p>
                                             )}
                                         </div>
                                     </div>
@@ -358,9 +387,11 @@ const Contact = () => {
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.7 }}
-                                className="bg-[#1a1f2e] p-6 rounded-2xl border border-gray-800"
+                                className={`p-6 rounded-2xl border transition-colors duration-300 ${
+                                    theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
+                                }`}
                             >
-                                <h3 className="font-semibold text-white mb-4">Follow Us</h3>
+                                <h3 className="font-semibold mb-4">Follow Us</h3>
                                 <div className="flex gap-3">
                                     {socialLinks.map((social, index) => (
                                         <a
@@ -368,7 +399,9 @@ const Contact = () => {
                                             href={social.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className={`w-12 h-12 bg-[#0a0e1a] rounded-lg flex items-center justify-center text-gray-400 transition-all ${social.color}`}
+                                            className={`w-12 h-12 rounded-lg flex items-center justify-center transition-all ${
+                                                theme === 'dark' ? 'bg-[#0a0e1a] text-gray-400' : 'bg-white border border-gray-200 text-gray-600'
+                                            } ${social.color}`}
                                             aria-label={social.name}
                                         >
                                             {social.icon}
@@ -384,14 +417,18 @@ const Contact = () => {
             {/* FAQ Quick Links */}
             <section className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 text-center">
+                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 text-center transition-colors duration-300">
                         <h2 className="text-2xl font-bold mb-4">Have a Quick Question?</h2>
-                        <p className="text-gray-300 mb-6">
+                        <p className={`mb-6 transition-colors duration-300 ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
+                        }`}>
                             Check out our FAQ page for instant answers to common questions
                         </p>
                         <Link 
                             to="/faq" 
-                            className="inline-flex items-center justify-center gap-2 bg-[#1a1f2e] hover:bg-[#252a3a] text-white font-semibold px-6 py-3 rounded-lg border border-gray-700 transition-all"
+                            className={`inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-lg border transition-all ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] hover:bg-[#252a3a] text-white border-gray-700' : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                            }`}
                         >
                             Visit FAQ Page
                             <ArrowLeft className="w-4 h-4 rotate-180" />

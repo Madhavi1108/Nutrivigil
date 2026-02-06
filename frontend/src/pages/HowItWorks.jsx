@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Upload, Brain, Target, CheckCircle, Scan, Zap, Shield, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const HowItWorks = () => {
+    const { theme } = useTheme();
     const steps = [
         {
             number: "01",
@@ -54,14 +56,20 @@ const HowItWorks = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     {/* Back Button */}
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -72,7 +80,9 @@ const HowItWorks = () => {
                         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             How It Works
                         </h1>
-                        <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                        }`}>
                             From photo to personalized health insights in 4 simple steps. 
                             Let AI guide your nutrition journey.
                         </p>
@@ -107,9 +117,13 @@ const HowItWorks = () => {
                                     </div>
 
                                     {/* Step Content */}
-                                    <div className={`flex-1 bg-white/5 border-white/10 p-8 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2 ${index % 2 === 1 ? 'md:text-right' : ''}`}>
+                                    <div className={`flex-1 p-8 rounded-xl border transition-colors duration-300 ${
+                                        theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
+                                    } ${index % 2 === 1 ? 'md:text-right' : ''}`}>
                                         <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
-                                        <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                                        <p className={`leading-relaxed ${
+                                            theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                        }`}>{step.description}</p>
                                     </div>
                                 </div>
 
@@ -128,7 +142,9 @@ const HowItWorks = () => {
             </section>
 
             {/* Features Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1a1f2e]">
+            <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
                         What Makes It Special
@@ -141,14 +157,18 @@ const HowItWorks = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="flex items-start gap-4 p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
+                                className={`flex items-start gap-4 p-6 rounded-lg border transition-colors duration-300 ${
+                                    theme === 'dark' ? 'bg-[#0a0e1a] border-gray-800' : 'bg-white border-gray-200'
+                                }`}
                             >
                                 <div className="text-purple-400 mt-1">
                                     {feature.icon}
                                 </div>
                                 <div>
                                     <h3 className="font-semibold mb-2">{feature.title}</h3>
-                                    <p className="text-sm text-gray-400">{feature.description}</p>
+                                    <p className={`text-sm ${
+                                        theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                                    }`}>{feature.description}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -159,11 +179,17 @@ const HowItWorks = () => {
             {/* CTA Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
-                    <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-12 border border-purple-500/20">
+                    <div className={`rounded-2xl p-12 border transition-colors duration-300 ${
+                        theme === 'dark' 
+                            ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20'
+                            : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-300'
+                    }`}>
                         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                             Ready to Try It?
                         </h2>
-                        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                        <p className={`text-xl mb-8 max-w-2xl mx-auto ${
+                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                        }`}>
                             Join thousands of users making smarter food choices with AI-powered nutrition analysis.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -177,7 +203,11 @@ const HowItWorks = () => {
                             </Link>
                             <Link 
                                 to="/about" 
-                                className="inline-flex items-center justify-center gap-2 bg-[#1a1f2e] hover:bg-[#252a3a] text-white font-semibold px-8 py-4 rounded-lg border border-gray-700 transition-all"
+                                className={`inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-lg border transition-all ${
+                                    theme === 'dark'
+                                        ? 'bg-[#1a1f2e] hover:bg-[#252a3a] text-white border-gray-700'
+                                        : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
+                                }`}
                             >
                                 Learn More About Us
                             </Link>

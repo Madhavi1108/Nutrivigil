@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, AlertTriangle, FileText, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const TermsOfService = () => {
+    const { theme } = useTheme();
     const [activeSection, setActiveSection] = useState('');
 
     const sections = [
@@ -28,13 +30,19 @@ const TermsOfService = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[#0a0e1a] text-white">
+        <div className={`min-h-screen transition-colors duration-300 ${
+            theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
+        }`}>
             {/* Hero Section */}
-            <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]">
+            <section className={`relative py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+                theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
+            }`}>
                 <div className="max-w-7xl mx-auto">
                     <Link 
                         to="/" 
-                        className="inline-flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors mb-8"
+                        className={`inline-flex items-center gap-2 transition-colors mb-8 ${
+                            theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
+                        }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Home
@@ -52,10 +60,14 @@ const TermsOfService = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Terms of Service
                             </h1>
-                            <p className="text-gray-400 text-lg mb-2">
+                            <p className={`text-lg mb-2 ${
+                                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                            }`}>
                                 Last Updated: February 4, 2026
                             </p>
-                            <p className="text-gray-300 max-w-3xl mx-auto">
+                            <p className={`max-w-3xl mx-auto ${
+                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                            }`}>
                                 Please read these terms carefully before using NutriVigil
                             </p>
                         </motion.div>
@@ -69,7 +81,9 @@ const TermsOfService = () => {
                     <div className="grid lg:grid-cols-4 gap-8">
                         {/* Table of Contents - Sidebar */}
                         <aside className="lg:col-span-1">
-                            <div className="sticky top-8 bg-[#1a1f2e] p-6 rounded-xl border border-gray-800">
+                            <div className={`sticky top-8 p-6 rounded-xl border transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                                     <Shield className="w-5 h-5 text-purple-400" />
                                     Table of Contents
@@ -79,10 +93,10 @@ const TermsOfService = () => {
                                         <button
                                             key={section.id}
                                             onClick={() => scrollToSection(section.id)}
-                                            className={`w-full text-left text-sm px-3 py-2 rounded-lg transition-all flex items-center justify-between group ${
+                                            className={`w-full text-left text-sm px-3 py-2 rounded-lg transition-all duration-300 flex items-center justify-between group ${
                                                 activeSection === section.id
                                                     ? 'bg-purple-500/20 text-purple-400'
-                                                    : 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/10'
+                                                    : theme === 'dark' ? 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/10' : 'text-gray-600 hover:text-purple-600 hover:bg-purple-50'
                                             }`}
                                         >
                                             <span>{section.title}</span>
@@ -96,12 +110,16 @@ const TermsOfService = () => {
                         {/* Content */}
                         <div className="lg:col-span-3 space-y-8">
                             {/* Important Notice */}
-                            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-6">
+                            <div className={`border rounded-xl p-6 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-yellow-500/10 border-yellow-500/30' : 'bg-yellow-50 border-yellow-200'
+                            }`}>
                                 <div className="flex items-start gap-4">
                                     <AlertTriangle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
                                     <div>
                                         <h3 className="text-yellow-400 font-bold mb-2">Important Notice</h3>
-                                        <p className="text-gray-300 text-sm leading-relaxed">
+                                        <p className={`text-sm leading-relaxed ${
+                                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                        }`}>
                                             By accessing or using NutriVigil, you agree to be bound by these Terms of Service. 
                                             If you do not agree to these terms, please do not use our service.
                                         </p>
@@ -110,9 +128,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 1. Acceptance of Terms */}
-                            <div id="acceptance" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="acceptance" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">1. Acceptance of Terms</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         These Terms of Service ("Terms") govern your access to and use of NutriVigil's website, 
                                         mobile applications, and services (collectively, the "Service"). By accessing or using 
@@ -126,9 +148,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 2. Service Description */}
-                            <div id="service" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="service" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">2. Service Description</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         NutriVigil is an AI-powered nutrition analysis platform that provides:
                                     </p>
@@ -146,12 +172,16 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 3. Medical Disclaimer - CRITICAL */}
-                            <div id="medical" className="bg-red-500/10 border-2 border-red-500/30 p-8 rounded-xl scroll-mt-8">
+                            <div id="medical" className={`border-2 p-8 rounded-xl scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-red-500/10 border-red-500/30' : 'bg-red-50 border-red-200'
+                            }`}>
                                 <div className="flex items-start gap-4 mb-4">
                                     <AlertTriangle className="w-8 h-8 text-red-400 flex-shrink-0" />
                                     <h2 className="text-2xl font-bold text-red-400">3. Medical Disclaimer</h2>
                                 </div>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p className="font-semibold text-red-300">
                                         IMPORTANT: NutriVigil is NOT a substitute for professional medical advice, diagnosis, or treatment.
                                     </p>
@@ -185,9 +215,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 4. User Responsibilities */}
-                            <div id="responsibilities" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="responsibilities" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">4. User Responsibilities</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>As a user of NutriVigil, you agree to:</p>
                                     <ul className="list-disc list-inside space-y-2 ml-4">
                                         <li>Provide accurate health information when creating your profile</li>
@@ -206,9 +240,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 5. Intellectual Property */}
-                            <div id="intellectual" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="intellectual" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">5. Intellectual Property</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         <strong>Our Content:</strong> All content, features, and functionality of the Service, 
                                         including but not limited to text, graphics, logos, icons, images, audio clips, video clips, 
@@ -228,9 +266,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 6. Limitation of Liability */}
-                            <div id="liability" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="liability" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">6. Limitation of Liability</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p className="font-semibold">
                                         TO THE MAXIMUM EXTENT PERMITTED BY LAW, NUTRIVIGIL SHALL NOT BE LIABLE FOR:
                                     </p>
@@ -255,9 +297,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 7. Account Terms */}
-                            <div id="account" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="account" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">7. Account Terms</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         <strong>Account Creation:</strong> You may need to create an account to access certain 
                                         features. You must be at least 13 years old to create an account.
@@ -275,9 +321,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 8. Termination */}
-                            <div id="termination" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="termination" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">8. Termination</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         <strong>By You:</strong> You may delete your account at any time through your account settings.
                                     </p>
@@ -299,9 +349,13 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 9. Changes to Terms */}
-                            <div id="changes" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="changes" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">9. Changes to Terms</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         We reserve the right to modify these Terms at any time. We will notify users of material 
                                         changes by:
@@ -319,13 +373,19 @@ const TermsOfService = () => {
                             </div>
 
                             {/* 10. Contact Information */}
-                            <div id="contact" className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 scroll-mt-8">
+                            <div id="contact" className={`p-8 rounded-xl border scroll-mt-8 transition-colors duration-300 ${
+                                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-white border-gray-200'
+                            }`}>
                                 <h2 className="text-2xl font-bold mb-4 text-purple-400">10. Contact Information</h2>
-                                <div className="space-y-4 text-gray-300 leading-relaxed">
+                                <div className={`space-y-4 leading-relaxed ${
+                                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                                }`}>
                                     <p>
                                         If you have questions, concerns, or complaints about these Terms of Service, please contact us:
                                     </p>
-                                    <div className="bg-[#0a0e1a] p-6 rounded-lg border border-gray-700">
+                                    <div className={`p-6 rounded-lg border transition-colors duration-300 ${
+                                        theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700' : 'bg-gray-50 border-gray-200'
+                                    }`}>
                                         <p><strong>Email:</strong> legal@nutrivigil.com</p>
                                         <p><strong>Support:</strong> support@nutrivigil.com</p>
                                         <p><strong>Website:</strong> www.nutrivigil.com</p>
