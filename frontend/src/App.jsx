@@ -4,6 +4,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Navbar from "./components/Navbar";
 import LanguageModal from "./components/LanguageModal";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import ScanPage from "./pages/ScanPage";
@@ -60,6 +61,8 @@ function App() {
         )}
 
         <Navbar />
+
+        <ScrollToTop />
 
         <Routes>
           <Route path="/" element={<Home />} />
