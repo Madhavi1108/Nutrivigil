@@ -158,8 +158,10 @@ const BrowseFoods = () => {
   ];
 
   const handleCategoryClick = (slug) => {
-    // Navigate to category detail page (placeholder for now)
-    navigate(`/browse/${slug}`);
+    // Category detail pages are not yet implemented.
+    // Keep users on /browse and show a "Coming soon" placeholder instead of navigating
+    console.info(`Category detail for "${slug}" is coming soon.`);
+    window.alert('Category detail pages are coming soon.');
   };
 
   return (
