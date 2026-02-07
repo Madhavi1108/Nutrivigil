@@ -396,6 +396,13 @@ const Footer = () => {
           </div>
         </motion.div>
 
+        {/* Model Note */}
+        <div className="flex justify-center">
+          <p className={`text-center text-xs mt-3 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
+            {t("footer.modelNote")}
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <motion.div
           className={`pt-4 border-t ${theme === 'dark' ? 'border-white/10' : 'border-gray-200'} flex flex-col md:flex-row justify-between items-center gap-3`}
