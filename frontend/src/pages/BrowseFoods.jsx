@@ -15,6 +15,12 @@ import cerealImg from '../assets/cereal.jpg';
 import cheeseImg from '../assets/chees.jpg';
 import coffeeImg from '../assets/coffee.jpg';
 import cookiesBiscuitImg from '../assets/cokies-biscuit.jpg';
+import beveragesImg from '../assets/beverages.jpg';
+import pastaImg from '../assets/pasta.jpg';
+import snacksImg from '../assets/snacks.jpg';
+import produceImg from '../assets/produce.jpg';
+import icecreamImg from '../assets/icecream.jpg';
+import frozenFoodsImg from '../assets/frozen-foods.jpg';
 
 const BrowseFoods = () => {
   const { theme } = useTheme();
@@ -104,7 +110,7 @@ const BrowseFoods = () => {
     {
       id: 11,
       name: 'Beverages',
-      image: babyFoodImg,
+      image: beveragesImg,
       count: 345,
       slug: 'beverages',
       gradient: 'from-blue-500 to-cyan-500'
@@ -112,7 +118,7 @@ const BrowseFoods = () => {
     {
       id: 12,
       name: 'Pasta',
-      image: breadImg,
+      image: pastaImg,
       count: 187,
       slug: 'pasta',
       gradient: 'from-red-500 to-orange-500'
@@ -120,7 +126,7 @@ const BrowseFoods = () => {
     {
       id: 13,
       name: 'Snacks',
-      image: cookiesBiscuitImg,
+      image: snacksImg,
       count: 412,
       slug: 'snacks',
       gradient: 'from-indigo-500 to-purple-500'
@@ -128,23 +134,23 @@ const BrowseFoods = () => {
     {
       id: 14,
       name: 'Produce',
-      image: breadImg,
+      image: produceImg,
       count: 289,
       slug: 'produce',
       gradient: 'from-green-500 to-emerald-500'
     },
     {
       id: 15,
-      name: 'Meat & Seafood',
-      image: cannedGoodsImg,
+      name: 'Ice Cream',
+      image: icecreamImg,
       count: 256,
-      slug: 'meat-seafood',
+      slug: 'ice-cream',
       gradient: 'from-red-600 to-rose-700'
     },
     {
       id: 16,
       name: 'Frozen Foods',
-      image: cakesImg,
+      image: frozenFoodsImg,
       count: 198,
       slug: 'frozen-foods',
       gradient: 'from-cyan-500 to-blue-500'
