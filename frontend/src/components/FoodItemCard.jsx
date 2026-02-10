@@ -2,9 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import { Package } from 'lucide-react';
+import { calculateNutritionScore, getScoreColor } from '../utils/nutritionScore';
 
 const FoodItemCard = ({ item, index = 0 }) => {
   const { theme } = useTheme();
+
+  // Calculate nutrition score
+  const score = item.nutrition ? calculateNutritionScore(item.nutrition) : null;
+  const scoreInfo = score !== null ? getScoreColor(score) : null;
 
   const handleCardClick = () => {
     // Detail modal will be implemented in Issue 3
@@ -48,6 +53,48 @@ const FoodItemCard = ({ item, index = 0 }) => {
         {/* Gradient Overlay on Hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
+        {/* Nutrition Score Badge - Top Right */}
+        {scoreInfo && (
+          <div className="absolute top-3 right-3">
+            <div className="relative w-16 h-16">
+              {/* Circle Background */}
+              <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 64 64">
+                {/* Background circle */}
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="28"
+                  fill="none"
+                  stroke={theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}
+                  strokeWidth="4"
+                />
+                {/* Progress circle */}
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="28"
+                  fill="none"
+                  stroke={scoreInfo.circleColor}
+                  strokeWidth="4"
+                  strokeDasharray={`${(score / 100) * 175.93} 175.93`}
+                  strokeLinecap="round"
+                  className="transition-all duration-500"
+                />
+              </svg>
+              {/* Score Number */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className={`text-center ${
+                  theme === 'dark' ? 'bg-gray-900/90' : 'bg-white/90'
+                } backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center`}>
+                  <span className={`text-sm font-bold ${scoreInfo.textColor}`}>
+                    {score}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Hover Indicator */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -65,7 +112,7 @@ const FoodItemCard = ({ item, index = 0 }) => {
       </div>
 
       {/* Card Content */}
-      <div className="p-4 space-y-2">
+      <div className="p-4 space-y-3">
         {/* Product Name */}
         <h3 className={`text-lg font-bold line-clamp-2 min-h-[3.5rem] ${
           theme === 'dark' ? 'text-white' : 'text-gray-900'
@@ -80,22 +127,123 @@ const FoodItemCard = ({ item, index = 0 }) => {
           {item.brand}
         </p>
 
-        {/* Serving Size */}
-        <div className="flex items-center justify-between pt-2">
-          <div className={`text-xs px-2 py-1 rounded-full ${
+        {/* Nutrition Quick View */}
+        {item.nutrition && (
+          <div className={`rounded-lg p-3 space-y-2 ${
+            theme === 'dark' ? 'bg-white/5' : 'bg-gray-50'
+          }`}>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              {/* Calories */}
+              <div>
+                <span className={`block font-semibold ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  Calories
+                </span>
+                <span className={`block font-bold ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.nutrition.calories}
+                </span>
+              </div>
+
+              {/* Protein */}
+              <div>
+                <span className={`block font-semibold ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  Protein
+                </span>
+                <span className={`block font-bold ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.nutrition.protein}g
+                </span>
+              </div>
+
+              {/* Carbs */}
+              <div>
+                <span className={`block font-semibold ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  Carbs
+                </span>
+                <span className={`block font-bold ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.nutrition.carbs}g
+                </span>
+              </div>
+
+              {/* Fat */}
+              <div>
+                <span className={`block font-semibold ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  Fat
+                </span>
+                <span className={`block font-bold ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.nutrition.totalFat}g
+                </span>
+              </div>
+
+              {/* Sodium */}
+              <div>
+                <span className={`block font-semibold ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  Sodium
+                </span>
+                <span className={`block font-bold ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.nutrition.sodium}mg
+                </span>
+              </div>
+
+              {/* Sugar */}
+              <div>
+                <span className={`block font-semibold ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  Sugar
+                </span>
+                <span className={`block font-bold ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {item.nutrition.sugar}g
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Score Label and Serving Size */}
+        <div className="flex items-center justify-between">
+          {/* Score Label */}
+          {scoreInfo && (
+            <div className={`text-xs px-2 py-1 rounded-full font-semibold ${scoreInfo.bgColor} ${scoreInfo.textColor}`}>
+              {scoreInfo.label}
+            </div>
+          )}
+
+          {/* Serving Size */}
+          <div className={`text-xs px-2 py-1 rounded-full flex-shrink-0 ${
             theme === 'dark'
               ? 'bg-white/10 text-gray-300'
               : 'bg-gray-100 text-gray-700'
           }`}>
-            <span className="font-semibold">Serving:</span> {item.servingSize}
+            {item.servingSize}
           </div>
         </div>
       </div>
 
       {/* Decorative Corner Accent */}
-      <div className={`absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-        theme === 'dark' ? 'bg-gradient-to-bl from-indigo-500/20' : 'bg-gradient-to-bl from-indigo-500/10'
-      } rounded-bl-full`} />
+      <div className={`absolute top-0 left-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+        theme === 'dark' ? 'bg-gradient-to-br from-indigo-500/20' : 'bg-gradient-to-br from-indigo-500/10'
+      } rounded-br-full`} />
     </motion.div>
   );
 };
@@ -124,8 +272,23 @@ export const FoodItemCardSkeleton = () => {
         {/* Brand Skeleton */}
         <div className={`h-3 w-1/2 rounded ${theme === 'dark' ? 'bg-white/10' : 'bg-gray-200'}`} />
 
-        {/* Serving Skeleton */}
-        <div className={`h-6 w-24 rounded-full ${theme === 'dark' ? 'bg-white/10' : 'bg-gray-200'}`} />
+        {/* Nutrition Grid Skeleton */}
+        <div className={`rounded-lg p-3 ${theme === 'dark' ? 'bg-white/5' : 'bg-gray-50'}`}>
+          <div className="grid grid-cols-2 gap-2">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="space-y-1">
+                <div className={`h-3 w-12 rounded ${theme === 'dark'? 'bg-white/10' : 'bg-gray-200'}`} />
+                <div className={`h-3 w-8 rounded ${theme === 'dark' ? 'bg-white/10' : 'bg-gray-200'}`} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom row skeleton */}
+        <div className="flex items-center justify-between">
+          <div className={`h-6 w-16 rounded-full ${theme === 'dark' ? 'bg-white/10' : 'bg-gray-200'}`} />
+          <div className={`h-6 w-20 rounded-full ${theme === 'dark' ? 'bg-white/10' : 'bg-gray-200'}`} />
+        </div>
       </div>
     </div>
   );
