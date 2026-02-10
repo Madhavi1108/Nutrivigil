@@ -24,10 +24,19 @@ const FoodItemCard = ({ item, index = 0 }) => {
       whileHover={{ scale: 1.03, y: -8 }}
       whileTap={{ scale: 0.98 }}
       onClick={handleCardClick}
-      className={`group relative rounded-xl border backdrop-blur-xl overflow-hidden cursor-pointer transition-all duration-300 ${
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleCardClick();
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${item.name} by ${item.brand}`}
+      className={`group relative rounded-xl border backdrop-blur-xl overflow-hidden cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${
         theme === 'dark'
-          ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
-          : 'bg-white border-gray-200 hover:border-indigo-300 shadow-lg hover:shadow-2xl'
+          ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 focus:ring-offset-gray-900'
+          : 'bg-white border-gray-200 hover:border-indigo-300 shadow-lg hover:shadow-2xl focus:ring-offset-white'
       }`}
     >
       {/* Product Image */}
