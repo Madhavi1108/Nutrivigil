@@ -24,6 +24,7 @@ import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import FAQ from "./pages/FAQ";
 import BrowseFoods from "./pages/BrowseFoods";
+import CategoryDetail from "./pages/CategoryDetail";
 import Footer from "./components/Footer";
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/scan" element={<ScanPage />} />
           <Route path="/browse" element={<BrowseFoods />} />
+          <Route path="/browse/:categorySlug" element={<CategoryDetail />} />
           <Route path="/protocol" element={<Protocol />} />
           <Route path="/app" element={<AppInterface />} />
           <Route path="/nutrition" element={<Nutrition />} />
