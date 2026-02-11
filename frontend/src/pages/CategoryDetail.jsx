@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import { Home, ChevronRight, Package } from 'lucide-react';
 import FoodItemCard, { FoodItemCardSkeleton } from '../components/FoodItemCard';
+import SortDropdown from '../components/SortDropdown';
 import FOOD_ITEMS from '../data/foodItems';
+import { calculateNutritionScore } from '../utils/nutritionScore';
 
 // Import category images
 import babyFoodImg from '../assets/baby-food.jpg';
@@ -179,6 +181,65 @@ const CategoryDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState(null);
   const [foodItems, setFoodItems] = useState([]);
+  const [currentSort, setCurrentSort] = useState(() => {
+    // Load sort preference from localStorage
+    return localStorage.getItem('nutrivigil-sort-preference') || 'name-asc';
+  });
+
+  // Handle sort change and save to localStorage
+  const handleSortChange = (sortId) => {
+    setCurrentSort(sortId);
+    localStorage.setItem('nutrivigil-sort-preference', sortId);
+  };
+
+  // Sort food items based on current sort option
+  const sortedFoodItems = useMemo(() => {
+    if (!foodItems || foodItems.length === 0) return [];
+
+    const sorted = [...foodItems];
+
+    switch (currentSort) {
+      case 'name-asc':
+        return sorted.sort((a, b) => a.name.localeCompare(b.name));
+
+      case 'name-desc':
+        return sorted.sort((a, b) => b.name.localeCompare(a.name));
+
+      case 'score-high':
+        return sorted.sort((a, b) => {
+          const scoreA = a.nutrition ? calculateNutritionScore(a.nutrition) : 0;
+          const scoreB = b.nutrition ? calculateNutritionScore(b.nutrition) : 0;
+          return scoreB - scoreA;
+        });
+
+      case 'score-low':
+        return sorted.sort((a, b) => {
+          const scoreA = a.nutrition ? calculateNutritionScore(a.nutrition) : 0;
+          const scoreB = b.nutrition ? calculateNutritionScore(b.nutrition) : 0;
+          return scoreA - scoreB;
+        });
+
+      case 'calories-low':
+        return sorted.sort((a, b) => {
+          const calA = a.nutrition?.calories || 0;
+          const calB = b.nutrition?.calories || 0;
+          return calA - calB;
+        });
+
+      case 'calories-high':
+        return sorted.sort((a, b) => {
+          const calA = a.nutrition?.calories || 0;
+          const calB = b.nutrition?.calories || 0;
+          return calB - calA;
+        });
+
+      case 'brand-asc':
+        return sorted.sort((a, b) => a.brand.localeCompare(b.brand));
+
+      default:
+        return sorted;
+    }
+  }, [foodItems, currentSort]);
 
   // Find category by slug
   useEffect(() => {
@@ -193,11 +254,11 @@ const CategoryDetail = () => {
       setTimeout(() => {
         setCategory(foundCategory);
         // Load sample food items for this category
-        const items = SAMPLE_FOOD_ITEMS[categorySlug];
+        const items = FOOD_ITEMS[categorySlug];
         if ((!items || items.length === 0) && process.env.NODE_ENV === 'development') {
           console.warn(
             `[CategoryDetail] No mock data found for category slug "${categorySlug}". ` +
-              'EmptyState will be shown. Ensure SAMPLE_FOOD_ITEMS contains data for this category.'
+              'EmptyState will be shown. Ensure FOOD_ITEMS contains data for this category.'
           );
         }
         setFoodItems(items || []);
@@ -393,6 +454,26 @@ const CategoryDetail = () => {
           </div>
         </motion.div>
 
+        {/* Sort Controls */}
+        {foodItems.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex items-center justify-between mb-6"
+          >
+            {/* Results Counter */}
+            <div className={`text-sm font-medium ${
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+            }`}>
+              Showing {sortedFoodItems.length} item{sortedFoodItems.length !== 1 ? 's' : ''}
+            </div>
+
+            {/* Sort Dropdown */}
+            <SortDropdown currentSort={currentSort} onSortChange={handleSortChange} />
+          </motion.div>
+        )}
+
         {/* Food Items Grid - Phase 2 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -401,9 +482,9 @@ const CategoryDetail = () => {
           role="region"
           aria-label="Food products list"
         >
-          {foodItems.length > 0 ? (
+          {sortedFoodItems.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="list">
-              {foodItems.map((item, index) => (
+              {sortedFoodItems.map((item, index) => (
                 <div key={`${category.name}-${item.id}`} role="listitem">
                   <FoodItemCard item={item} index={index} />
                 </div>
