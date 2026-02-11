@@ -192,8 +192,15 @@ const CategoryDetail = () => {
 
       setTimeout(() => {
         setCategory(foundCategory);
-        // Load food items for this category from FOOD_ITEMS data
-        setFoodItems(FOOD_ITEMS[categorySlug] || []);
+        // Load sample food items for this category
+        const items = SAMPLE_FOOD_ITEMS[categorySlug];
+        if ((!items || items.length === 0) && process.env.NODE_ENV === 'development') {
+          console.warn(
+            `[CategoryDetail] No mock data found for category slug "${categorySlug}". ` +
+              'EmptyState will be shown. Ensure SAMPLE_FOOD_ITEMS contains data for this category.'
+          );
+        }
+        setFoodItems(items || []);
         setIsLoading(false);
       }, 500);
     } else {
