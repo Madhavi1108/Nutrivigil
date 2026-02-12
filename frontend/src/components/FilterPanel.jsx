@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import {
@@ -11,55 +12,25 @@ import {
   AlertCircle,
   Flame,
 } from 'lucide-react';
+import { FILTER_DEFINITIONS } from '../constants/filterConstants';
 
-// Filter options data
-const FILTER_OPTIONS = {
+// Map filter categories to their icons and colors
+const FILTER_UI_CONFIG = {
   dietary: {
-    label: 'Dietary Preferences',
     icon: Leaf,
     color: 'green',
-    options: [
-      { id: 'vegan', label: 'Vegan' },
-      { id: 'vegetarian', label: 'Vegetarian' },
-      { id: 'gluten-free', label: 'Gluten-Free' },
-      { id: 'organic', label: 'Organic' },
-      { id: 'low-carb', label: 'Low Carb' },
-      { id: 'high-protein', label: 'High Protein' },
-    ],
   },
   scoreRange: {
-    label: 'Nutrition Score',
     icon: Award,
     color: 'indigo',
-    options: [
-      { id: 'good', label: 'Good (70-100)', min: 70, max: 100 },
-      { id: 'fair', label: 'Fair (40-69)', min: 40, max: 69 },
-      { id: 'poor', label: 'Poor (0-39)', min: 0, max: 39 },
-    ],
   },
   allergens: {
-    label: 'Allergen-Free',
     icon: AlertCircle,
     color: 'amber',
-    options: [
-      { id: 'nuts', label: 'Nuts' },
-      { id: 'dairy', label: 'Dairy' },
-      { id: 'gluten', label: 'Gluten' },
-      { id: 'soy', label: 'Soy' },
-      { id: 'eggs', label: 'Eggs' },
-    ],
   },
   calorieRange: {
-    label: 'Calorie Range',
     icon: Flame,
     color: 'red',
-    options: [
-      { id: 'very-low', label: 'Very Low (0-100)', min: 0, max: 100 },
-      { id: 'low', label: 'Low (101-200)', min: 101, max: 200 },
-      { id: 'medium', label: 'Medium (201-400)', min: 201, max: 400 },
-      { id: 'high', label: 'High (401-600)', min: 401, max: 600 },
-      { id: 'very-high', label: 'Very High (601+)', min: 601, max: 9999 },
-    ],
   },
 };
 
@@ -70,6 +41,18 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onClose, isMobile }) => 
     scoreRange: true,
     allergens: true,
     calorieRange: true,
+  });
+
+  // Merge filter definitions with UI config
+  const getFilterCategoryData = (categoryKey) => {
+    const definition = FILTER_DEFINITIONS[categoryKey];
+    const uiConfig = FILTER_UI_CONFIG[categoryKey];
+    return {
+      ...definition,
+      ...uiConfig,
+    };
+  };
+
   });
 
   const toggleSection = (section) => {
