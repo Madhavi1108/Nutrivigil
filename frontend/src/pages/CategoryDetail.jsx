@@ -651,6 +651,8 @@ const CategoryDetail = () => {
           allFoods={searchedFoodItems}
           currentIndex={searchedFoodItems.findIndex((item) => item.id === selectedFood.id)}
           onNavigate={handleModalNavigate}
+          category={categorySlug}
+          onProductSelect={setSelectedFood}
         />
       )}
     </div>
