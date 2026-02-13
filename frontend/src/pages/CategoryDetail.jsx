@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import { Home, ChevronRight, Package, SlidersHorizontal } from 'lucide-react';
 import FoodItemCard, { FoodItemCardSkeleton } from '../components/FoodItemCard';
+import FoodDetailModal from '../components/FoodDetailModal';
 import FilterPanel from '../components/FilterPanel';
 import ActiveFilters from '../components/ActiveFilters';
 import SearchBar from '../components/SearchBar';
@@ -205,6 +206,22 @@ const CategoryDetail = () => {
     }
     return DEFAULT_FILTERS;
   });
+  // Modal state for food detail
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedFood, setSelectedFood] = useState(null);
+
+  // Handle opening food detail modal
+  const handleViewDetails = (foodItem) => {
+    setSelectedFood(foodItem);
+    setIsModalOpen(true);
+  };
+
+  // Handle closing food detail modal
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    // Delay clearing selected food for smooth exit animation
+    setTimeout(() => setSelectedFood(null), 350);
+  };
 
   // Handle view mode change and save to localStorage
   const handleViewModeChange = (mode) => {
@@ -562,7 +579,11 @@ const CategoryDetail = () => {
             >
               {searchedFoodItems.map((item, index) => (
                 <div key={`${category.name}-${item.id}`} role="listitem">
-                  <FoodItemCard item={item} index={index} />
+                  <FoodItemCard
+                    item={item}
+                    index={index}
+                    onViewDetails={handleViewDetails}
+                  />
                 </div>
               ))}
             </div>
@@ -606,6 +627,14 @@ const CategoryDetail = () => {
           )}
         </motion.div>
       </div>
+
+      {/* Food Detail Modal */}
+      <FoodDetailModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        foodItem={selectedFood}
+        categoryName={category?.name}
+      />
     </div>
   );
 };
