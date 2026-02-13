@@ -34,7 +34,7 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [onClose, hasPrevious, hasNext, onNavigate]);
+  }, [onClose, onNavigate, currentIndex, allFoods.length]);
 
   if (!food) return null;
 
