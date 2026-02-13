@@ -244,17 +244,23 @@ const CategoryDetail = () => {
     setSelectedFood(null);
   };
 
+  // Memoized index of the currently selected food item within the searched results
+  const selectedFoodIndex = useMemo(() => {
+    if (!selectedFood || !searchedFoodItems || searchedFoodItems.length === 0) {
+      return -1;
+    }
+
+    return searchedFoodItems.findIndex((item) => item.id === selectedFood.id);
+  }, [selectedFood, searchedFoodItems]);
+
   // Handle navigation in modal (Previous/Next)
   const handleModalNavigate = (direction) => {
-    if (!selectedFood) return;
+    if (!selectedFood || selectedFoodIndex === -1) return;
 
-    const currentIndex = searchedFoodItems.findIndex((item) => item.id === selectedFood.id);
-    if (currentIndex === -1) return;
-
-    if (direction === 'previous' && currentIndex > 0) {
-      setSelectedFood(searchedFoodItems[currentIndex - 1]);
-    } else if (direction === 'next' && currentIndex < searchedFoodItems.length - 1) {
-      setSelectedFood(searchedFoodItems[currentIndex + 1]);
+    if (direction === 'previous' && selectedFoodIndex > 0) {
+      setSelectedFood(searchedFoodItems[selectedFoodIndex - 1]);
+    } else if (direction === 'next' && selectedFoodIndex < searchedFoodItems.length - 1) {
+      setSelectedFood(searchedFoodItems[selectedFoodIndex + 1]);
     }
   };
 
