@@ -130,12 +130,15 @@ const SimilarProductCard = ({ product, index, theme, onClick }) => {
         {product.image ? (
           <img
             src={product.image}
-            alt={product.name}
+            alt={`Product image of ${product.name}`}
             className="w-full h-full object-cover"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <Package className={`w-12 h-12 ${theme === 'dark' ? 'text-gray-600' : 'text-gray-300'}`} />
+            <Package
+              aria-hidden="true"
+              className={`w-12 h-12 ${theme === 'dark' ? 'text-gray-600' : 'text-gray-300'}`}
+            />
           </div>
         )}
 

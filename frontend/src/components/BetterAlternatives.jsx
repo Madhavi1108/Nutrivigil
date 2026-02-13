@@ -164,7 +164,7 @@ const BetterAlternatives = ({ currentFood, allFoods, category, onProductClick })
                   }`}>
                     Nutrition Score
                   </span>
-                  <span className={`text-sm font-bold ${getScoreColor(alternative.nutritionScore)}`}>
+                  <span className={`text-sm font-bold ${getScoreColor(alternative.nutritionScore).textColor}`}>
                     {alternative.nutritionScore}/100
                   </span>
                 </div>

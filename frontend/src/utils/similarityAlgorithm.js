@@ -30,7 +30,7 @@ export const calculateSimilarity = (food1, food2, category) => {
   // 1. Calorie similarity (30 points max)
   const calorieDiff = Math.abs(nutrition1.calories - nutrition2.calories);
   const calorieAvg = (nutrition1.calories + nutrition2.calories) / 2;
-  const caloriePercentDiff = (calorieDiff / calorieAvg) * 100;
+  const caloriePercentDiff = calorieAvg === 0 ? 0 : (calorieDiff / calorieAvg) * 100;
 
   if (caloriePercentDiff <= 10) similarityScore += 30;
   else if (caloriePercentDiff <= 20) similarityScore += 20;
