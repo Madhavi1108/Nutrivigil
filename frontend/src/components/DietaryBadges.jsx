@@ -5,8 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 const DietaryBadges = ({ dietary }) => {
   const { theme } = useTheme();
 
-  // Mock dietary attributes if none provided (for demonstration)
-  const displayDietary = dietary || ['Organic', 'Non-GMO'];
+  // Only display dietary badges when actual dietary data is provided
+  const displayDietary = Array.isArray(dietary) && dietary.length > 0 ? dietary : [];
 
   // Badge configuration with icons and colors
   const badgeConfig = {
