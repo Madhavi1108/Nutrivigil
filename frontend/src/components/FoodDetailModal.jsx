@@ -67,12 +67,24 @@ const FoodDetailModal = ({ isOpen, onClose, foodItem, categoryName }) => {
       } catch (err) {
         // Fallback: copy to clipboard
         navigator.clipboard.writeText(window.location.href);
-        alert('Link copied to clipboard!');
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(
+            new CustomEvent('clipboard:copied', {
+              detail: { url: window.location.href },
+            }),
+          );
+        }
       }
     } else {
       // Fallback for browsers that don't support Web Share API
       navigator.clipboard.writeText(window.location.href);
-      alert('Link copied to clipboard!');
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(
+          new CustomEvent('clipboard:copied', {
+            detail: { url: window.location.href },
+          }),
+        );
+      }
     }
   };
 
