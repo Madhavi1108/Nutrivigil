@@ -33,6 +33,21 @@ import purePumpkin from '../assets/baking/pure-pumpkin.jpg';
 import semiSweetBakingChips from '../assets/baking/semi-sweet-baking-chips.jpg';
 import bakingHero from '../assets/baking.jpg';
 
+// bread image imports (normalized)
+import bread100RyeBread from '../assets/bread/100-rye-bread.jpg';
+import bread100PureMapleSyrup from '../assets/bread/100-pure-maple-syrup.jpg';
+import bread100PureMapleSyrup7 from '../assets/bread/100-pure-maple-syrup7.jpg';
+import bread100PureOrganicMaple from '../assets/bread/100-pure-organic-maple.jpg';
+import bread100WholeWheatBread from '../assets/bread/100-whole-wheat-bread.jpg';
+import bread100WholeWheatStoneBakedPizzaCrusts from '../assets/bread/100-whole-wheat-stone-baked-pizza-crusts.jpg';
+import bread3CheeseGarlicToast from '../assets/bread/3-cheese-garlic-toast.jpg';
+import bread6GrainPumpkinSeedBread from '../assets/bread/6-grain-pumpkin-seed-bread.jpg';
+import bread7GrainHalfDeliLoaf from '../assets/bread/7-grain-half-deli-loaf.jpg';
+import bread7NutSeedBread from '../assets/bread/7-nut-and-seed-bread.jpg';
+import bread7SproutedGrainsCinnamonRaisinBread from '../assets/bread/7-sprouted-grains-cinnamon-raisin-bread.jpg';
+import bread7DaysSoftCroissantChocolateBreakfastPastry from '../assets/bread/7days-soft-croissant-chocolate-breakfast-pastry.jpg';
+import breadAgainstTheGrainGlutenFreeRosemaryBaguettes from '../assets/bread/against-the-grain-gluten-free-fresh-rosemary-baguettes.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -68,19 +83,19 @@ const FOOD_ITEMS = {
   ],
 
   'bread': [
-    { id: 1, name: 'Honey Wheat Bread', brand: "Nature's Own", servingSize: '2 slices (52g)', image: null, nutrition: { calories: 130, protein: 5, carbs: 24, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 4, fiber: 3 } },
-    { id: 2, name: '21 Whole Grains Bread', brand: "Dave's Killer Bread", servingSize: '1 slice (38g)', image: null, nutrition: { calories: 110, protein: 5, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 5, fiber: 5 } },
-    { id: 3, name: 'Sourdough Bread', brand: 'Boudin', servingSize: '1 slice (45g)', image: null, nutrition: { calories: 120, protein: 4, carbs: 23, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 1, fiber: 1 } },
-    { id: 4, name: 'Italian Bread', brand: 'Pepperidge Farm', servingSize: '1 slice (42g)', image: null, nutrition: { calories: 110, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 2, fiber: 1 } },
-    { id: 5, name: 'White Bread', brand: 'Wonder', servingSize: '2 slices (52g)', image: null, nutrition: { calories: 140, protein: 4, carbs: 26, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 4, fiber: 2 } },
-    { id: 6, name: 'Whole Grain Bread', brand: "Nature's Own", servingSize: '2 slices (52g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 4, fiber: 4 } },
-    { id: 7, name: 'Rye Bread', brand: 'Pepperidge Farm', servingSize: '1 slice (32g)', image: null, nutrition: { calories: 80, protein: 3, carbs: 15, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 1, fiber: 2 } },
-    { id: 8, name: 'Multigrain Bread', brand: "Arnold", servingSize: '2 slices (52g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 24, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 3, fiber: 4 } },
-    { id: 9, name: 'Potato Bread', brand: "Martin's", servingSize: '1 slice (38g)', image: null, nutrition: { calories: 100, protein: 3, carbs: 19, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 3, fiber: 1 } },
-    { id: 10, name: 'Ciabatta Bread', brand: 'La Brea Bakery', servingSize: '2 oz (57g)', image: null, nutrition: { calories: 140, protein: 5, carbs: 27, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 1, fiber: 1 } },
-    { id: 11, name: 'Bagel Plain', brand: "Thomas'", servingSize: '1 bagel (95g)', image: null, nutrition: { calories: 260, protein: 10, carbs: 52, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 430, sugar: 5, fiber: 2 } },
-    { id: 12, name: 'English Muffin', brand: "Thomas'", servingSize: '1 muffin (57g)', image: null, nutrition: { calories: 130, protein: 5, carbs: 26, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 2, fiber: 1 } },
-    { id: 13, name: 'Pita Bread', brand: "Toufayan", servingSize: '1 pita (57g)', image: null, nutrition: { calories: 150, protein: 6, carbs: 30, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 2 } },
+    { id: 1, name: '100-rye-bread', brand: "Nature's Own", servingSize: '2 slices (52g)', image: bread100RyeBread, nutrition: { calories: 130, protein: 5, carbs: 24, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 4, fiber: 3 } },
+    { id: 2, name: '100-pure-maple-syrup', brand: "Dave's Killer Bread", servingSize: '1 slice (38g)', image: bread100PureMapleSyrup, nutrition: { calories: 110, protein: 5, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 5, fiber: 5 } },
+    { id: 3, name: '100-pure-maple-syrup7', brand: 'Boudin', servingSize: '1 slice (45g)', image: bread100PureMapleSyrup7, nutrition: { calories: 120, protein: 4, carbs: 23, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 1, fiber: 1 } },
+    { id: 4, name: '100-pure-organic-maple', brand: 'Pepperidge Farm', servingSize: '1 slice (42g)', image: bread100PureOrganicMaple, nutrition: { calories: 110, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 2, fiber: 1 } },
+    { id: 5, name: '100-whole-wheat-bread', brand: 'Wonder', servingSize: '2 slices (52g)', image: bread100WholeWheatBread, nutrition: { calories: 140, protein: 4, carbs: 26, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 4, fiber: 2 } },
+    { id: 6, name: '100-whole-wheat-stone-baked-pizza-crusts', brand: "Nature's Own", servingSize: '2 slices (52g)', image: bread100WholeWheatStoneBakedPizzaCrusts, nutrition: { calories: 120, protein: 6, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 4, fiber: 4 } },
+    { id: 7, name: '3-cheese-garlic-toast', brand: 'Pepperidge Farm', servingSize: '1 slice (32g)', image: bread3CheeseGarlicToast, nutrition: { calories: 80, protein: 3, carbs: 15, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 1, fiber: 2 } },
+    { id: 8, name: '6-grain-pumpkin-seed-bread', brand: "Arnold", servingSize: '2 slices (52g)', image: bread6GrainPumpkinSeedBread, nutrition: { calories: 120, protein: 6, carbs: 24, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 3, fiber: 4 } },
+    { id: 9, name: '7-grain-half-deli-loaf', brand: "Martin's", servingSize: '1 slice (38g)', image: bread7GrainHalfDeliLoaf, nutrition: { calories: 100, protein: 3, carbs: 19, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 3, fiber: 1 } },
+    { id: 10, name: '7-nut-seed-bread', brand: 'La Brea Bakery', servingSize: '2 oz (57g)', image: bread7NutSeedBread, nutrition: { calories: 140, protein: 5, carbs: 27, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 1, fiber: 1 } },
+    { id: 11, name: '7-sprouted-grains-cinnamon-raisin-bread', brand: "Thomas'", servingSize: '1 bagel (95g)', image: bread7SproutedGrainsCinnamonRaisinBread, nutrition: { calories: 260, protein: 10, carbs: 52, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 430, sugar: 5, fiber: 2 } },
+    { id: 12, name: '7days-soft-croissant-chocolate-breakfast-pastry', brand: "Thomas'", servingSize: '1 muffin (57g)', image: bread7DaysSoftCroissantChocolateBreakfastPastry, nutrition: { calories: 130, protein: 5, carbs: 26, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 2, fiber: 1 } },
+    { id: 13, name: 'against-the-grain-gluten-free-fresh-rosemary-baguettes', brand: "Toufayan", servingSize: '1 pita (57g)', image: breadAgainstTheGrainGlutenFreeRosemaryBaguettes, nutrition: { calories: 150, protein: 6, carbs: 30, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 2 } },
   ],
 
   'breakfast': [
