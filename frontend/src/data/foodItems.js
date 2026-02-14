@@ -116,7 +116,7 @@ const FOOD_ITEMS = {
 
   'breakfast': [
     { id: 1, name: 'maple-breakfast-sausage', brand: 'Quaker', servingSize: '1 packet (43g)', image: mapleBreakfastSausage, nutrition: { calories: 160, protein: 4, carbs: 32, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 12, fiber: 3 } },
-    { id: 2, name: 'amys-kitchen-amys-gf-vegan-classic', brand: "Kellogg's", servingSize: '2 waffles (70g)', image: amysKitchenAmysGfVeganClassic, nutrition: { calories: 190, protein: 5, carbs: 30, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 420, sugar: 3, fiber: 1 } },
+    { id: 2, name: 'eggo-waffles-homestyle', brand: "Kellogg's", servingSize: '2 waffles (70g)', image: amysKitchenAmysGfVeganClassic, nutrition: { calories: 190, protein: 5, carbs: 30, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 420, sugar: 3, fiber: 1 } },
     { id: 3, name: 'toaster-strudel-strawberry', brand: 'Pillsbury', servingSize: '1 pastry (54g)', image: anniesOrganicPancake, nutrition: { calories: 190, protein: 3, carbs: 25, totalFat: 9, saturatedFat: 3, transFat: 0, sodium: 190, sugar: 10, fiber: 0 } },
     { id: 4, name: 'applegate-natural-savory-turkey-breakfast-sausage', brand: "Amy's Kitchen", servingSize: '1 burrito (170g)', image: applegateNaturalSavoryTurkeyBreakfastSausage, nutrition: { calories: 270, protein: 9, carbs: 38, totalFat: 9, saturatedFat: 3.5, transFat: 0, sodium: 540, sugar: 2, fiber: 6 } },
     { id: 5, name: 'archway-classic-soft-oatmeal-cookies', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: archwayClassicSoftOatmealCookies, nutrition: { calories: 190, protein: 4, carbs: 29, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 12, fiber: 2 } },
