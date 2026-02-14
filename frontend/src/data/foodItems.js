@@ -182,10 +182,10 @@ const FOOD_ITEMS = {
     { id: 8, name: 'bread-and-butter-chips', brand: "Campbell's", servingSize: '1/2 cup (124g)', image: breadAndButterChips, nutrition: { calories: 100, protein: 2, carbs: 9, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 870, sugar: 1, fiber: 0 } },
     { id: 9, name: 'bumble-bee-chub-mackerel', brand: 'Goya', servingSize: '1/2 cup (130g)', image: bumbleBeeChubMackerel, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 340, sugar: 1, fiber: 7 } },
     { id: 10, name: 'bumble-bee-skinless-smoked', brand: 'Hormel', servingSize: '1 cup (247g)', image: bumbleBeeSkinlessSmoked, nutrition: { calories: 260, protein: 13, carbs: 28, totalFat: 9, saturatedFat: 4, transFat: 0, sodium: 1010, sugar: 5, fiber: 7 } },
-    { id: 11, name: 'bushs-best-light-red-kidney', brand: "Bumble Bee", servingSize: '2 oz drained (56g)', image: bushsBestLightRedKidney, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'cajun-chef-nacho-slices', brand: 'Del Monte', servingSize: '1/2 cup (124g)', image: cajunChefNachoSlices, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 13, fiber: 1 } },
-    { id: 13, name: 'castelvetrano-olives', brand: 'Libby\'s', servingSize: '1/2 cup (122g)', image: castelvetranoOlives, nutrition: { calories: 40, protein: 1, carbs: 9, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 3 } },
-    { id: 14, name: 'chopped-olive-tapenade', brand: 'Rosarita', servingSize: '1/2 cup (127g)', image: choppedOliveTapenade, nutrition: { calories: 120, protein: 6, carbs: 19, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 530, sugar: 0, fiber: 6 } },
+    { id: 11, name: 'bushs-best-light-red-kidney', brand: "Bush's Best", servingSize: '1/2 cup (130g)', image: bushsBestLightRedKidney, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 7 } },
+    { id: 12, name: 'cajun-chef-nacho-slices', brand: 'Cajun Chef', servingSize: '1 oz (28g)', image: cajunChefNachoSlices, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 0, fiber: 0 } },
+    { id: 13, name: 'castelvetrano-olives', brand: 'Castelvetrano', servingSize: '5 olives (15g)', image: castelvetranoOlives, nutrition: { calories: 25, protein: 0, carbs: 1, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 240, sugar: 0, fiber: 0 } },
+    { id: 14, name: 'chopped-olive-tapenade', brand: 'Mezzetta', servingSize: '2 tbsp (30g)', image: choppedOliveTapenade, nutrition: { calories: 45, protein: 0, carbs: 1, totalFat: 4.5, saturatedFat: 0.5, transFat: 0, sodium: 220, sugar: 0, fiber: 0 } },
   ],
 
   'cereal': [
