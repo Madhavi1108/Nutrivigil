@@ -27,7 +27,10 @@ const ComparisonBar = () => {
           <div className="flex items-center justify-between gap-4">
             {/* Left side - Selected products */}
             <div className="flex items-center gap-2 flex-1 overflow-x-auto">
-              <Scale className={`w-5 h-5 ${isDark ? 'text-blue-400' : 'text-blue-600'} flex-shrink-0`} />
+              <Scale
+                aria-hidden="true"
+                className={`w-5 h-5 ${isDark ? 'text-blue-400' : 'text-blue-600'} flex-shrink-0`}
+              />
               <span className={`font-medium ${isDark ? 'text-gray-200' : 'text-gray-800'} flex-shrink-0`}>
                 Compare ({comparisonProducts.length}/{4})
               </span>
@@ -44,7 +47,7 @@ const ComparisonBar = () => {
                     } rounded-lg px-3 py-2 flex-shrink-0`}
                   >
                     <img
-                      src={product.imageUrl}
+                      src={product.image || product.imageUrl}
                       alt={product.name}
                       className="w-8 h-8 object-cover rounded"
                     />
