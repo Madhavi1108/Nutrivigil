@@ -128,7 +128,7 @@ const FOOD_ITEMS = {
     { id: 11, name: 'belvita-peanut-butter-breakfast-biscuits', brand: 'Pillsbury', servingSize: '1 scramble (89g)', image: belvitaPeanutButterBreakfastBiscuits, nutrition: { calories: 180, protein: 7, carbs: 24, totalFat: 6, saturatedFat: 2.5, transFat: 0, sodium: 490, sugar: 2, fiber: 1 } },
     { id: 12, name: 'belvita-protein-oats-honey-and-chocolate-breakfast', brand: 'KIND', servingSize: '1 bar (50g)', image: belvitaProteinOatsHoneyAndChocolateBreakfast, nutrition: { calories: 230, protein: 12, carbs: 17, totalFat: 13, saturatedFat: 2.5, transFat: 0, sodium: 160, sugar: 8, fiber: 6 } },
     { id: 13, name: 'betty-crocker-bisquick-pancake', brand: "McCann's", servingSize: '1/4 cup dry (40g)', image: bettyCrockerBisquickPancake, nutrition: { calories: 150, protein: 5, carbs: 27, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 4 } },
-    { id: 14, name: 'betty-crocker-bisquick-shake', brand: 'Kodiak Cakes', servingSize: '2 waffles (76g)', image: bettyCrockerBisquickShake, nutrition: { calories: 260, protein: 13, carbs: 35, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 530, sugar: 6, fiber: 6 } },
+    { id: 14, name: 'betty-crocker-bisquick-shake', brand: 'Betty Crocker', servingSize: '2 waffles (76g)', image: bettyCrockerBisquickShake, nutrition: { calories: 260, protein: 13, carbs: 35, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 530, sugar: 6, fiber: 6 } },
   ],
 
   'cakes': [
