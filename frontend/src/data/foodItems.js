@@ -162,6 +162,22 @@ import agedProvoloneAndProsciuttoTortelloni from '../assets/pasta/aged-provolone
 import banzaChickpeaPastaAlphabets from '../assets/pasta/banza-chickpea-pasta-alphabets.jpg';
 import buckwheatSobaNoodles from '../assets/pasta/buckwheat-soba-noodles.jpg';
 
+// snacks imports (normalized filenames)
+import agedCheddarThaiRice from '../assets/snacks/aged-cheddar-thai-rice.jpg';
+import agedWhiteCheddarPotato from '../assets/snacks/aged-white-cheddar-potato.jpg';
+import alaniNutritionProteinBar from '../assets/snacks/alani-nutrition-protein-bar.jpg';
+import alimentosBermudez from '../assets/snacks/alimentos-bermudez.jpg';
+import allDayVarietyMultipack from '../assets/snacks/all-day-variety-multipack.jpg';
+import allDressedPotatoChips from '../assets/snacks/all-dressed-potato-chips.jpg';
+import andyCappsBigBagHot from '../assets/snacks/andy-capps-big-bag-hot.jpg';
+import annieChun from '../assets/snacks/annie-chun.jpg';
+import bachmanJaxCheddarCheese from '../assets/snacks/bachman-jax-cheddar-cheese.jpg';
+import backyardBarbequePotatoChips from '../assets/snacks/backyard-barbeque-potato-chips.jpg';
+import bakedRufflesFlamin from '../assets/snacks/baked-ruffles-flamin.jpg';
+import bakedSeaSaltPitaChips from '../assets/snacks/baked-sea-salt-pita-chips.jpg';
+import doubleChocolateSnack from '../assets/snacks/double-chocolate.jpg';
+import roastedSeaweedSnacks from '../assets/snacks/roasted-seaweed-snacks.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -353,20 +369,20 @@ const FOOD_ITEMS = {
   ],
 
   'snacks': [
-    { id: 1, name: 'Classic Potato Chips', brand: "Lay's", servingSize: '1 oz (28g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 15, totalFat: 10, saturatedFat: 1.5, transFat: 0, sodium: 170, sugar: 1, fiber: 1 } },
-    { id: 2, name: 'Nacho Cheese Doritos', brand: 'Doritos', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 150, protein: 2, carbs: 18, totalFat: 8, saturatedFat: 1, transFat: 0, sodium: 210, sugar: 0, fiber: 1 } },
-    { id: 3, name: 'Dark Chocolate Almond Bar', brand: 'KIND', servingSize: '1 bar (40g)', image: null, nutrition: { calories: 200, protein: 6, carbs: 16, totalFat: 15, saturatedFat: 3.5, transFat: 0, sodium: 125, sugar: 8, fiber: 7 } },
-    { id: 4, name: 'Pretzel Sticks', brand: 'Rold Gold', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 3, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 450, sugar: 1, fiber: 1 } },
-    { id: 5, name: 'Cheez-It Crackers', brand: 'Kellogg\'s', servingSize: '27 crackers (30g)', image: null, nutrition: { calories: 150, protein: 3, carbs: 17, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 230, sugar: 0, fiber: 1 } },
-    { id: 6, name: 'Peanut Butter Cups', brand: 'Reese\'s', servingSize: '2 cups (42g)', image: null, nutrition: { calories: 210, protein: 5, carbs: 24, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 135, sugar: 21, fiber: 2 } },
-    { id: 7, name: 'Trail Mix', brand: 'Planters', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 140, protein: 5, carbs: 13, totalFat: 9, saturatedFat: 1.5, transFat: 0, sodium: 65, sugar: 8, fiber: 2 } },
-    { id: 8, name: 'Popcorn Butter', brand: 'Pop Secret', servingSize: '2 tbsp unpopped (36g)', image: null, nutrition: { calories: 170, protein: 3, carbs: 19, totalFat: 10, saturatedFat: 2.5, transFat: 0, sodium: 330, sugar: 0, fiber: 3 } },
-    { id: 9, name: 'Goldfish Crackers Cheddar', brand: 'Pepperidge Farm', servingSize: '55 pieces (30g)', image: null, nutrition: { calories: 140, protein: 3, carbs: 20, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 250, sugar: 0, fiber: 1 } },
-    { id: 10, name: 'Sun chips Original', brand: 'Frito-Lay', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 115, sugar: 2, fiber: 2 } },
-    { id: 11, name: 'Pringles Original', brand: 'Pringles', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 150, protein: 1, carbs: 15, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 135, sugar: 0, fiber: 1 } },
-    { id: 12, name: 'Mixed Nuts', brand: 'Planters', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 170, protein: 5, carbs: 6, totalFat: 15, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 1, fiber: 2 } },
-    { id: 13, name: 'Granola Bar Peanut Butter', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: null, nutrition: { calories: 190, protein: 4, carbs: 28, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 180, sugar: 11, fiber: 2 } },
-    { id: 14, name: 'Beef Jerky Original', brand: "Jack Link's", servingSize: '1 oz (28g)', image: null, nutrition: { calories: 80, protein: 13, carbs: 4, totalFat: 1.5, saturatedFat: 0.5, transFat: 0, sodium: 590, sugar: 3, fiber: 0 } },
+    { id: 1, name: 'Classic Potato Chips', brand: "Lay's", servingSize: '1 oz (28g)', image: allDressedPotatoChips, nutrition: { calories: 160, protein: 2, carbs: 15, totalFat: 10, saturatedFat: 1.5, transFat: 0, sodium: 170, sugar: 1, fiber: 1 } },
+    { id: 2, name: 'Nacho Cheese Doritos', brand: 'Doritos', servingSize: '1 oz (28g)', image: andyCappsBigBagHot, nutrition: { calories: 150, protein: 2, carbs: 18, totalFat: 8, saturatedFat: 1, transFat: 0, sodium: 210, sugar: 0, fiber: 1 } },
+    { id: 3, name: 'Dark Chocolate Almond Bar', brand: 'KIND', servingSize: '1 bar (40g)', image: doubleChocolateSnack, nutrition: { calories: 200, protein: 6, carbs: 16, totalFat: 15, saturatedFat: 3.5, transFat: 0, sodium: 125, sugar: 8, fiber: 7 } },
+    { id: 4, name: 'Pretzel Sticks', brand: 'Rold Gold', servingSize: '1 oz (28g)', image: bakedSeaSaltPitaChips, nutrition: { calories: 110, protein: 3, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 450, sugar: 1, fiber: 1 } },
+    { id: 5, name: 'Cheez-It Crackers', brand: 'Kellogg\'s', servingSize: '27 crackers (30g)', image: agedWhiteCheddarPotato, nutrition: { calories: 150, protein: 3, carbs: 17, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 230, sugar: 0, fiber: 1 } },
+    { id: 6, name: 'Peanut Butter Cups', brand: 'Reese\'s', servingSize: '2 cups (42g)', image: agedCheddarThaiRice, nutrition: { calories: 210, protein: 5, carbs: 24, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 135, sugar: 21, fiber: 2 } },
+    { id: 7, name: 'Trail Mix', brand: 'Planters', servingSize: '1 oz (28g)', image: alimentosBermudez, nutrition: { calories: 140, protein: 5, carbs: 13, totalFat: 9, saturatedFat: 1.5, transFat: 0, sodium: 65, sugar: 8, fiber: 2 } },
+    { id: 8, name: 'Popcorn Butter', brand: 'Pop Secret', servingSize: '2 tbsp unpopped (36g)', image: bakedRufflesFlamin, nutrition: { calories: 170, protein: 3, carbs: 19, totalFat: 10, saturatedFat: 2.5, transFat: 0, sodium: 330, sugar: 0, fiber: 3 } },
+    { id: 9, name: 'Goldfish Crackers Cheddar', brand: 'Pepperidge Farm', servingSize: '55 pieces (30g)', image: bachmanJaxCheddarCheese, nutrition: { calories: 140, protein: 3, carbs: 20, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 250, sugar: 0, fiber: 1 } },
+    { id: 10, name: 'Sun chips Original', brand: 'Frito-Lay', servingSize: '1 oz (28g)', image: backyardBarbequePotatoChips, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 115, sugar: 2, fiber: 2 } },
+    { id: 11, name: 'Pringles Original', brand: 'Pringles', servingSize: '1 oz (28g)', image: allDayVarietyMultipack, nutrition: { calories: 150, protein: 1, carbs: 15, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 135, sugar: 0, fiber: 1 } },
+    { id: 12, name: 'Mixed Nuts', brand: 'Planters', servingSize: '1 oz (28g)', image: roastedSeaweedSnacks, nutrition: { calories: 170, protein: 5, carbs: 6, totalFat: 15, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 1, fiber: 2 } },
+    { id: 13, name: 'Granola Bar Peanut Butter', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: alaniNutritionProteinBar, nutrition: { calories: 190, protein: 4, carbs: 28, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 180, sugar: 11, fiber: 2 } },
+    { id: 14, name: 'Beef Jerky Original', brand: "Jack Link's", servingSize: '1 oz (28g)', image: annieChun, nutrition: { calories: 80, protein: 13, carbs: 4, totalFat: 1.5, saturatedFat: 0.5, transFat: 0, sodium: 590, sugar: 3, fiber: 0 } },
   ],
 
   'produce': [
