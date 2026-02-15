@@ -148,6 +148,20 @@ import busteloCafeEspresso from '../assets/coffee/bustelo-cafe-espresso.jpg';
 import espressoWholeBeanCoffee from '../assets/coffee/espresso-whole-bean-coffee.jpg';
 import everydayValue from '../assets/coffee/everyday-value.jpg';
 
+// pasta image imports (normalized)
+import barillaCollezioneBucatiniPasta from '../assets/pasta/barilla-collezione-bucatini-pasta.jpg';
+import banzaChickpeaPastaPenne from '../assets/pasta/banza-chickpea-pasta-penne.jpg';
+import banzaGlutenFreeLinquinePasta from '../assets/pasta/banza-gluten-free-linquine-pasta.jpg';
+import barillaClassicBlueBoxElbowsPasta from '../assets/pasta/barilla-classic-blue-box-elbows-pasta.jpg';
+import barillaChickpeaRotini from '../assets/pasta/barilla-chickpea-rotini.jpg';
+import angelHair from '../assets/pasta/angel-hair.jpg';
+import abc123Pasta from '../assets/pasta/abc-123-pasta.jpg';
+import banzaChickpeaPastaLasagna from '../assets/pasta/banza-chickpea-pasta-lasagna.jpg';
+import anniesOnePotWhiteCheddarPasta from '../assets/pasta/annies-one-pot-white-cheddar-pasta.jpg';
+import agedProvoloneAndProsciuttoTortelloni from '../assets/pasta/aged-provolone-and-prosciutto-tortelloni.jpg';
+import banzaChickpeaPastaAlphabets from '../assets/pasta/banza-chickpea-pasta-alphabets.jpg';
+import buckwheatSobaNoodles from '../assets/pasta/buckwheat-soba-noodles.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -324,18 +338,18 @@ const FOOD_ITEMS = {
   ],
 
   'pasta': [
-    { id: 1, name: 'Spaghetti', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 2, name: 'Penne Rigate', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
-    { id: 3, name: 'Fettuccine', brand: 'Buitoni', servingSize: '2 oz (56g)', image: null, nutrition: { calories: 200, protein: 8, carbs: 38, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 15, sugar: 1, fiber: 2 } },
-    { id: 4, name: 'Elbow Macaroni', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 5, name: 'Linguine', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
-    { id: 6, name: 'Rotini', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 7, name: 'Angel Hair', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 8, name: 'Whole Grain Spaghetti', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 180, protein: 8, carbs: 38, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 6 } },
-    { id: 9, name: 'Lasagna Noodles', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 2, fiber: 2 } },
-    { id: 10, name: 'Ravioli Cheese', brand: 'Buitoni', servingSize: '1 cup (108g)', image: null, nutrition: { calories: 270, protein: 13, carbs: 40, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 380, sugar: 3, fiber: 2 } },
-    { id: 11, name: 'Tortellini Three Cheese', brand: 'Buitoni', servingSize: '3/4 cup (81g)', image: null, nutrition: { calories: 240, protein: 11, carbs: 37, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 350, sugar: 2, fiber: 2 } },
-    { id: 12, name: 'Orzo', brand: 'RiceSelect', servingSize: '1/4 cup dry (45g)', image: null, nutrition: { calories: 160, protein: 6, carbs: 33, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 1, name: 'barilla-collezione-bucatini-pasta', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: barillaCollezioneBucatiniPasta, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 2, name: 'banza-chickpea-pasta-penne', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: banzaChickpeaPastaPenne, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 3, name: 'buckwheat-soba-noodles', brand: 'Buitoni', servingSize: '2 oz (56g)', image: buckwheatSobaNoodles, nutrition: { calories: 200, protein: 8, carbs: 38, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 15, sugar: 1, fiber: 2 } },
+    { id: 4, name: 'barilla-classic-blue-box-elbows-pasta', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: barillaClassicBlueBoxElbowsPasta, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 5, name: 'banza-gluten-free-linquine-pasta', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: banzaGlutenFreeLinquinePasta, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 6, name: 'barilla-chickpea-rotini', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: barillaChickpeaRotini, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 7, name: 'angel-hair', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: angelHair, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 8, name: 'abc-123-pasta', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: abc123Pasta, nutrition: { calories: 180, protein: 8, carbs: 38, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 6 } },
+    { id: 9, name: 'banza-chickpea-pasta-lasagna', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: banzaChickpeaPastaLasagna, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 2, fiber: 2 } },
+    { id: 10, name: 'annies-one-pot-white-cheddar-pasta', brand: 'Buitoni', servingSize: '1 cup (108g)', image: anniesOnePotWhiteCheddarPasta, nutrition: { calories: 270, protein: 13, carbs: 40, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 380, sugar: 3, fiber: 2 } },
+    { id: 11, name: 'aged-provolone-and-prosciutto-tortelloni', brand: 'Buitoni', servingSize: '3/4 cup (81g)', image: agedProvoloneAndProsciuttoTortelloni, nutrition: { calories: 240, protein: 11, carbs: 37, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 350, sugar: 2, fiber: 2 } },
+    { id: 12, name: 'banza-chickpea-pasta-alphabets', brand: 'RiceSelect', servingSize: '1/4 cup dry (45g)', image: banzaChickpeaPastaAlphabets, nutrition: { calories: 160, protein: 6, carbs: 33, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
   ],
 
   'snacks': [
