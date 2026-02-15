@@ -121,6 +121,18 @@ import belvitaProteinOatsHoneyAndChocolateBreakfast from '../assets/breakfast/be
 import bettyCrockerBisquickPancake from '../assets/breakfast/betty-crocker-bisquick-pancake.jpg';
 import bettyCrockerBisquickShake from '../assets/breakfast/betty-crocker-bisquick-shake.jpg';
 
+// coffee image imports (normalized)
+import arabicaBeansCoffee from '../assets/coffee/arabica-beans-coffee.jpg';
+import bigBangGroundBeans from '../assets/coffee/big-bang-ground-beans.jpg';
+import birdsBlendCoffee from '../assets/coffee/birds-blend-coffee.jpg';
+import blackCatClassicEspresso from '../assets/coffee/black-cat-classic-espresso.jpg';
+import blackMagicColdBrewed from '../assets/coffee/black-magic-cold-brewed.jpg';
+import blueNileBlendWholeBeen from '../assets/coffee/blue-nile-blend-whole-been.jpg';
+import brightLightsNewEngland from '../assets/coffee/bright-lights-new-england.jpg';
+import busteloCafeEspresso from '../assets/coffee/bustelo-cafe-espresso.jpg';
+import espressoWholeBeanCoffee from '../assets/coffee/espresso-whole-bean-coffee.jpg';
+import everydayValue from '../assets/coffee/everyday-value.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -251,16 +263,16 @@ const FOOD_ITEMS = {
   ],
 
   'coffee': [
-    { id: 1, name: 'Pike Place Roast Ground', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 2, name: 'Original Blend Medium Roast', brand: "Dunkin'", servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 3, name: 'Classic Roast Instant', brand: 'Folgers', servingSize: '1 tsp (2g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 4, name: 'French Roast Dark', brand: 'Peet\'s Coffee', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'Breakfast Blend', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 6, name: 'Colombian', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'Espresso Roast', brand: 'Lavazza', servingSize: '1 tbsp (7g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 8, name: 'Hazelnut Medium Roast', brand: 'Dunkin\'', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'Decaf Medium Roast', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'Cold Brew Concentrate', brand: 'Starbucks', servingSize: '1/2 cup (120ml)', image: null, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    { id: 1, name: 'arabica-beans-coffee', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: arabicaBeansCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 2, name: 'big-bang-ground-beans', brand: "Dunkin'", servingSize: '1 tbsp (5g)', image: bigBangGroundBeans, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 3, name: 'birds-blend-coffee', brand: 'Folgers', servingSize: '1 tsp (2g)', image: birdsBlendCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 4, name: 'black-cat-classic-espresso', brand: 'Peet\'s Coffee', servingSize: '1 tbsp (5g)', image: blackCatClassicEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'black-magic-cold-brewed', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: blackMagicColdBrewed, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 6, name: 'blue-nile-blend-whole-been', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: blueNileBlendWholeBeen, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'bright-lights-new-england', brand: 'Lavazza', servingSize: '1 tbsp (7g)', image: brightLightsNewEngland, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 8, name: 'bustelo-cafe-espresso', brand: 'Dunkin\'', servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'espresso-whole-bean-coffee', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'everyday-value', brand: 'Starbucks', servingSize: '1/2 cup (120ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
   ],
 
   'cookies-biscuits': [
