@@ -45,6 +45,20 @@ import peachPie from '../assets/cake/peach-pie.jpg';
 import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
 import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
 
+// cheese image imports (normalized)
+import oneYearSharpCheddar from '../assets/cheese/1-year-sharp-cheddar.jpg';
+import tenYearCheddar from '../assets/cheese/10-year-cheddar.jpg';
+import gruyere from '../assets/cheese/gruyere.jpg';
+import milkfatCottageCheese from '../assets/cheese/milkfat-cottage-cheese.jpg';
+import milkfatSmallCurd from '../assets/cheese/milkfat-small-curd.jpg';
+import monthAgedGouda from '../assets/cheese/month-aged-gouda.jpg';
+import monthOldManchego from '../assets/cheese/month-old-manchego.jpg';
+import parmesanRomanoCheese from '../assets/cheese/parmesan-romano-cheese.jpg';
+import vintageCheddar from '../assets/cheese/vintage-cheddar.jpg';
+import yearGouda from '../assets/cheese/year-gouda.jpg';
+import yearVintageWhiteCheddar from '../assets/cheese/year-vintage-white-cheddar.jpg';
+import yearWhiteCheddar from '../assets/cheese/year-white-cheddar.jpg';
+
 // cereal image imports (normalized)
 import activationEnergyCoffee from '../assets/cereal/activation-energy-coffee.jpg';
 import allBranBreakfastCereal from '../assets/cereal/all-bran-breakfast-cereal.jpg';
@@ -206,34 +220,34 @@ const FOOD_ITEMS = {
 
   'cereal': [
     { id: 1, name: 'activation-energy-coffee', brand: 'General Mills', servingSize: '3/4 cup (28g)', image: activationEnergyCoffee, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 9, fiber: 2 } },
-    { id: 2, name: 'All-Bran Breakfast Cereal', slug: 'all-bran-breakfast-cereal', brand: "Kellogg's", servingSize: '3/4 cup (31g)', image: allBranBreakfastCereal, nutrition: { calories: 120, protein: 7, carbs: 23, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 3 } },
-    { id: 3, name: 'Almond Butter Whole Grains Clusters', slug: 'almond-butter-whole-grains-clusters', brand: 'Kashi', servingSize: '1 cup (55g)', image: almondButterWholeGrainsClusters, nutrition: { calories: 200, protein: 8, carbs: 43, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 125, sugar: 10, fiber: 11 } },
-    { id: 4, name: 'Almond Butter', slug: 'almond-butter', brand: "Kellogg's", servingSize: '3/4 cup (29g)', image: almondButter, nutrition: { calories: 110, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 12, fiber: 1 } },
-    { id: 5, name: 'Almond Pecan Cashew', slug: 'almond-pecan-cashew', brand: 'Post', servingSize: '1 cup (59g)', image: almondPecanCashew, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 18, fiber: 7 } },
-    { id: 6, name: 'Almond Pecan Granola', slug: 'almond-pecan-granola', brand: "Kellogg's", servingSize: '1 cup (29g)', image: almondPecanGranola, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 3, fiber: 1 } },
-    { id: 7, name: "Annie's Organic Cocoa Bunnies Cereal", slug: 'annies-organic-cocoa-bunnies-cereal', brand: 'Post', servingSize: '3/4 cup (30g)', image: anniesOrganicCocoaBunniesCereal, nutrition: { calories: 120, protein: 2, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 6, fiber: 2 } },
-    { id: 8, name: 'Apple Cereal Bar', slug: 'apple-cereal-bar', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: appleCerealBar, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
-    { id: 9, name: 'Apple Cinnamon Bag', slug: 'apple-cinnamon-bag', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: appleCinnamonBag, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
-    { id: 10, name: 'Apple Jacks Giant Cereal', slug: 'apple-jacks-giant-cereal', brand: 'General Mills', servingSize: '1 cup (28g)', image: appleJacksGiantCereal, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
-    { id: 11, name: 'Apple Cinnamon Cereal', slug: 'apple-cinnamon-cereal', brand: 'General Mills', servingSize: '3/4 cup (31g)', image: appleCinnamonCereal, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
-    { id: 12, name: 'apple-cinnamon-instant-oatmeal', brand: 'Post', servingSize: '1/2 cup (58g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
-    { id: 13, name: 'apple-jacks-breakfast-cereal', brand: "Kellogg's", servingSize: '1 1/4 cup (33g)', image: appleJacksBreakfastCereal, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
-    { id: 14, name: 'apple-cinnamon-granola', brand: 'Nature Valley', servingSize: '2/3 cup (49g)', image: appleCinnamonGranola, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
+    { id: 2, name: 'all-bran-breakfast-cereal', brand: "Kellogg's", servingSize: '3/4 cup (31g)', image: allBranBreakfastCereal, nutrition: { calories: 120, protein: 7, carbs: 23, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 3 } },
+    { id: 3, name: 'almond-butter-whole-grains-clusters', brand: 'Kashi', servingSize: '1 cup (55g)', image: almondButterWholeGrainsClusters, nutrition: { calories: 200, protein: 8, carbs: 43, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 125, sugar: 10, fiber: 11 } },
+    { id: 4, name: 'almond-butter', brand: "Kellogg's", servingSize: '3/4 cup (29g)', image: almondButter, nutrition: { calories: 110, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 12, fiber: 1 } },
+    { id: 5, name: 'almond-pecan-cashew', brand: 'Post', servingSize: '1 cup (59g)', image: almondPecanCashew, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 18, fiber: 7 } },
+    { id: 6, name: 'almond-pecan-granola', brand: "Kellogg's", servingSize: '1 cup (29g)', image: almondPecanGranola, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 3, fiber: 1 } },
+    { id: 7, name: 'annies-organic-cocoa-bunnies-cereal', brand: 'Post', servingSize: '3/4 cup (30g)', image: anniesOrganicCocoaBunniesCereal, nutrition: { calories: 120, protein: 2, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 6, fiber: 2 } },
+    { id: 8, name: 'apple-cereal-bar', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: appleCerealBar, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
+    { id: 9, name: 'apple-cinnamon-bag', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: appleCinnamonBag, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
+    { id: 10, name: 'apple-jacks-giant-cereal', brand: 'General Mills', servingSize: '1 cup (28g)', image: appleJacksGiantCereal, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
+    { id: 11, name: 'apple-cinnamon-cereal', brand: 'Sample Brand', servingSize: '3/4 cup (31g)', image: appleCinnamonCereal, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
+    { id: 12, name: 'apple-cinnamon-instant-oatmeal', brand: 'Sample Brand', servingSize: '1/2 cup (58g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
+    { id: 13, name: 'apple-jacks-breakfast-cereal', brand: 'Sample Brand', servingSize: '1 1/4 cup (33g)', image: appleJacksBreakfastCereal, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
+    { id: 14, name: 'apple-cinnamon-granola', brand: 'Sample Brand', servingSize: '2/3 cup (49g)', image: appleCinnamonGranola, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
   ],
 
   'cheese': [
-    { id: 1, name: 'Sharp Cheddar Cheese', brand: 'Kraft', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 2, name: 'Colby Jack Slices', brand: 'Sargento', servingSize: '1 slice (21g)', image: null, nutrition: { calories: 80, protein: 5, carbs: 0, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 3, name: 'Medium Cheddar Block', brand: 'Tillamook', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 4, name: 'Mozzarella String Cheese', brand: 'Kraft', servingSize: '1 stick (28g)', image: null, nutrition: { calories: 80, protein: 6, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 200, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'Swiss Cheese Slices', brand: 'Sargento', servingSize: '1 slice (21g)', image: null, nutrition: { calories: 80, protein: 6, carbs: 0, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
-    { id: 6, name: 'Pepper Jack Cheese', brand: 'Tillamook', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'Cream Cheese', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
-    { id: 8, name: 'Parmesan Grated', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: null, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'Mexican Cheese Blend', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'Feta Cheese Crumbled', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
-    { id: 11, name: 'Provolone Slices', brand: 'Sargento', servingSize: '1 slice (20g)', image: null, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'Blue Cheese Crumbles', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
+    { id: 1, name: '1-year-sharp-cheddar', brand: 'Kraft', servingSize: '1 oz (28g)', image: oneYearSharpCheddar, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 2, name: '10-year-cheddar', brand: 'Sargento', servingSize: '1 slice (21g)', image: tenYearCheddar, nutrition: { calories: 80, protein: 5, carbs: 0, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 3, name: 'gruyere', brand: 'Tillamook', servingSize: '1 oz (28g)', image: gruyere, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 4, name: 'milkfat-small-curd', brand: 'Kraft', servingSize: '1 stick (28g)', image: milkfatSmallCurd, nutrition: { calories: 80, protein: 6, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 200, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'milkfat-cottage-cheese', brand: 'Sargento', servingSize: '1 slice (21g)', image: milkfatCottageCheese, nutrition: { calories: 80, protein: 6, carbs: 0, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 6, name: 'month-aged-gouda', brand: 'Tillamook', servingSize: '1 oz (28g)', image: monthAgedGouda, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'month-old-manchego', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: monthOldManchego, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
+    { id: 8, name: 'parmesan-romano-cheese', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: parmesanRomanoCheese, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'Sargento Cheddar Cheese', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: vintageCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'Athenos Gouda Cheese', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: yearGouda, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
+    { id: 11, name: 'Sargento White Cheddar Slice', brand: 'Sargento', servingSize: '1 slice (20g)', image: yearVintageWhiteCheddar, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Treasure Cave White Cheddar Cheese', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: yearWhiteCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
   ],
 
   'coffee': [
