@@ -33,6 +33,63 @@ import purePumpkin from '../assets/baking/pure-pumpkin.jpg';
 import semiSweetBakingChips from '../assets/baking/semi-sweet-baking-chips.jpg';
 import bakingHero from '../assets/baking.jpg';
 
+// cake image imports (normalized)
+import organicTraditional2 from '../assets/cake/organic-traditional-2.jpg';
+import fourInVeganVanillaCake from '../assets/cake/4in-vegan-vanilla-cake.jpg';
+import applePie from '../assets/cake/apple-pie.jpg';
+import applePie1 from '../assets/cake/apple-pie-1.jpg';
+import berrySupremePie from '../assets/cake/berry-supreme-pie.jpg';
+import bundtVeganChocolateDippedVanilla from '../assets/cake/bundt-vegan-chocolate-dipped-vanilla.jpg';
+import chocolateSwirlCheesecake from '../assets/cake/chocolate-swirl-cheesecake.jpg';
+import peachPie from '../assets/cake/peach-pie.jpg';
+import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
+import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
+
+// cheese image imports (normalized)
+import oneYearSharpCheddar from '../assets/cheese/1-year-sharp-cheddar.jpg';
+import tenYearCheddar from '../assets/cheese/10-year-cheddar.jpg';
+import gruyere from '../assets/cheese/gruyere.jpg';
+import milkfatCottageCheese from '../assets/cheese/milkfat-cottage-cheese.jpg';
+import milkfatSmallCurd from '../assets/cheese/milkfat-small-curd.jpg';
+import monthAgedGouda from '../assets/cheese/month-aged-gouda.jpg';
+import monthOldManchego from '../assets/cheese/month-old-manchego.jpg';
+import parmesanRomanoCheese from '../assets/cheese/parmesan-romano-cheese.jpg';
+import vintageCheddar from '../assets/cheese/vintage-cheddar.jpg';
+import yearGouda from '../assets/cheese/year-gouda.jpg';
+import yearVintageWhiteCheddar from '../assets/cheese/year-vintage-white-cheddar.jpg';
+import yearWhiteCheddar from '../assets/cheese/year-white-cheddar.jpg';
+
+// cereal image imports (normalized)
+import activationEnergyCoffee from '../assets/cereal/activation-energy-coffee.jpg';
+import allBranBreakfastCereal from '../assets/cereal/all-bran-breakfast-cereal.jpg';
+import almondButterWholeGrainsClusters from '../assets/cereal/almond-butter-whole-grains-clusters.jpg';
+import almondButter from '../assets/cereal/almond-butter.jpg';
+import almondPecanCashew from '../assets/cereal/almond-pecan-cashew.jpg';
+import almondPecanGranola from '../assets/cereal/almond-pecan-granola.jpg';
+import anniesOrganicCocoaBunniesCereal from '../assets/cereal/annies-organic-cocoa-bunnies-cereal.jpg';
+import appleCerealBar from '../assets/cereal/apple-cereal-bar.jpg';
+import appleCinnamonBag from '../assets/cereal/apple-cinnamon-bag.jpg';
+import appleCinnamonCereal from '../assets/cereal/apple-cinnamon-cereal.jpg';
+import appleCinnamonGranola from '../assets/cereal/apple-cinnamon-granola.jpg';
+import appleCinnamonInstantOatmeal from '../assets/cereal/apple-cinnamon-instant-oatmeal.jpg';
+import appleJacksBreakfastCereal from '../assets/cereal/apple-jacks-breakfast-cereal.jpg';
+import appleJacksGiantCereal from '../assets/cereal/apple-jacks-giant-cereal.jpg';
+
+// canned-goods image imports (normalized)
+import bMOriginalBakedBeans from '../assets/canned-goods/b-m-original-baked-beans.jpg';
+import babyArtichokeHeartsInOil from '../assets/canned-goods/baby-artichoke-hearts-in-oil.jpg';
+import bakersAngelFlake from '../assets/canned-goods/bakers-angel-flake.jpg';
+import bestMaidDillRelish from '../assets/canned-goods/best-maid-dill-relish.jpg';
+import blackCerignolaOlives from '../assets/canned-goods/black-cerignola-olives.jpg';
+import blackChoppedRipeOlives from '../assets/canned-goods/black-chopped-ripe-olives.jpg';
+import bourbonBadaBingCherries from '../assets/canned-goods/bourbon-bada-bing-cherries.jpg';
+import breadAndButterChips from '../assets/canned-goods/bread-and-butter-chips.jpg';
+import bumbleBeeChubMackerel from '../assets/canned-goods/bumble-bee-chub-mackerel.jpg';
+import bumbleBeeSkinlessSmoked from '../assets/canned-goods/bumble-bee-skinless-smoked.jpg';
+import bushsBestLightRedKidney from '../assets/canned-goods/bushs-best-light-red-kidney.jpg';
+import cajunChefNachoSlices from '../assets/canned-goods/cajun-chef-nacho-slices.jpg';
+import castelvetranoOlives from '../assets/canned-goods/castelvetrano-olives.jpg';
+import choppedOliveTapenade from '../assets/canned-goods/chopped-olive-tapenade.jpg';
 // bread image imports (normalized)
 import bread100RyeBread from '../assets/bread/100-rye-bread.jpg';
 import bread100PureMapleSyrup from '../assets/bread/100-pure-maple-syrup.jpg';
@@ -47,6 +104,96 @@ import bread7NutSeedBread from '../assets/bread/7-nut-and-seed-bread.jpg';
 import bread7SproutedGrainsCinnamonRaisinBread from '../assets/bread/7-sprouted-grains-cinnamon-raisin-bread.jpg';
 import bread7DaysSoftCroissantChocolateBreakfastPastry from '../assets/bread/7days-soft-croissant-chocolate-breakfast-pastry.jpg';
 import breadAgainstTheGrainGlutenFreeRosemaryBaguettes from '../assets/bread/against-the-grain-gluten-free-fresh-rosemary-baguettes.jpg';
+
+// breakfast image imports (normalized)
+import mapleBreakfastSausage from '../assets/breakfast/maple-breakfast-sausage.jpg';
+import amysKitchenAmysGfVeganClassic from '../assets/breakfast/amys-kitchen-amys-gf-vegan-classic.jpg';
+import anniesOrganicPancake from '../assets/breakfast/annies-organic-pancake.jpg';
+import applegateNaturalSavoryTurkeyBreakfastSausage from '../assets/breakfast/applegate-natural-savory-turkey-breakfast-sausage.jpg';
+import archwayClassicSoftOatmealCookies from '../assets/breakfast/archway-classic-soft-oatmeal-cookies.jpg';
+import auntJemimaButterLiteSyrup from '../assets/breakfast/aunt-jemima-butter-lite-syrup.jpg';
+import auntJemimaButtermilkCompletePancake from '../assets/breakfast/aunt-jemima-buttermilk-complete-pancake.jpg';
+import auntJemimaButtermilk from '../assets/breakfast/aunt-jemima-buttermilk.jpg';
+import bajaBreakfastBurrito from '../assets/breakfast/baja-breakfast-burrito.jpg';
+import bananaPaleoPancake from '../assets/breakfast/banana-paleo-pancake.jpg';
+import belvitaPeanutButterBreakfastBiscuits from '../assets/breakfast/belvita-peanut-butter-breakfast-biscuits.jpg';
+import belvitaProteinOatsHoneyAndChocolateBreakfast from '../assets/breakfast/belvita-protein-oats-honey-and-chocolate-breakfast.jpg';
+import bettyCrockerBisquickPancake from '../assets/breakfast/betty-crocker-bisquick-pancake.jpg';
+import bettyCrockerBisquickShake from '../assets/breakfast/betty-crocker-bisquick-shake.jpg';
+
+// cookies-biscuits image imports (normalized)
+import abcMultiGrainCookies from '../assets/cokies-biscuit/abc-multi-grain-cookies.jpg';
+import absolutelyGlutenFreeChocolateMacaroonCookie from '../assets/cokies-biscuit/absolutely-gluten-free-chocolate-macaroon-cookie.jpg';
+import absolutelyGlutenFreeCoconutMacaroonCookies from '../assets/cokies-biscuit/absolutely-gluten-free-coconut-macaroon-cookies.jpg';
+import alfajores from '../assets/cokies-biscuit/alfajores.jpg';
+import almondCrescentCookies from '../assets/cokies-biscuit/almond-crescent-cookies.jpg';
+import almondMacaroon from '../assets/cokies-biscuit/almond-macaroon.jpg';
+import almondMiniBiscotti from '../assets/cokies-biscuit/almond-mini-biscotti.jpg';
+import almondScones from '../assets/cokies-biscuit/almond-scones.jpg';
+import animalCrackers from '../assets/cokies-biscuit/animal-crackers.jpg';
+import anisetteCookies from '../assets/cokies-biscuit/anisette-cookies.jpg';
+import annsBiscuitsCheddarChiveGarlicBiscuits from '../assets/cokies-biscuit/anns-biscuits-cheddar-chive-garlic-biscuits.jpg';
+import anniesGlutenFreeCocoa from '../assets/cokies-biscuit/annies-gluten-free-cocoa.jpg';
+import anniesHomegrownOrganicHoneyGrahamCrackers from '../assets/cokies-biscuit/annies-homegrown-organic-honey-graham-crackers.jpg';
+
+// coffee image imports (normalized)
+import arabicaBeansCoffee from '../assets/coffee/arabica-beans-coffee.jpg';
+import bigBangGroundBeans from '../assets/coffee/big-bang-ground-beans.jpg';
+import birdsBlendCoffee from '../assets/coffee/birds-blend-coffee.jpg';
+import blackCatClassicEspresso from '../assets/coffee/black-cat-classic-espresso.jpg';
+import blackMagicColdBrewed from '../assets/coffee/black-magic-cold-brewed.jpg';
+import blueNileBlendWholeBeen from '../assets/coffee/blue-nile-blend-whole-been.jpg';
+import brightLightsNewEngland from '../assets/coffee/bright-lights-new-england.jpg';
+import busteloCafeEspresso from '../assets/coffee/bustelo-cafe-espresso.jpg';
+import espressoWholeBeanCoffee from '../assets/coffee/espresso-whole-bean-coffee.jpg';
+import everydayValue from '../assets/coffee/everyday-value.jpg';
+
+// pasta image imports (normalized)
+import barillaCollezioneBucatiniPasta from '../assets/pasta/barilla-collezione-bucatini-pasta.jpg';
+import banzaChickpeaPastaPenne from '../assets/pasta/banza-chickpea-pasta-penne.jpg';
+import banzaGlutenFreeLinquinePasta from '../assets/pasta/banza-gluten-free-linquine-pasta.jpg';
+import barillaClassicBlueBoxElbowsPasta from '../assets/pasta/barilla-classic-blue-box-elbows-pasta.jpg';
+import barillaChickpeaRotini from '../assets/pasta/barilla-chickpea-rotini.jpg';
+import angelHair from '../assets/pasta/angel-hair.jpg';
+import abc123Pasta from '../assets/pasta/abc-123-pasta.jpg';
+import banzaChickpeaPastaLasagna from '../assets/pasta/banza-chickpea-pasta-lasagna.jpg';
+import anniesOnePotWhiteCheddarPasta from '../assets/pasta/annies-one-pot-white-cheddar-pasta.jpg';
+import agedProvoloneAndProsciuttoTortelloni from '../assets/pasta/aged-provolone-and-prosciutto-tortelloni.jpg';
+import banzaChickpeaPastaAlphabets from '../assets/pasta/banza-chickpea-pasta-alphabets.jpg';
+import buckwheatSobaNoodles from '../assets/pasta/buckwheat-soba-noodles.jpg';
+
+// snacks imports (normalized filenames)
+import agedCheddarThaiRice from '../assets/snacks/aged-cheddar-thai-rice.jpg';
+import agedWhiteCheddarPotato from '../assets/snacks/aged-white-cheddar-potato.jpg';
+import alaniNutritionProteinBar from '../assets/snacks/alani-nutrition-protein-bar.jpg';
+import alimentosBermudez from '../assets/snacks/alimentos-bermudez.jpg';
+import allDayVarietyMultipack from '../assets/snacks/all-day-variety-multipack.jpg';
+import allDressedPotatoChips from '../assets/snacks/all-dressed-potato-chips.jpg';
+import andyCappsBigBagHot from '../assets/snacks/andy-capps-big-bag-hot.jpg';
+import annieChun from '../assets/snacks/annie-chun.jpg';
+import bachmanJaxCheddarCheese from '../assets/snacks/bachman-jax-cheddar-cheese.jpg';
+import backyardBarbequePotatoChips from '../assets/snacks/backyard-barbeque-potato-chips.jpg';
+import bakedRufflesFlamin from '../assets/snacks/baked-ruffles-flamin.jpg';
+import bakedSeaSaltPitaChips from '../assets/snacks/baked-sea-salt-pita-chips.jpg';
+import doubleChocolateSnack from '../assets/snacks/double-chocolate.jpg';
+import roastedSeaweedSnacks from '../assets/snacks/roasted-seaweed-snacks.jpg';
+
+// produce images (normalized)
+import aDozenCousinsClassicRefriedPintoBeans from '../assets/produce/a-dozen-cousins-classic-refried-pinto-beans.jpg';
+import aTasteOfThaiSweetenedCondensedCoconut from '../assets/produce/a-taste-of-thai-sweetened-condensed-coconut.jpg';
+import beanSoupStarter from '../assets/produce/bean-soup-starter.jpg';
+import delMonteFruitCupsMandarinOranges from '../assets/produce/del-monte-fruit-cups-mandarin-oranges.jpg';
+import delMonteNoSugarAddedVarietyPack from '../assets/produce/del-monte-no-sugar-added-variety-pack.jpg';
+import doleCherryMixedFruitIn100PercentFruitJuice from '../assets/produce/dole-cherry-mixed-fruit-in-100-percent-fruit-juice.jpg';
+import fruitCupFruitRefreshersGrapefruit from '../assets/produce/fruit-cup-fruit-refreshers-grapefruit.jpg';
+import fruitCupsFruitAndChiaMango from '../assets/produce/fruit-cups-fruit-and-chia-mango.jpg';
+import fruitCupsFruitAndOatsApple from '../assets/produce/fruit-cups-fruit-and-oats-apple.jpg';
+import mixedFruitProduce from '../assets/produce/mixed-fruit.jpg';
+import orangeGel from '../assets/produce/orange-gel.jpg';
+import orangesIn100PercentFruitJuice from '../assets/produce/oranges-in-100-percent-fruit-juice.jpg';
+import organicCoconutFlakes from '../assets/produce/organic-coconut-flakes.jpg';
+import pureVermontMapleSyrup from '../assets/produce/pure-vermont-maple-syrup.jpg';
+import produceGeneric from '../assets/produce.jpg';
 
 const FOOD_ITEMS = {
   'baby-food': [
@@ -99,111 +246,111 @@ const FOOD_ITEMS = {
   ],
 
   'breakfast': [
-    { id: 1, name: 'Instant Oatmeal Maple Brown Sugar', brand: 'Quaker', servingSize: '1 packet (43g)', image: null, nutrition: { calories: 160, protein: 4, carbs: 32, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 12, fiber: 3 } },
-    { id: 2, name: 'Eggo Waffles Homestyle', brand: "Kellogg's", servingSize: '2 waffles (70g)', image: null, nutrition: { calories: 190, protein: 5, carbs: 30, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 420, sugar: 3, fiber: 1 } },
-    { id: 3, name: 'Toaster Strudel Strawberry', brand: 'Pillsbury', servingSize: '1 pastry (54g)', image: null, nutrition: { calories: 190, protein: 3, carbs: 25, totalFat: 9, saturatedFat: 3, transFat: 0, sodium: 190, sugar: 10, fiber: 0 } },
-    { id: 4, name: 'Breakfast Burrito', brand: "Amy's Kitchen", servingSize: '1 burrito (170g)', image: null, nutrition: { calories: 270, protein: 9, carbs: 38, totalFat: 9, saturatedFat: 3.5, transFat: 0, sodium: 540, sugar: 2, fiber: 6 } },
-    { id: 5, name: 'Granola Bars Oats & Honey', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: null, nutrition: { calories: 190, protein: 4, carbs: 29, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 12, fiber: 2 } },
-    { id: 6, name: 'Pop-Tarts Brown Sugar Cinnamon', brand: "Kellogg's", servingSize: '1 pastry (50g)', image: null, nutrition: { calories: 200, protein: 2, carbs: 35, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 180, sugar: 16, fiber: 1 } },
-    { id: 7, name: 'Breakfast Sandwich Sausage Egg Cheese', brand: 'Jimmy Dean', servingSize: '1 sandwich (127g)', image: null, nutrition: { calories: 380, protein: 14, carbs: 30, totalFat: 22, saturatedFat: 8, transFat: 0, sodium: 760, sugar: 3, fiber: 2 } },
-    { id: 8, name: 'Blueberry Pancakes', brand: 'Krusteaz', servingSize: '3 pancakes (106g)', image: null, nutrition: { calories: 210, protein: 6, carbs: 39, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 650, sugar: 9, fiber: 1 } },
-    { id: 9, name: 'French Toast Sticks', brand: 'Eggo', servingSize: '4 sticks (84g)', image: null, nutrition: { calories: 230, protein: 6, carbs: 36, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 380, sugar: 9, fiber: 2 } },
-    { id: 10, name: 'Breakfast Bowl Eggs Bacon Potatoes', brand: 'Jimmy Dean', servingSize: '1 bowl (227g)', image: null, nutrition: { calories: 350, protein: 14, carbs: 27, totalFat: 21, saturatedFat: 7, transFat: 0, sodium: 750, sugar: 2, fiber: 2 } },
-    { id: 11, name: 'Toaster Scrambles Bacon Egg Cheese', brand: 'Pillsbury', servingSize: '1 scramble (89g)', image: null, nutrition: { calories: 180, protein: 7, carbs: 24, totalFat: 6, saturatedFat: 2.5, transFat: 0, sodium: 490, sugar: 2, fiber: 1 } },
-    { id: 12, name: 'Protein Breakfast Bar', brand: 'KIND', servingSize: '1 bar (50g)', image: null, nutrition: { calories: 230, protein: 12, carbs: 17, totalFat: 13, saturatedFat: 2.5, transFat: 0, sodium: 160, sugar: 8, fiber: 6 } },
-    { id: 13, name: 'Steel Cut Oatmeal', brand: "McCann's", servingSize: '1/4 cup dry (40g)', image: null, nutrition: { calories: 150, protein: 5, carbs: 27, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 4 } },
-    { id: 14, name: 'Protein Waffles', brand: 'Kodiak Cakes', servingSize: '2 waffles (76g)', image: null, nutrition: { calories: 260, protein: 13, carbs: 35, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 530, sugar: 6, fiber: 6 } },
+    { id: 1, name: 'maple-breakfast-sausage', brand: 'Quaker', servingSize: '1 packet (43g)', image: mapleBreakfastSausage, nutrition: { calories: 160, protein: 4, carbs: 32, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 12, fiber: 3 } },
+    { id: 2, name: 'eggo-waffles-homestyle', brand: "Kellogg's", servingSize: '2 waffles (70g)', image: amysKitchenAmysGfVeganClassic, nutrition: { calories: 190, protein: 5, carbs: 30, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 420, sugar: 3, fiber: 1 } },
+    { id: 3, name: 'toaster-strudel-strawberry', brand: 'Pillsbury', servingSize: '1 pastry (54g)', image: anniesOrganicPancake, nutrition: { calories: 190, protein: 3, carbs: 25, totalFat: 9, saturatedFat: 3, transFat: 0, sodium: 190, sugar: 10, fiber: 0 } },
+    { id: 4, name: 'applegate-natural-savory-turkey-breakfast-sausage', brand: "Amy's Kitchen", servingSize: '1 burrito (170g)', image: applegateNaturalSavoryTurkeyBreakfastSausage, nutrition: { calories: 270, protein: 9, carbs: 38, totalFat: 9, saturatedFat: 3.5, transFat: 0, sodium: 540, sugar: 2, fiber: 6 } },
+    { id: 5, name: 'archway-classic-soft-oatmeal-cookies', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: archwayClassicSoftOatmealCookies, nutrition: { calories: 190, protein: 4, carbs: 29, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 12, fiber: 2 } },
+    { id: 6, name: 'aunt-jemima-butter-lite-syrup', brand: "Kellogg's", servingSize: '1 pastry (50g)', image: auntJemimaButterLiteSyrup, nutrition: { calories: 200, protein: 2, carbs: 35, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 180, sugar: 16, fiber: 1 } },
+    { id: 7, name: 'aunt-jemima-buttermilk-complete-pancake', brand: 'Jimmy Dean', servingSize: '1 sandwich (127g)', image: auntJemimaButtermilkCompletePancake, nutrition: { calories: 380, protein: 14, carbs: 30, totalFat: 22, saturatedFat: 8, transFat: 0, sodium: 760, sugar: 3, fiber: 2 } },
+    { id: 8, name: 'aunt-jemima-buttermilk', brand: 'Krusteaz', servingSize: '3 pancakes (106g)', image: auntJemimaButtermilk, nutrition: { calories: 210, protein: 6, carbs: 39, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 650, sugar: 9, fiber: 1 } },
+    { id: 9, name: 'baja-breakfast-burrito', brand: 'Eggo', servingSize: '4 sticks (84g)', image: bajaBreakfastBurrito, nutrition: { calories: 230, protein: 6, carbs: 36, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 380, sugar: 9, fiber: 2 } },
+    { id: 10, name: 'banana-paleo-pancake', brand: 'Jimmy Dean', servingSize: '1 bowl (227g)', image: bananaPaleoPancake, nutrition: { calories: 350, protein: 14, carbs: 27, totalFat: 21, saturatedFat: 7, transFat: 0, sodium: 750, sugar: 2, fiber: 2 } },
+    { id: 11, name: 'belvita-peanut-butter-breakfast-biscuits', brand: 'Pillsbury', servingSize: '1 scramble (89g)', image: belvitaPeanutButterBreakfastBiscuits, nutrition: { calories: 180, protein: 7, carbs: 24, totalFat: 6, saturatedFat: 2.5, transFat: 0, sodium: 490, sugar: 2, fiber: 1 } },
+    { id: 12, name: 'belvita-protein-oats-honey-and-chocolate-breakfast', brand: 'KIND', servingSize: '1 bar (50g)', image: belvitaProteinOatsHoneyAndChocolateBreakfast, nutrition: { calories: 230, protein: 12, carbs: 17, totalFat: 13, saturatedFat: 2.5, transFat: 0, sodium: 160, sugar: 8, fiber: 6 } },
+    { id: 13, name: 'betty-crocker-bisquick-pancake', brand: "McCann's", servingSize: '1/4 cup dry (40g)', image: bettyCrockerBisquickPancake, nutrition: { calories: 150, protein: 5, carbs: 27, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 4 } },
+    { id: 14, name: 'betty-crocker-bisquick-shake', brand: 'Betty Crocker', servingSize: '2 waffles (76g)', image: bettyCrockerBisquickShake, nutrition: { calories: 260, protein: 13, carbs: 35, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 530, sugar: 6, fiber: 6 } },
   ],
 
   'cakes': [
-    { id: 1, name: 'Yellow Cake Mix', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 320, sugar: 19, fiber: 0 } },
-    { id: 2, name: 'Chocolate Fudge Cake Mix', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 33, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 440, sugar: 19, fiber: 1 } },
-    { id: 3, name: 'Crumb Coffee Cake', brand: "Entenmann's", servingSize: '1/8 cake (57g)', image: null, nutrition: { calories: 250, protein: 3, carbs: 36, totalFat: 11, saturatedFat: 2.5, transFat: 0, sodium: 220, sugar: 19, fiber: 1 } },
-    { id: 4, name: 'Angel Food Cake Mix', brand: 'Pillsbury', servingSize: '1/12 cake', image: null, nutrition: { calories: 140, protein: 3, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 21, fiber: 0 } },
-    { id: 5, name: 'Pound Cake', brand: 'Sara Lee', servingSize: '1/10 cake (77g)', image: null, nutrition: { calories: 310, protein: 4, carbs: 40, totalFat: 15, saturatedFat: 9, transFat: 0, sodium: 270, sugar: 23, fiber: 1 } },
-    { id: 6, name: 'Carrot Cake', brand: "Entenmann's", servingSize: '1/8 cake (79g)', image: null, nutrition: { calories: 330, protein: 3, carbs: 42, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 250, sugar: 28, fiber: 1 } },
-    { id: 7, name: 'Chocolate Cake', brand: 'Sara Lee', servingSize: '1/8 cake (80g)', image: null, nutrition: { calories: 270, protein: 3, carbs: 38, totalFat: 12, saturatedFat: 3, transFat: 0, sodium: 340, sugar: 24, fiber: 2 } },
-    { id: 8, name: 'Red Velvet Cake Mix', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 34, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 340, sugar: 19, fiber: 0 } },
-    { id: 9, name: 'Lemon Cake Mix', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 300, sugar: 20, fiber: 0 } },
-    { id: 10, name: 'Marble Cake', brand: "Entenmann's", servingSize: '1/8 cake (71g)', image: null, nutrition: { calories: 280, protein: 3, carbs: 38, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 240, sugar: 22, fiber: 1 } },
+    { id: 1, name: 'organic-traditional-2', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: organicTraditional2, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 320, sugar: 19, fiber: 0 } },
+    { id: 2, name: '4in-vegan-vanilla-cake', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: fourInVeganVanillaCake, nutrition: { calories: 160, protein: 2, carbs: 33, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 440, sugar: 19, fiber: 1 } },
+    { id: 3, name: 'apple-pie', brand: "Entenmann's", servingSize: '1/8 cake (57g)', image: applePie, nutrition: { calories: 250, protein: 3, carbs: 36, totalFat: 11, saturatedFat: 2.5, transFat: 0, sodium: 220, sugar: 19, fiber: 1 } },
+    { id: 4, name: 'apple-pie-1', brand: 'Pillsbury', servingSize: '1/12 cake', image: applePie1, nutrition: { calories: 140, protein: 3, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 21, fiber: 0 } },
+    { id: 5, name: 'berry-supreme-pie', brand: 'Sara Lee', servingSize: '1/10 cake (77g)', image: berrySupremePie, nutrition: { calories: 310, protein: 4, carbs: 40, totalFat: 15, saturatedFat: 9, transFat: 0, sodium: 270, sugar: 23, fiber: 1 } },
+    { id: 6, name: 'bundt-vegan-chocolate-dipped-vanilla', brand: "Entenmann's", servingSize: '1/8 cake (79g)', image: bundtVeganChocolateDippedVanilla, nutrition: { calories: 330, protein: 3, carbs: 42, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 250, sugar: 28, fiber: 1 } },
+    { id: 7, name: 'chocolate-swirl-cheesecake', brand: 'Sara Lee', servingSize: '1/8 cake (80g)', image: chocolateSwirlCheesecake, nutrition: { calories: 270, protein: 3, carbs: 38, totalFat: 12, saturatedFat: 3, transFat: 0, sodium: 340, sugar: 24, fiber: 2 } },
+    { id: 8, name: 'peach-pie', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: peachPie, nutrition: { calories: 160, protein: 2, carbs: 34, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 340, sugar: 19, fiber: 0 } },
+    { id: 9, name: 'raspberry-swirl-cheesecake', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: raspberrySwirlCheesecake, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 300, sugar: 20, fiber: 0 } },
+    { id: 10, name: 'sugarless-apple-pie', brand: "Entenmann's", servingSize: '1/8 cake (71g)', image: sugarlessApplePie, nutrition: { calories: 280, protein: 3, carbs: 38, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 240, sugar: 22, fiber: 1 } },
   ],
 
   'canned-goods': [
-    { id: 1, name: 'Tomato Soup', brand: "Campbell's", servingSize: '1 cup (245g)', image: null, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 2 } },
-    { id: 2, name: 'Chicken Noodle Soup', brand: 'Progresso', servingSize: '1 cup (245g)', image: null, nutrition: { calories: 100, protein: 7, carbs: 14, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 690, sugar: 2, fiber: 1 } },
-    { id: 3, name: 'Sweet Corn', brand: 'Green Giant', servingSize: '1/2 cup (125g)', image: null, nutrition: { calories: 60, protein: 2, carbs: 11, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 3, fiber: 2 } },
-    { id: 4, name: 'Black Beans', brand: 'Bush\'s Best', servingSize: '1/2 cup (130g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 460, sugar: 1, fiber: 7 } },
-    { id: 5, name: 'Diced Tomatoes', brand: 'Hunt\'s', servingSize: '1/2 cup (121g)', image: null, nutrition: { calories: 25, protein: 1, carbs: 5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 3, fiber: 1 } },
-    { id: 6, name: 'Pinto Beans', brand: 'Ranch Style', servingSize: '1/2 cup (130g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 20, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 490, sugar: 1, fiber: 6 } },
-    { id: 7, name: 'Green Beans', brand: 'Del Monte', servingSize: '1/2 cup (121g)', image: null, nutrition: { calories: 20, protein: 1, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 390, sugar: 2, fiber: 2 } },
-    { id: 8, name: 'Cream of Mushroom Soup', brand: "Campbell's", servingSize: '1/2 cup (124g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 9, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 870, sugar: 1, fiber: 0 } },
-    { id: 9, name: 'Kidney Beans', brand: 'Goya', servingSize: '1/2 cup (130g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 340, sugar: 1, fiber: 7 } },
-    { id: 10, name: 'Chili with Beans', brand: 'Hormel', servingSize: '1 cup (247g)', image: null, nutrition: { calories: 260, protein: 13, carbs: 28, totalFat: 9, saturatedFat: 4, transFat: 0, sodium: 1010, sugar: 5, fiber: 7 } },
-    { id: 11, name: 'Tuna in Water', brand: "Bumble Bee", servingSize: '2 oz drained (56g)', image: null, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'Canned Peaches', brand: 'Del Monte', servingSize: '1/2 cup (124g)', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 13, fiber: 1 } },
-    { id: 13, name: 'Pumpkin Puree', brand: 'Libby\'s', servingSize: '1/2 cup (122g)', image: null, nutrition: { calories: 40, protein: 1, carbs: 9, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 3 } },
-    { id: 14, name: 'Refried Beans', brand: 'Rosarita', servingSize: '1/2 cup (127g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 19, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 530, sugar: 0, fiber: 6 } },
+    { id: 1, name: 'b-m-original-baked-beans', brand: "Campbell's", servingSize: '1 cup (245g)', image: bMOriginalBakedBeans, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 2 } },
+    { id: 2, name: 'baby-artichoke-hearts-in-oil', brand: 'Progresso', servingSize: '1 cup (245g)', image: babyArtichokeHeartsInOil, nutrition: { calories: 100, protein: 7, carbs: 14, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 690, sugar: 2, fiber: 1 } },
+    { id: 3, name: 'bakers-angel-flake', brand: 'Green Giant', servingSize: '1/2 cup (125g)', image: bakersAngelFlake, nutrition: { calories: 60, protein: 2, carbs: 11, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 3, fiber: 2 } },
+    { id: 4, name: 'best-maid-dill-relish', brand: 'Bush\'s Best', servingSize: '1/2 cup (130g)', image: bestMaidDillRelish, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 460, sugar: 1, fiber: 7 } },
+    { id: 5, name: 'black-cerignola-olives', brand: 'Hunt\'s', servingSize: '1/2 cup (121g)', image: blackCerignolaOlives, nutrition: { calories: 25, protein: 1, carbs: 5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 3, fiber: 1 } },
+    { id: 6, name: 'black-chopped-ripe-olives', brand: 'Ranch Style', servingSize: '1/2 cup (130g)', image: blackChoppedRipeOlives, nutrition: { calories: 120, protein: 6, carbs: 20, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 490, sugar: 1, fiber: 6 } },
+    { id: 7, name: 'bourbon-bada-bing-cherries', brand: 'Del Monte', servingSize: '1/2 cup (121g)', image: bourbonBadaBingCherries, nutrition: { calories: 20, protein: 1, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 390, sugar: 2, fiber: 2 } },
+    { id: 8, name: 'bread-and-butter-chips', brand: "Campbell's", servingSize: '1/2 cup (124g)', image: breadAndButterChips, nutrition: { calories: 100, protein: 2, carbs: 9, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 870, sugar: 1, fiber: 0 } },
+    { id: 9, name: 'bumble-bee-chub-mackerel', brand: 'Goya', servingSize: '1/2 cup (130g)', image: bumbleBeeChubMackerel, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 340, sugar: 1, fiber: 7 } },
+    { id: 10, name: 'bumble-bee-skinless-smoked', brand: 'Hormel', servingSize: '1 cup (247g)', image: bumbleBeeSkinlessSmoked, nutrition: { calories: 260, protein: 13, carbs: 28, totalFat: 9, saturatedFat: 4, transFat: 0, sodium: 1010, sugar: 5, fiber: 7 } },
+    { id: 11, name: 'bushs-best-light-red-kidney', brand: "Bush's Best", servingSize: '1/2 cup (130g)', image: bushsBestLightRedKidney, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 7 } },
+    { id: 12, name: 'cajun-chef-nacho-slices', brand: 'Cajun Chef', servingSize: '1 oz (28g)', image: cajunChefNachoSlices, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 0, fiber: 0 } },
+    { id: 13, name: 'castelvetrano-olives', brand: 'Castelvetrano', servingSize: '5 olives (15g)', image: castelvetranoOlives, nutrition: { calories: 25, protein: 0, carbs: 1, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 240, sugar: 0, fiber: 0 } },
+    { id: 14, name: 'chopped-olive-tapenade', brand: 'Mezzetta', servingSize: '2 tbsp (30g)', image: choppedOliveTapenade, nutrition: { calories: 45, protein: 0, carbs: 1, totalFat: 4.5, saturatedFat: 0.5, transFat: 0, sodium: 220, sugar: 0, fiber: 0 } },
   ],
 
   'cereal': [
-    { id: 1, name: 'Honey Nut Cheerios', brand: 'General Mills', servingSize: '3/4 cup (28g)', image: null, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 9, fiber: 2 } },
-    { id: 2, name: 'Special K Original', brand: "Kellogg's", servingSize: '3/4 cup (31g)', image: null, nutrition: { calories: 120, protein: 7, carbs: 23, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 3 } },
-    { id: 3, name: 'Organic Berry Cereal', brand: 'Kashi', servingSize: '1 cup (55g)', image: null, nutrition: { calories: 200, protein: 8, carbs: 43, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 125, sugar: 10, fiber: 11 } },
-    { id: 4, name: 'Frosted Flakes', brand: "Kellogg's", servingSize: '3/4 cup (29g)', image: null, nutrition: { calories: 110, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 12, fiber: 1 } },
-    { id: 5, name: 'Raisin Bran', brand: 'Post', servingSize: '1 cup (59g)', image: null, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 18, fiber: 7 } },
-    { id: 6, name: 'Corn Flakes', brand: "Kellogg's", servingSize: '1 cup (29g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 3, fiber: 1 } },
-    { id: 7, name: 'Honey Bunches of Oats', brand: 'Post', servingSize: '3/4 cup (30g)', image: null, nutrition: { calories: 120, protein: 2, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 6, fiber: 2 } },
-    { id: 8, name: 'Life Original', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: null, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
-    { id: 9, name: 'Lucky Charms', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: null, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
-    { id: 10, name: 'Cheerios Original', brand: 'General Mills', servingSize: '1 cup (28g)', image: null, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
-    { id: 11, name: 'Cinnamon Toast Crunch', brand: 'General Mills', servingSize: '3/4 cup (31g)', image: null, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
-    { id: 12, name: 'Grape-Nuts', brand: 'Post', servingSize: '1/2 cup (58g)', image: null, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
-    { id: 13, name: 'Rice Krispies', brand: "Kellogg's", servingSize: '1 1/4 cup (33g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
-    { id: 14, name: 'Granola Oats & Honey', brand: 'Nature Valley', servingSize: '2/3 cup (49g)', image: null, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
+    { id: 1, name: 'activation-energy-coffee', brand: 'General Mills', servingSize: '3/4 cup (28g)', image: activationEnergyCoffee, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 9, fiber: 2 } },
+    { id: 2, name: 'all-bran-breakfast-cereal', brand: "Kellogg's", servingSize: '3/4 cup (31g)', image: allBranBreakfastCereal, nutrition: { calories: 120, protein: 7, carbs: 23, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 3 } },
+    { id: 3, name: 'almond-butter-whole-grains-clusters', brand: 'Kashi', servingSize: '1 cup (55g)', image: almondButterWholeGrainsClusters, nutrition: { calories: 200, protein: 8, carbs: 43, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 125, sugar: 10, fiber: 11 } },
+    { id: 4, name: 'almond-butter', brand: "Kellogg's", servingSize: '3/4 cup (29g)', image: almondButter, nutrition: { calories: 110, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 12, fiber: 1 } },
+    { id: 5, name: 'almond-pecan-cashew', brand: 'Post', servingSize: '1 cup (59g)', image: almondPecanCashew, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 18, fiber: 7 } },
+    { id: 6, name: 'almond-pecan-granola', brand: "Kellogg's", servingSize: '1 cup (29g)', image: almondPecanGranola, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 3, fiber: 1 } },
+    { id: 7, name: 'annies-organic-cocoa-bunnies-cereal', brand: 'Post', servingSize: '3/4 cup (30g)', image: anniesOrganicCocoaBunniesCereal, nutrition: { calories: 120, protein: 2, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 6, fiber: 2 } },
+    { id: 8, name: 'apple-cereal-bar', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: appleCerealBar, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
+    { id: 9, name: 'apple-cinnamon-bag', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: appleCinnamonBag, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
+    { id: 10, name: 'apple-jacks-giant-cereal', brand: 'General Mills', servingSize: '1 cup (28g)', image: appleJacksGiantCereal, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
+    { id: 11, name: 'apple-cinnamon-cereal', brand: 'Sample Brand', servingSize: '3/4 cup (31g)', image: appleCinnamonCereal, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
+    { id: 12, name: 'apple-cinnamon-instant-oatmeal', brand: 'Sample Brand', servingSize: '1/2 cup (58g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
+    { id: 13, name: 'apple-jacks-breakfast-cereal', brand: 'Sample Brand', servingSize: '1 1/4 cup (33g)', image: appleJacksBreakfastCereal, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
+    { id: 14, name: 'apple-cinnamon-granola', brand: 'Sample Brand', servingSize: '2/3 cup (49g)', image: appleCinnamonGranola, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
   ],
 
   'cheese': [
-    { id: 1, name: 'Sharp Cheddar Cheese', brand: 'Kraft', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 2, name: 'Colby Jack Slices', brand: 'Sargento', servingSize: '1 slice (21g)', image: null, nutrition: { calories: 80, protein: 5, carbs: 0, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 3, name: 'Medium Cheddar Block', brand: 'Tillamook', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 4, name: 'Mozzarella String Cheese', brand: 'Kraft', servingSize: '1 stick (28g)', image: null, nutrition: { calories: 80, protein: 6, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 200, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'Swiss Cheese Slices', brand: 'Sargento', servingSize: '1 slice (21g)', image: null, nutrition: { calories: 80, protein: 6, carbs: 0, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
-    { id: 6, name: 'Pepper Jack Cheese', brand: 'Tillamook', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'Cream Cheese', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
-    { id: 8, name: 'Parmesan Grated', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: null, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'Mexican Cheese Blend', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'Feta Cheese Crumbled', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
-    { id: 11, name: 'Provolone Slices', brand: 'Sargento', servingSize: '1 slice (20g)', image: null, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'Blue Cheese Crumbles', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
+    { id: 1, name: '1-year-sharp-cheddar', brand: 'Kraft', servingSize: '1 oz (28g)', image: oneYearSharpCheddar, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 2, name: '10-year-cheddar', brand: 'Sargento', servingSize: '1 slice (21g)', image: tenYearCheddar, nutrition: { calories: 80, protein: 5, carbs: 0, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 3, name: 'gruyere', brand: 'Tillamook', servingSize: '1 oz (28g)', image: gruyere, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 4, name: 'milkfat-small-curd', brand: 'Kraft', servingSize: '1 stick (28g)', image: milkfatSmallCurd, nutrition: { calories: 80, protein: 6, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 200, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'milkfat-cottage-cheese', brand: 'Sargento', servingSize: '1 slice (21g)', image: milkfatCottageCheese, nutrition: { calories: 80, protein: 6, carbs: 0, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 6, name: 'month-aged-gouda', brand: 'Tillamook', servingSize: '1 oz (28g)', image: monthAgedGouda, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'month-old-manchego', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: monthOldManchego, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
+    { id: 8, name: 'parmesan-romano-cheese', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: parmesanRomanoCheese, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'Sargento Cheddar Cheese', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: vintageCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'Athenos Gouda Cheese', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: yearGouda, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
+    { id: 11, name: 'Sargento White Cheddar Slice', brand: 'Sargento', servingSize: '1 slice (20g)', image: yearVintageWhiteCheddar, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Treasure Cave White Cheddar Cheese', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: yearWhiteCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
   ],
 
   'coffee': [
-    { id: 1, name: 'Pike Place Roast Ground', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 2, name: 'Original Blend Medium Roast', brand: "Dunkin'", servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 3, name: 'Classic Roast Instant', brand: 'Folgers', servingSize: '1 tsp (2g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 4, name: 'French Roast Dark', brand: 'Peet\'s Coffee', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'Breakfast Blend', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 6, name: 'Colombian', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'Espresso Roast', brand: 'Lavazza', servingSize: '1 tbsp (7g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 8, name: 'Hazelnut Medium Roast', brand: 'Dunkin\'', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'Decaf Medium Roast', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'Cold Brew Concentrate', brand: 'Starbucks', servingSize: '1/2 cup (120ml)', image: null, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    { id: 1, name: 'arabica-beans-coffee', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: arabicaBeansCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 2, name: 'big-bang-ground-beans', brand: "Dunkin'", servingSize: '1 tbsp (5g)', image: bigBangGroundBeans, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 3, name: 'birds-blend-coffee', brand: 'Folgers', servingSize: '1 tsp (2g)', image: birdsBlendCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 4, name: 'black-cat-classic-espresso', brand: 'Peet\'s Coffee', servingSize: '1 tbsp (5g)', image: blackCatClassicEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'black-magic-cold-brewed', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: blackMagicColdBrewed, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 6, name: 'blue-nile-blend-whole-been', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: blueNileBlendWholeBeen, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'bright-lights-new-england', brand: 'Lavazza', servingSize: '1 tbsp (7g)', image: brightLightsNewEngland, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 8, name: 'bustelo-cafe-espresso', brand: 'Dunkin\'', servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'espresso-whole-bean-coffee', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'everyday-value', brand: 'Starbucks', servingSize: '1/2 cup (120ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
   ],
 
   'cookies-biscuits': [
-    { id: 1, name: 'Oreo Chocolate Sandwich Cookies', brand: 'Nabisco', servingSize: '3 cookies (34g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 25, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 135, sugar: 14, fiber: 1 } },
-    { id: 2, name: 'Chips Ahoy! Original', brand: 'Nabisco', servingSize: '3 cookies (33g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 105, sugar: 11, fiber: 1 } },
-    { id: 3, name: 'Milano Cookies', brand: 'Pepperidge Farm', servingSize: '3 cookies (34g)', image: null, nutrition: { calories: 180, protein: 2, carbs: 21, totalFat: 10, saturatedFat: 5, transFat: 0, sodium: 60, sugar: 10, fiber: 1 } },
-    { id: 4, name: 'Fig Newtons', brand: 'Nabisco', servingSize: '2 cookies (29g)', image: null, nutrition: { calories: 110, protein: 1, carbs: 22, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 100, sugar: 12, fiber: 1 } },
-    { id: 5, name: 'Nilla Wafers', brand: 'Nabisco', servingSize: '8 wafers (31g)', image: null, nutrition: { calories: 140, protein: 1, carbs: 24, totalFat: 4.5, saturatedFat: 1.5, transFat: 0, sodium: 110, sugar: 11, fiber: 0 } },
-    { id: 6, name: 'Nutter Butter', brand: 'Nabisco', servingSize: '2 cookies (25g)', image: null, nutrition: { calories: 120, protein: 2, carbs: 16, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 90, sugar: 7, fiber: 1 } },
-    { id: 7, name: 'Ritz Crackers', brand: 'Nabisco', servingSize: '5 crackers (16g)', image: null, nutrition: { calories: 80, protein: 1, carbs: 10, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 1, fiber: 0 } },
-    { id: 8, name: 'Wheat Thins', brand: 'Nabisco', servingSize: '16 crackers (31g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 22, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 230, sugar: 4, fiber: 3 } },
-    { id: 9, name: 'Triscuit Original', brand: 'Nabisco', servingSize: '6 crackers (28g)', image: null, nutrition: { calories: 120, protein: 3, carbs: 19, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 0, fiber: 3 } },
-    { id: 10, name: 'Vanilla Wafers', brand: 'Keebler', servingSize: '8 wafers (30g)', image: null, nutrition: { calories: 140, protein: 1, carbs: 22, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 115, sugar: 10, fiber: 0 } },
-    { id: 11, name: 'Ginger Snaps', brand: 'Nabisco', servingSize: '4 cookies (28g)', image: null, nutrition: { calories: 120, protein: 2, carbs: 22, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 11, fiber: 0 } },
-    { id: 12, name: 'Chessmen Cookies', brand: 'Pepperidge Farm', servingSize: '3 cookies (28g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 95, sugar: 7, fiber: 0 } },
-    { id: 13, name: 'Graham Crackers Honey', brand: 'Honey Maid', servingSize: '2 full sheets (28g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
+    { id: 1, name: 'abc-multi-grain-cookies', brand: 'Nabisco', servingSize: '3 cookies (34g)', image: abcMultiGrainCookies, nutrition: { calories: 160, protein: 2, carbs: 25, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 135, sugar: 14, fiber: 1 } },
+    { id: 2, name: 'absolutely-gluten-free-chocolate-macaroon-cookie', brand: 'Nabisco', servingSize: '3 cookies (33g)', image: absolutelyGlutenFreeChocolateMacaroonCookie, nutrition: { calories: 160, protein: 2, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 105, sugar: 11, fiber: 1 } },
+    { id: 3, name: 'absolutely-gluten-free-coconut-macaroon-cookies', brand: 'Pepperidge Farm', servingSize: '3 cookies (34g)', image: absolutelyGlutenFreeCoconutMacaroonCookies, nutrition: { calories: 180, protein: 2, carbs: 21, totalFat: 10, saturatedFat: 5, transFat: 0, sodium: 60, sugar: 10, fiber: 1 } },
+    { id: 4, name: 'alfajores', brand: 'Nabisco', servingSize: '2 cookies (29g)', image: alfajores, nutrition: { calories: 110, protein: 1, carbs: 22, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 100, sugar: 12, fiber: 1 } },
+    { id: 5, name: 'almond-crescent-cookies', brand: 'Nabisco', servingSize: '8 wafers (31g)', image: almondCrescentCookies, nutrition: { calories: 140, protein: 1, carbs: 24, totalFat: 4.5, saturatedFat: 1.5, transFat: 0, sodium: 110, sugar: 11, fiber: 0 } },
+    { id: 6, name: 'almond-macaroon', brand: 'Nabisco', servingSize: '2 cookies (25g)', image: almondMacaroon, nutrition: { calories: 120, protein: 2, carbs: 16, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 90, sugar: 7, fiber: 1 } },
+    { id: 7, name: 'almond-mini-biscotti', brand: 'Nabisco', servingSize: '5 crackers (16g)', image: almondMiniBiscotti, nutrition: { calories: 80, protein: 1, carbs: 10, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 1, fiber: 0 } },
+    { id: 8, name: 'almond-scones', brand: 'Nabisco', servingSize: '16 crackers (31g)', image: almondScones, nutrition: { calories: 140, protein: 2, carbs: 22, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 230, sugar: 4, fiber: 3 } },
+    { id: 9, name: 'animal-crackers', brand: 'Nabisco', servingSize: '6 crackers (28g)', image: animalCrackers, nutrition: { calories: 120, protein: 3, carbs: 19, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 0, fiber: 3 } },
+    { id: 10, name: 'anisette-cookies', brand: 'Keebler', servingSize: '8 wafers (30g)', image: anisetteCookies, nutrition: { calories: 140, protein: 1, carbs: 22, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 115, sugar: 10, fiber: 0 } },
+    { id: 11, name: 'anns-biscuits-cheddar-chive-garlic-biscuits', brand: 'Nabisco', servingSize: '4 cookies (28g)', image: annsBiscuitsCheddarChiveGarlicBiscuits, nutrition: { calories: 120, protein: 2, carbs: 22, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 11, fiber: 0 } },
+    { id: 12, name: 'annies-gluten-free-cocoa', brand: 'Pepperidge Farm', servingSize: '3 cookies (28g)', image: anniesGlutenFreeCocoa, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 95, sugar: 7, fiber: 0 } },
+    { id: 13, name: 'annies-homegrown-organic-honey-graham-crackers', brand: 'Honey Maid', servingSize: '2 full sheets (28g)', image: anniesHomegrownOrganicHoneyGrahamCrackers, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
   ],
 
   'beverages': [
@@ -224,65 +371,65 @@ const FOOD_ITEMS = {
   ],
 
   'pasta': [
-    { id: 1, name: 'Spaghetti', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 2, name: 'Penne Rigate', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
-    { id: 3, name: 'Fettuccine', brand: 'Buitoni', servingSize: '2 oz (56g)', image: null, nutrition: { calories: 200, protein: 8, carbs: 38, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 15, sugar: 1, fiber: 2 } },
-    { id: 4, name: 'Elbow Macaroni', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 5, name: 'Linguine', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
-    { id: 6, name: 'Rotini', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 7, name: 'Angel Hair', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-    { id: 8, name: 'Whole Grain Spaghetti', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 180, protein: 8, carbs: 38, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 6 } },
-    { id: 9, name: 'Lasagna Noodles', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: null, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 2, fiber: 2 } },
-    { id: 10, name: 'Ravioli Cheese', brand: 'Buitoni', servingSize: '1 cup (108g)', image: null, nutrition: { calories: 270, protein: 13, carbs: 40, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 380, sugar: 3, fiber: 2 } },
-    { id: 11, name: 'Tortellini Three Cheese', brand: 'Buitoni', servingSize: '3/4 cup (81g)', image: null, nutrition: { calories: 240, protein: 11, carbs: 37, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 350, sugar: 2, fiber: 2 } },
-    { id: 12, name: 'Orzo', brand: 'RiceSelect', servingSize: '1/4 cup dry (45g)', image: null, nutrition: { calories: 160, protein: 6, carbs: 33, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 1, name: 'barilla-collezione-bucatini-pasta', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: barillaCollezioneBucatiniPasta, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 2, name: 'banza-chickpea-pasta-penne', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: banzaChickpeaPastaPenne, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 3, name: 'buckwheat-soba-noodles', brand: 'Buitoni', servingSize: '2 oz (56g)', image: buckwheatSobaNoodles, nutrition: { calories: 200, protein: 8, carbs: 38, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 15, sugar: 1, fiber: 2 } },
+    { id: 4, name: 'barilla-classic-blue-box-elbows-pasta', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: barillaClassicBlueBoxElbowsPasta, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 5, name: 'banza-gluten-free-linquine-pasta', brand: 'De Cecco', servingSize: '2 oz dry (56g)', image: banzaGlutenFreeLinquinePasta, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 6, name: 'barilla-chickpea-rotini', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: barillaChickpeaRotini, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 7, name: 'angel-hair', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: angelHair, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 8, name: 'abc-123-pasta', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: abc123Pasta, nutrition: { calories: 180, protein: 8, carbs: 38, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 6 } },
+    { id: 9, name: 'banza-chickpea-pasta-lasagna', brand: 'Barilla', servingSize: '2 oz dry (56g)', image: banzaChickpeaPastaLasagna, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 2, fiber: 2 } },
+    { id: 10, name: 'annies-one-pot-white-cheddar-pasta', brand: 'Buitoni', servingSize: '1 cup (108g)', image: anniesOnePotWhiteCheddarPasta, nutrition: { calories: 270, protein: 13, carbs: 40, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 380, sugar: 3, fiber: 2 } },
+    { id: 11, name: 'aged-provolone-and-prosciutto-tortelloni', brand: 'Buitoni', servingSize: '3/4 cup (81g)', image: agedProvoloneAndProsciuttoTortelloni, nutrition: { calories: 240, protein: 11, carbs: 37, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 350, sugar: 2, fiber: 2 } },
+    { id: 12, name: 'banza-chickpea-pasta-alphabets', brand: 'RiceSelect', servingSize: '1/4 cup dry (45g)', image: banzaChickpeaPastaAlphabets, nutrition: { calories: 160, protein: 6, carbs: 33, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
   ],
 
   'snacks': [
-    { id: 1, name: 'Classic Potato Chips', brand: "Lay's", servingSize: '1 oz (28g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 15, totalFat: 10, saturatedFat: 1.5, transFat: 0, sodium: 170, sugar: 1, fiber: 1 } },
-    { id: 2, name: 'Nacho Cheese Doritos', brand: 'Doritos', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 150, protein: 2, carbs: 18, totalFat: 8, saturatedFat: 1, transFat: 0, sodium: 210, sugar: 0, fiber: 1 } },
-    { id: 3, name: 'Dark Chocolate Almond Bar', brand: 'KIND', servingSize: '1 bar (40g)', image: null, nutrition: { calories: 200, protein: 6, carbs: 16, totalFat: 15, saturatedFat: 3.5, transFat: 0, sodium: 125, sugar: 8, fiber: 7 } },
-    { id: 4, name: 'Pretzel Sticks', brand: 'Rold Gold', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 3, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 450, sugar: 1, fiber: 1 } },
-    { id: 5, name: 'Cheez-It Crackers', brand: 'Kellogg\'s', servingSize: '27 crackers (30g)', image: null, nutrition: { calories: 150, protein: 3, carbs: 17, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 230, sugar: 0, fiber: 1 } },
-    { id: 6, name: 'Peanut Butter Cups', brand: 'Reese\'s', servingSize: '2 cups (42g)', image: null, nutrition: { calories: 210, protein: 5, carbs: 24, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 135, sugar: 21, fiber: 2 } },
-    { id: 7, name: 'Trail Mix', brand: 'Planters', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 140, protein: 5, carbs: 13, totalFat: 9, saturatedFat: 1.5, transFat: 0, sodium: 65, sugar: 8, fiber: 2 } },
-    { id: 8, name: 'Popcorn Butter', brand: 'Pop Secret', servingSize: '2 tbsp unpopped (36g)', image: null, nutrition: { calories: 170, protein: 3, carbs: 19, totalFat: 10, saturatedFat: 2.5, transFat: 0, sodium: 330, sugar: 0, fiber: 3 } },
-    { id: 9, name: 'Goldfish Crackers Cheddar', brand: 'Pepperidge Farm', servingSize: '55 pieces (30g)', image: null, nutrition: { calories: 140, protein: 3, carbs: 20, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 250, sugar: 0, fiber: 1 } },
-    { id: 10, name: 'Sun chips Original', brand: 'Frito-Lay', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 115, sugar: 2, fiber: 2 } },
-    { id: 11, name: 'Pringles Original', brand: 'Pringles', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 150, protein: 1, carbs: 15, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 135, sugar: 0, fiber: 1 } },
-    { id: 12, name: 'Mixed Nuts', brand: 'Planters', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 170, protein: 5, carbs: 6, totalFat: 15, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 1, fiber: 2 } },
-    { id: 13, name: 'Granola Bar Peanut Butter', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: null, nutrition: { calories: 190, protein: 4, carbs: 28, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 180, sugar: 11, fiber: 2 } },
-    { id: 14, name: 'Beef Jerky Original', brand: "Jack Link's", servingSize: '1 oz (28g)', image: null, nutrition: { calories: 80, protein: 13, carbs: 4, totalFat: 1.5, saturatedFat: 0.5, transFat: 0, sodium: 590, sugar: 3, fiber: 0 } },
+    { id: 1, name: 'Classic Potato Chips', brand: "Lay's", servingSize: '1 oz (28g)', image: allDressedPotatoChips, nutrition: { calories: 160, protein: 2, carbs: 15, totalFat: 10, saturatedFat: 1.5, transFat: 0, sodium: 170, sugar: 1, fiber: 1 } },
+    { id: 2, name: 'Nacho Cheese Doritos', brand: 'Doritos', servingSize: '1 oz (28g)', image: andyCappsBigBagHot, nutrition: { calories: 150, protein: 2, carbs: 18, totalFat: 8, saturatedFat: 1, transFat: 0, sodium: 210, sugar: 0, fiber: 1 } },
+    { id: 3, name: 'Dark Chocolate Almond Bar', brand: 'KIND', servingSize: '1 bar (40g)', image: doubleChocolateSnack, nutrition: { calories: 200, protein: 6, carbs: 16, totalFat: 15, saturatedFat: 3.5, transFat: 0, sodium: 125, sugar: 8, fiber: 7 } },
+    { id: 4, name: 'Pretzel Sticks', brand: 'Rold Gold', servingSize: '1 oz (28g)', image: bakedSeaSaltPitaChips, nutrition: { calories: 110, protein: 3, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 450, sugar: 1, fiber: 1 } },
+    { id: 5, name: 'Cheez-It Crackers', brand: 'Kellogg\'s', servingSize: '27 crackers (30g)', image: agedWhiteCheddarPotato, nutrition: { calories: 150, protein: 3, carbs: 17, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 230, sugar: 0, fiber: 1 } },
+    { id: 6, name: 'Peanut Butter Cups', brand: 'Reese\'s', servingSize: '2 cups (42g)', image: agedCheddarThaiRice, nutrition: { calories: 210, protein: 5, carbs: 24, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 135, sugar: 21, fiber: 2 } },
+    { id: 7, name: 'Trail Mix', brand: 'Planters', servingSize: '1 oz (28g)', image: alimentosBermudez, nutrition: { calories: 140, protein: 5, carbs: 13, totalFat: 9, saturatedFat: 1.5, transFat: 0, sodium: 65, sugar: 8, fiber: 2 } },
+    { id: 8, name: 'Popcorn Butter', brand: 'Pop Secret', servingSize: '2 tbsp unpopped (36g)', image: bakedRufflesFlamin, nutrition: { calories: 170, protein: 3, carbs: 19, totalFat: 10, saturatedFat: 2.5, transFat: 0, sodium: 330, sugar: 0, fiber: 3 } },
+    { id: 9, name: 'Goldfish Crackers Cheddar', brand: 'Pepperidge Farm', servingSize: '55 pieces (30g)', image: bachmanJaxCheddarCheese, nutrition: { calories: 140, protein: 3, carbs: 20, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 250, sugar: 0, fiber: 1 } },
+    { id: 10, name: 'Sun chips Original', brand: 'Frito-Lay', servingSize: '1 oz (28g)', image: backyardBarbequePotatoChips, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 115, sugar: 2, fiber: 2 } },
+    { id: 11, name: 'Pringles Original', brand: 'Pringles', servingSize: '1 oz (28g)', image: allDayVarietyMultipack, nutrition: { calories: 150, protein: 1, carbs: 15, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 135, sugar: 0, fiber: 1 } },
+    { id: 12, name: 'Mixed Nuts', brand: 'Planters', servingSize: '1 oz (28g)', image: roastedSeaweedSnacks, nutrition: { calories: 170, protein: 5, carbs: 6, totalFat: 15, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 1, fiber: 2 } },
+    { id: 13, name: 'Granola Bar Peanut Butter', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: alaniNutritionProteinBar, nutrition: { calories: 190, protein: 4, carbs: 28, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 180, sugar: 11, fiber: 2 } },
+    { id: 14, name: 'Beef Jerky Original', brand: "Jack Link's", servingSize: '1 oz (28g)', image: annieChun, nutrition: { calories: 80, protein: 13, carbs: 4, totalFat: 1.5, saturatedFat: 0.5, transFat: 0, sodium: 590, sugar: 3, fiber: 0 } },
   ],
 
   'produce': [
-    { id: 1, name: 'Organic Bananas', brand: 'Fresh', servingSize: '1 medium (118g)', image: null, nutrition: { calories: 105, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 14, fiber: 3 } },
-    { id: 2, name: 'Gala Apples', brand: 'Fresh', servingSize: '1 medium (182g)', image: null, nutrition: { calories: 95, protein: 0, carbs: 25, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 19, fiber: 4 } },
-    { id: 3, name: 'Baby Carrots', brand: 'Bolthouse Farms', servingSize: '3 oz (85g)', image: null, nutrition: { calories: 35, protein: 1, carbs: 8, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 75, sugar: 5, fiber: 2 } },
-    { id: 4, name: 'Broccoli Florets', brand: 'Fresh', servingSize: '1 cup (91g)', image: null, nutrition: { calories: 31, protein: 3, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 30, sugar: 1, fiber: 2 } },
-    { id: 5, name: 'Strawberries', brand: 'Driscoll\'s', servingSize: '8 strawberries (147g)', image: null, nutrition: { calories: 50, protein: 1, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 7, fiber: 3 } },
-    { id: 6, name: 'Blueberries', brand: 'Driscoll\'s', servingSize: '1 cup (148g)', image: null, nutrition: { calories: 85, protein: 1, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 15, fiber: 4 } },
-    { id: 7, name: 'Spinach', brand: 'Fresh', servingSize: '2 cups (60g)', image: null, nutrition: { calories: 14, protein: 2, carbs: 2, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 47, sugar: 0, fiber: 1 } },
-    { id: 8, name: 'Cherry Tomatoes', brand: 'Fresh', servingSize: '1 cup (149g)', image: null, nutrition: { calories: 27, protein: 1, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 7, sugar: 4, fiber: 2 } },
-    { id: 9, name: 'Avocado', brand: 'Fresh', servingSize: '1/2 avocado (68g)', image: null, nutrition: { calories: 114, protein: 1, carbs: 6, totalFat: 11, saturatedFat: 1.5, transFat: 0, sodium: 5, sugar: 0, fiber: 5 } },
-    { id: 10, name: 'Red Bell Pepper', brand: 'Fresh', servingSize: '1 medium (119g)', image: null, nutrition: { calories: 37, protein: 1, carbs: 7, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 4, sugar: 5, fiber: 2 } },
-    { id: 11, name: 'Grapes Red Seedless', brand: 'Fresh', servingSize: '3/4 cup (126g)', image: null, nutrition: { calories: 90, protein: 1, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 3, sugar: 20, fiber: 1 } },
-    { id: 12, name: 'Romaine Lettuce', brand: 'Fresh', servingSize: '2 cups shredded (85g)', image: null, nutrition: { calories: 15, protein: 1, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 4, sugar: 1, fiber: 2 } },
-    { id: 13, name: 'Oranges Navel', brand: 'Fresh', servingSize: '1 medium (140g)', image: null, nutrition: { calories: 69, protein: 1, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 3 } },
-    { id: 14, name: 'Sweet Potato', brand: 'Fresh', servingSize: '1 medium (130g)', image: null, nutrition: { calories: 112, protein: 2, carbs: 26, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 72, sugar: 5, fiber: 4 } },
+    { id: 1, name: 'a-dozen-cousins-classic-refried-pinto-beans', brand: 'A Dozen Cousins', servingSize: '1 can (411g)', image: aDozenCousinsClassicRefriedPintoBeans, nutrition: { calories: 200, protein: 7, carbs: 30, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 420, sugar: 2, fiber: 5 } },
+    { id: 2, name: 'a-taste-of-thai-sweetened-condensed-coconut', brand: 'A Taste Of Thai', servingSize: '1 tbsp (15g)', image: aTasteOfThaiSweetenedCondensedCoconut, nutrition: { calories: 60, protein: 0, carbs: 10, totalFat: 2, saturatedFat: 1.5, transFat: 0, sodium: 10, sugar: 9, fiber: 0 } },
+    { id: 3, name: 'bean-soup-starter', brand: 'Beans Co.', servingSize: '1 packet (25g)', image: beanSoupStarter, nutrition: { calories: 90, protein: 3, carbs: 18, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 1, fiber: 3 } },
+    { id: 4, name: 'del-monte-fruit-cups-mandarin-oranges', brand: 'Del Monte', servingSize: '1 cup (100g)', image: delMonteFruitCupsMandarinOranges, nutrition: { calories: 70, protein: 0, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 14, fiber: 1 } },
+    { id: 5, name: 'del-monte-no-sugar-added-variety-pack', brand: 'Del Monte', servingSize: '1 cup (100g)', image: delMonteNoSugarAddedVarietyPack, nutrition: { calories: 50, protein: 0, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 9, fiber: 1 } },
+    { id: 6, name: 'dole-cherry-mixed-fruit-in-100-percent-fruit-juice', brand: 'Dole', servingSize: '1 cup (120g)', image: doleCherryMixedFruitIn100PercentFruitJuice, nutrition: { calories: 80, protein: 0, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 1 } },
+    { id: 7, name: 'fruit-cup-fruit-refreshers-grapefruit', brand: 'Fruit Cup', servingSize: '1 cup (100g)', image: fruitCupFruitRefreshersGrapefruit, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 1 } },
+    { id: 8, name: 'fruit-cups-fruit-and-chia-mango', brand: 'Fruit Cups', servingSize: '1 cup (100g)', image: fruitCupsFruitAndChiaMango, nutrition: { calories: 90, protein: 1, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 2 } },
+    { id: 9, name: 'fruit-cups-fruit-and-oats-apple', brand: 'Fruit Cups', servingSize: '1 cup (100g)', image: fruitCupsFruitAndOatsApple, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 18, fiber: 3 } },
+    { id: 10, name: 'mixed-fruit', brand: 'Generic', servingSize: '1 cup (120g)', image: mixedFruitProduce, nutrition: { calories: 80, protein: 1, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 2 } },
+    { id: 11, name: 'orange-gel', brand: 'Generic', servingSize: '1 cup (120g)', image: orangeGel, nutrition: { calories: 90, protein: 0, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 20, fiber: 0 } },
+    { id: 12, name: 'oranges-in-100-percent-fruit-juice', brand: 'Generic', servingSize: '1 cup (120g)', image: orangesIn100PercentFruitJuice, nutrition: { calories: 80, protein: 1, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 2 } },
+    { id: 13, name: 'organic-coconut-flakes', brand: 'Organic', servingSize: '1/4 cup (15g)', image: organicCoconutFlakes, nutrition: { calories: 100, protein: 1, carbs: 4, totalFat: 9, saturatedFat: 8, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 14, name: 'pure-vermont-maple-syrup', brand: 'Pure Vermont', servingSize: '1 tbsp (20g)', image: pureVermontMapleSyrup, nutrition: { calories: 52, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 12, fiber: 0 } },
   ],
 
   'ice-cream': [
-    { id: 1, name: 'Cherry Garcia', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: null, nutrition: { calories: 250, protein: 4, carbs: 30, totalFat: 13, saturatedFat: 8, transFat: 0, sodium: 45, sugar: 24, fiber: 1 } },
-    { id: 2, name: 'Vanilla Bean Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: null, nutrition: { calories: 270, protein: 5, carbs: 26, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 70, sugar: 23, fiber: 0 } },
-    { id: 3, name: 'Cookies & Cream', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 19, totalFat: 7, saturatedFat: 3, transFat: 0, sodium: 60, sugar: 13, fiber: 0 } },
-    { id: 4, name: 'Mint Chocolate Chip', brand: 'Turkey Hill', servingSize: '1/2 cup (66g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 7, saturatedFat: 4.5, transFat: 0, sodium: 40, sugar: 14, fiber: 1 } },
-    { id: 5, name: 'Chocolate Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: null, nutrition: { calories: 270, protein: 5, carbs: 26, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 60, sugar: 22, fiber: 1 } },
-    { id: 6, name: 'Phish Food', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: null, nutrition: { calories: 280, protein: 4, carbs: 37, totalFat: 13, saturatedFat: 8, transFat: 0, sodium: 60, sugar: 31, fiber: 1 } },
-    { id: 7, name: 'Strawberry Ice Cream', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 17, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 35, sugar: 14, fiber: 0 } },
-    { id: 8, name: 'Half Baked', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: null, nutrition: { calories: 280, protein: 4, carbs: 36, totalFat: 14, saturatedFat: 8, transFat: 0, sodium: 80, sugar: 26, fiber: 2 } },
-    { id: 9, name: 'Rocky Road', brand: 'Turkey Hill', servingSize: '1/2 cup (66g)', image: null, nutrition: { calories: 170, protein: 3, carbs: 21, totalFat: 9, saturatedFat: 5, transFat: 0, sodium: 50, sugar: 17, fiber: 1 } },
-    { id: 10, name: 'Butter Pecan', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: null, nutrition: { calories: 300, protein: 5, carbs: 24, totalFat: 21, saturatedFat: 11, transFat: 0, sodium: 140, sugar: 20, fiber: 0 } },
+    { id: 1, name: 'Cherry Garcia', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: benAndJerrysCherryGarciaIceCream, nutrition: { calories: 250, protein: 4, carbs: 30, totalFat: 13, saturatedFat: 8, transFat: 0, sodium: 45, sugar: 24, fiber: 1 } },
+    { id: 2, name: 'Vanilla Bean Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: bananasFosterIceCream, nutrition: { calories: 270, protein: 5, carbs: 26, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 70, sugar: 23, fiber: 0 } },
+    { id: 3, name: 'Cookies & Cream', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: anniesCookiesAndCreamIceCreamSandwiches, nutrition: { calories: 140, protein: 2, carbs: 19, totalFat: 7, saturatedFat: 3, transFat: 0, sodium: 60, sugar: 13, fiber: 0 } },
+    { id: 4, name: 'Mint Chocolate Chip', brand: 'Turkey Hill', servingSize: '1/2 cup (66g)', image: albaneseFatFreeGlutenFreeAssortedFlavors, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 7, saturatedFat: 4.5, transFat: 0, sodium: 40, sugar: 14, fiber: 1 } },
+    { id: 5, name: 'Chocolate Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: acaiPerformanceProtein, nutrition: { calories: 270, protein: 5, carbs: 26, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 60, sugar: 22, fiber: 1 } },
+    { id: 6, name: 'Phish Food', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: bakersSmoresCookieBalls, nutrition: { calories: 280, protein: 4, carbs: 37, totalFat: 13, saturatedFat: 8, transFat: 0, sodium: 60, sugar: 31, fiber: 1 } },
+    { id: 7, name: 'Strawberry Ice Cream', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: acaiSmoothiePopsStrawberryBanana, nutrition: { calories: 130, protein: 2, carbs: 17, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 35, sugar: 14, fiber: 0 } },
+    { id: 8, name: 'Half Baked', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: benAndJerrysBrownieBatterCoreIceCream, nutrition: { calories: 280, protein: 4, carbs: 36, totalFat: 14, saturatedFat: 8, transFat: 0, sodium: 80, sugar: 26, fiber: 2 } },
+    { id: 9, name: 'Rocky Road', brand: 'Turkey Hill', servingSize: '1/2 cup (66g)', image: appleGrape, nutrition: { calories: 170, protein: 3, carbs: 21, totalFat: 9, saturatedFat: 5, transFat: 0, sodium: 50, sugar: 17, fiber: 1 } },
+    { id: 10, name: 'Butter Pecan', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: bananasFosterIceCreamYellow, nutrition: { calories: 300, protein: 5, carbs: 24, totalFat: 21, saturatedFat: 11, transFat: 0, sodium: 140, sugar: 20, fiber: 0 } },
     { id: 11, name: 'Neapolitan', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 17, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 35, sugar: 14, fiber: 0 } },
     { id: 12, name: 'Coffee Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: null, nutrition: { calories: 270, protein: 5, carbs: 25, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 70, sugar: 22, fiber: 0 } },
   ],

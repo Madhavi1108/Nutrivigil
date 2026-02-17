@@ -18,7 +18,8 @@ import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
 import { LANGUAGE_MAP } from "../utils/languageMap";
 
-const STORAGE_KEY = "nutriguard";
+// Updated storage key to support multi-condition arrays
+const STORAGE_KEY = "nutriguard_v2";
 
 const Scanner = () => {
     const { theme } = useTheme();
@@ -38,18 +39,19 @@ const Scanner = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [error, setError] = useState(null);
     const [facingMode, setFacingMode] = useState("environment");
-    const [condition, setCondition] = useState("");
+    const [conditions, setConditions] = useState([]); // Changed to array for multi-select
 
-    // Food classes from COCO-SSD dataset
+    // Expanded food classes to include common packaging
     const FOOD_CLASSES = [
         'apple', 'banana', 'sandwich', 'orange', 'broccoli', 
-        'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'bowl'
+        'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'bowl',
+        'bottle', 'cup', 'box'
     ];
 
-    // Load user condition and TFJS model
     useEffect(() => {
-        const savedCondition = localStorage.getItem(STORAGE_KEY);
-        setCondition(savedCondition || "");
+        // Load the conditions array from local storage
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        setConditions(Array.isArray(saved) ? saved : []);
 
         const loadResources = async () => {
             try {
@@ -65,7 +67,11 @@ const Scanner = () => {
         loadResources();
     }, []);
 
-    // Detection loop
+    // Helper to join multiple conditions into a single string for the AI prompt
+    const getConditionString = () => {
+        return conditions.map(c => t(`conditions.${c}`)).join(", ");
+    };
+
     const detect = useCallback(async () => {
         if (
             !isAnalyzing &&
@@ -76,7 +82,6 @@ const Scanner = () => {
             const video = webcamRef.current.video;
             const predictions = await model.detect(video);
 
-            // Logic: Enable capture only if a food item is detected with > 60% confidence
             const foodMatch = predictions.find(p => 
                 FOOD_CLASSES.includes(p.class) && p.score > 0.60
             );
@@ -124,29 +129,23 @@ const Scanner = () => {
     };
 
     const handleCapture = async () => {
-        if (!isFoodDetected || !condition) return;
+        if (!isFoodDetected || conditions.length === 0) return;
 
         setIsAnalyzing(true);
         setError(null);
 
         try {
-            // 1. Capture frame as base64
             const imageSrc = webcamRef.current.getScreenshot();
-            
-            // 2. Convert to WebP Blob for optimization
             const response = await fetch(imageSrc);
             const blob = await response.blob();
             
-            // 3. Prepare FormData
             const formData = new FormData();
             formData.append("image", blob, "capture.webp");
-            formData.append("condition", condition);
+            // Pass the formatted multi-condition string to the backend
+            formData.append("condition", getConditionString());
             formData.append("language", LANGUAGE_MAP[i18n.language] || "English");
 
-            // 4. Send to Analyze Endpoint
             const res = await axios.post("https://nutb.onrender.com/analyze", formData);
-            
-            // Navigate to nutrition results page with the data
             navigate('/nutrition', { state: { result: res.data } });
         } catch (err) {
             setError(err.response?.data?.message || "Analysis failed. Try again.");
@@ -160,7 +159,6 @@ const Scanner = () => {
 
     return (
         <div className={`min-h-screen flex flex-col transition-colors ${theme === 'dark' ? 'bg-black text-white' : 'bg-gray-50 text-gray-900'}`}>
-            {/* Header */}
             <header className="p-4 flex items-center justify-between backdrop-blur-md border-b border-white/10">
                 <Link to="/" className="p-2 hover:bg-white/10 rounded-full">
                     <ArrowLeft size={24} />
@@ -168,11 +166,10 @@ const Scanner = () => {
                 <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
                     AI Scanner
                 </h1>
-                <div className="w-10" /> {/* Spacer */}
+                <div className="w-10" />
             </header>
 
             <main className="flex-1 relative flex flex-col items-center justify-center p-4">
-                {/* Camera Container */}
                 <div className="relative w-full max-w-md aspect-[3/4] rounded-3xl overflow-hidden bg-gray-900 shadow-2xl border-4 border-white/5">
                     {isModelLoading && (
                         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 z-50">
@@ -197,7 +194,18 @@ const Scanner = () => {
                         height={480}
                     />
 
-                    {/* HUD Overlay */}
+                    {(detectedObject === 'box' || detectedObject === 'bottle') && (
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="absolute inset-0 border-[4px] border-dashed border-purple-400/50 m-12 rounded-xl z-20 flex items-end justify-center pb-4"
+                        >
+                            <p className="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">
+                                Align Ingredient Label Here
+                            </p>
+                        </motion.div>
+                    )}
+
                     <div className="absolute top-4 left-4 z-20">
                         <AnimatePresence>
                             {isFoodDetected ? (
@@ -220,7 +228,6 @@ const Scanner = () => {
                         </AnimatePresence>
                     </div>
 
-                    {/* Error Toast */}
                     <AnimatePresence>
                         {error && (
                             <motion.div 
@@ -236,7 +243,6 @@ const Scanner = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Controls */}
                 <div className="mt-8 flex items-center gap-8">
                     <button 
                         onClick={toggleCamera}
@@ -247,7 +253,7 @@ const Scanner = () => {
 
                     <button 
                         onClick={handleCapture}
-                        disabled={!isFoodDetected || isAnalyzing || !condition}
+                        disabled={!isFoodDetected || isAnalyzing || conditions.length === 0}
                         className={`relative p-8 rounded-full transition-all transform active:scale-95 ${
                             isFoodDetected 
                             ? 'bg-gradient-to-tr from-purple-600 to-blue-500 shadow-[0_0_30px_rgba(124,58,237,0.5)]' 
@@ -259,7 +265,6 @@ const Scanner = () => {
                         ) : (
                             <Camera size={32} className="text-white" />
                         )}
-                        {/* Outer Ring Animation */}
                         {isFoodDetected && !isAnalyzing && (
                             <motion.div 
                                 className="absolute -inset-2 border-2 border-purple-400 rounded-full"
@@ -269,17 +274,16 @@ const Scanner = () => {
                         )}
                     </button>
 
-                    <div className="w-14" /> {/* Alignment Balance */}
+                    <div className="w-14" />
                 </div>
 
-                {!condition && (
-                    <p className="mt-4 text-sm text-yellow-500 font-medium">
-                        Please set your <Link to="/profile" className="underline">health condition</Link> first.
+                {conditions.length === 0 && (
+                    <p className="mt-4 text-sm text-yellow-500 font-medium text-center px-6">
+                        Please set your <Link to="/profile" className="underline">health profile</Link> first to enable AI analysis.
                     </p>
                 )}
             </main>
 
-            {/* Hint Footer */}
             <footer className="p-6 text-center">
                 <p className={`text-xs opacity-60 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     AI pre-validation helps ensure accurate results and reduces API overhead.
