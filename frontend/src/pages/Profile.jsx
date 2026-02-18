@@ -5,14 +5,160 @@ import { useTranslation } from "react-i18next";
 import { Check, Info, Lock, Sparkles, Search, X, ChevronDown } from "lucide-react";
 
 const HEALTH_CONDITIONS = [
-  { id: "diabetes", icon: "🩸", category: "metabolic", gradient: { dark: "from-red-400 to-rose-500", light: "from-red-500 to-rose-600" }, descKey: "health.desc.diabetes", benefitKeys: ["health.benefits.diabetes.lowGlycemic", "health.benefits.diabetes.carbTracking", "health.benefits.diabetes.sugarAlternatives"] },
-  { id: "hypertension", icon: "💓", category: "cardiac", gradient: { dark: "from-purple-400 to-pink-500", light: "from-purple-500 to-pink-600" }, descKey: "health.desc.hypertension", benefitKeys: ["health.benefits.hypertension.lowSodium", "health.benefits.hypertension.heartHealthyFats", "health.benefits.hypertension.potassiumRichFoods"] },
-  { id: "heart", icon: "❤️", category: "cardiac", gradient: { dark: "from-rose-400 to-pink-500", light: "from-rose-500 to-pink-600" }, descKey: "health.desc.heart", benefitKeys: ["health.benefits.heart.omega3RichFoods", "health.benefits.heart.lowCholesterol", "health.benefits.heart.antiInflammatory"] },
-  { id: "kidney", icon: "🫘", category: "specialized", gradient: { dark: "from-amber-400 to-orange-500", light: "from-amber-500 to-orange-600" }, descKey: "health.desc.kidney", benefitKeys: ["health.benefits.kidney.lowPhosphorus", "health.benefits.kidney.proteinMonitoring", "health.benefits.kidney.fluidBalance"] },
-  { id: "cholesterol", icon: "🧈", category: "cardiac", gradient: { dark: "from-yellow-400 to-orange-500", light: "from-yellow-500 to-orange-600" }, descKey: "health.desc.cholesterol", benefitKeys: ["health.benefits.cholesterol.hdlBoostingFoods", "health.benefits.cholesterol.lowSaturatedFats", "health.benefits.cholesterol.fiberRichOptions"] },
-  { id: "celiac", icon: "🌾", category: "digestive", gradient: { dark: "from-lime-400 to-emerald-500", light: "from-lime-500 to-emerald-600" }, descKey: "health.desc.celiac", benefitKeys: ["health.benefits.celiac.glutenFreeAlternatives", "health.benefits.celiac.safeGrains", "health.benefits.celiac.crossContaminationAlerts"] },
-  { id: "lactose", icon: "🥛", category: "digestive", gradient: { dark: "from-blue-400 to-sky-500", light: "from-blue-500 to-sky-600" }, descKey: "health.desc.lactose", benefitKeys: ["health.benefits.lactose.lactoseFreeOptions", "health.benefits.lactose.plantBasedMilk", "health.benefits.lactose.calciumAlternatives"] },
-  { id: "none", icon: "✨", category: "life", gradient: { dark: "from-emerald-400 to-cyan-500", light: "from-emerald-500 to-cyan-600" }, descKey: "health.desc.none", benefitKeys: ["health.benefits.none.balancedNutrition", "health.benefits.none.macroTracking", "health.benefits.none.healthyLifestyleTips"] }
+  {
+    id: "diabetes",
+    icon: "🩸",
+    gradient: {
+      dark: "from-red-400 via-pink-400 to-rose-500",
+      light: "from-red-500 via-pink-500 to-rose-600"
+    },
+    descKey: "health.desc.diabetes",
+    benefitKeys: [
+      "health.benefits.diabetes.lowGlycemic",
+      "health.benefits.diabetes.carbTracking",
+      "health.benefits.diabetes.sugarAlternatives"
+    ]
+  },
+  {
+    id: "hypertension",
+    icon: "💓",
+    gradient: {
+      dark: "from-purple-400 via-fuchsia-400 to-pink-500",
+      light: "from-purple-500 via-fuchsia-500 to-pink-600"
+    },
+    descKey: "health.desc.hypertension",
+    benefitKeys: [
+      "health.benefits.hypertension.lowSodium",
+      "health.benefits.hypertension.heartHealthyFats",
+      "health.benefits.hypertension.potassiumRichFoods"
+    ]
+  },
+  {
+    id: "heart",
+    icon: "❤️",
+    gradient: {
+      dark: "from-rose-400 via-red-400 to-pink-500",
+      light: "from-rose-500 via-red-500 to-pink-600"
+    },
+    descKey: "health.desc.heart",
+    benefitKeys: [
+      "health.benefits.heart.omega3RichFoods",
+      "health.benefits.heart.lowCholesterol",
+      "health.benefits.heart.antiInflammatory"
+    ]
+  },
+  {
+    id: "kidney",
+    icon: "🫘",
+    gradient: {
+      dark: "from-amber-400 via-yellow-400 to-orange-500",
+      light: "from-amber-500 via-yellow-500 to-orange-600"
+    },
+    descKey: "health.desc.kidney",
+    benefitKeys: [
+      "health.benefits.kidney.lowPhosphorus",
+      "health.benefits.kidney.proteinMonitoring",
+      "health.benefits.kidney.fluidBalance"
+    ]
+  },
+  {
+    id: "cholesterol",
+    icon: "🧈",
+    gradient: {
+      dark: "from-yellow-400 via-amber-400 to-orange-500",
+      light: "from-yellow-500 via-amber-500 to-orange-600"
+    },
+    descKey: "health.desc.cholesterol",
+    benefitKeys: [
+      "health.benefits.cholesterol.hdlBoostingFoods",
+      "health.benefits.cholesterol.lowSaturatedFats",
+      "health.benefits.cholesterol.fiberRichOptions"
+    ]
+  },
+  {
+    id: "celiac",
+    icon: "🌾",
+    gradient: {
+      dark: "from-lime-400 via-green-400 to-emerald-500",
+      light: "from-lime-500 via-green-500 to-emerald-600"
+    },
+    descKey: "health.desc.celiac",
+    benefitKeys: [
+      "health.benefits.celiac.glutenFreeAlternatives",
+      "health.benefits.celiac.safeGrains",
+      "health.benefits.celiac.crossContaminationAlerts"
+    ]
+  },
+  {
+    id: "lactose",
+    icon: "🥛",
+    gradient: {
+      dark: "from-blue-400 via-cyan-400 to-sky-500",
+      light: "from-blue-500 via-cyan-500 to-sky-600"
+    },
+    descKey: "health.desc.lactose",
+    benefitKeys: [
+      "health.benefits.lactose.lactoseFreeOptions",
+      "health.benefits.lactose.plantBasedMilk",
+      "health.benefits.lactose.calciumAlternatives"
+    ]
+  },
+  {
+    id: "none",
+    icon: "✨",
+    gradient: {
+      dark: "from-emerald-400 via-teal-400 to-cyan-500",
+      light: "from-emerald-500 via-teal-500 to-cyan-600"
+    },
+    descKey: "health.desc.none",
+    benefitKeys: [
+      "health.benefits.none.balancedNutrition",
+      "health.benefits.none.macroTracking",
+      "health.benefits.none.healthyLifestyleTips"
+    ]
+  },
+ {
+    id: "cervical",
+    icon: "🦴",
+    gradient: {
+      dark: "from-slate-400 via-gray-400 to-slate-500",
+      light: "from-slate-500 via-gray-500 to-slate-600"
+    },
+    descKey: "health.desc.cervical",
+    benefitKeys: [
+      "health.benefits.cervical.antiInflammatory",
+      "health.benefits.cervical.calciumRich",
+      "health.benefits.cervical.magnesiumSupport"
+    ]
+  },
+  {
+    id: "migraine",
+    icon: "🧠",
+    gradient: {
+      dark: "from-orange-400 via-amber-400 to-yellow-500",
+      light: "from-orange-500 via-amber-500 to-yellow-600"
+    },
+    descKey: "health.desc.migraine",
+    benefitKeys: [
+      "health.benefits.migraine.hydrationTracking",
+      "health.benefits.migraine.triggerIdentification",
+      "health.benefits.migraine.magnesiumIntake"
+    ]
+  },
+  {
+    id: "anxiety",
+    icon: "🧘",
+    gradient: {
+      dark: "from-teal-400 via-emerald-400 to-cyan-500",
+      light: "from-teal-500 via-emerald-500 to-cyan-600"
+    },
+    descKey: "health.desc.anxiety",
+    benefitKeys: [
+      "health.benefits.anxiety.caffeineAlerts",
+      "health.benefits.anxiety.moodBoostingFoods",
+      "health.benefits.anxiety.bloodSugarStability"
+    ]
+  }
 ];
 
 const STORAGE_KEY = "nutriguard_v2";
@@ -231,3 +377,22 @@ function Profile() {
 }
 
 export default Profile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
