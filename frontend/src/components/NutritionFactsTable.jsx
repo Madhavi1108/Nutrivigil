@@ -76,7 +76,7 @@ const NutritionFactsTable = ({ nutrition, servingSize }) => {
       { label: 'Iron',        value: iron       ? `${iron}mg`       : '--', key: null        },
     ],
     [
-      { label: 'Vit. A/D',   value: vitaminD   ? `${vitaminD}mcg`  : '--', key: null        },
+      { label: 'Vit. D',     value: vitaminD   ? `${vitaminD}mcg`  : '--', key: null        },
       { label: 'Potassium',   value: potassium  ? `${potassium}mg`  : '--', key: null        },
     ],
   ];
