@@ -139,16 +139,22 @@ const NutritionFactsTable = ({ nutrition, servingSize }) => {
           </div>
         ))}
 
-        {/* Added sugars as a compact footnote if non-zero */}
-        {addedSugars > 0 && (
+        {/* Added sugars / trans fat compact footnote if either is non-zero */}
+        {(addedSugars > 0 || transFat > 0) && (
           <div className={`pt-1 mt-0.5 border-t ${rowDivider}`}>
             <span className={`text-xs ${labelCls}`}>
-              Incl. Added Sugars&nbsp;
-              <span className={`font-semibold ${getValColor('sugar', addedSugars, isDark)}`}>
-                {addedSugars}g
-              </span>
+              {addedSugars > 0 && (
+                <>
+                  Incl. Added Sugars&nbsp;
+                  <span
+                    className={`font-semibold ${getValColor('sugar', addedSugars, isDark)}`}
+                  >
+                    {addedSugars}g
+                  </span>
+                </>
+              )}
               {transFat > 0 && (
-                <span className="ml-3">
+                <span className={addedSugars > 0 ? 'ml-3' : ''}>
                   Trans Fat&nbsp;
                   <span className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {transFat}g
