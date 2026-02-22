@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "Back to Home",
+    "title": "About NutriVigil",
+    "subtitle": "Your Personal AI Health Scanner. Instantly analyze meals to keep your nutrition perfectly aligned with your health goals.",
+    "hallTitle": "Hall of Contributions",
+    "hallDesc": "Recognizing the individuals who actively contribute to the growth and transparency of NutriVigil.",
+    "projectAdmin": "Project Admin",
+    "contributor": "Contributor",
+    "missionTitle": "Our Mission",
+    "mission": {
+      "accurate": {
+        "title": "Accurate Analysis",
+        "description": "Powered by cutting-edge Gemini v2.5 AI for precise nutritional insights tailored to your health conditions."
+      },
+      "health": {
+        "title": "Health First",
+        "description": "Personalized recommendations based on your specific health conditions like diabetes, hypertension, and more."
+      },
+      "instant": {
+        "title": "Instant Results",
+        "description": "Get comprehensive nutrition analysis in seconds, not hours. Upload, scan, and receive detailed insights instantly."
+      }
+    },
+    "ctaTitle": "Ready to Start Your Health Journey?",
+    "tryScanner": "Try Scanner Now"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Upload Photo",

@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "Zurück zur Startseite",
+    "title": "Über NutriVigil",
+    "subtitle": "Ihr persönlicher KI-Gesundheitsscanner. Analysieren Sie Mahlzeiten sofort, um Ihre Ernährung perfekt auf Ihre Gesundheitsziele abzustimmen.",
+    "hallTitle": "Beitragshalle",
+    "hallDesc": "Anerkennung der Personen, die aktiv zum Wachstum und zur Transparenz von NutriVigil beitragen.",
+    "projectAdmin": "Projektadmin",
+    "contributor": "Mitwirkender",
+    "missionTitle": "Unsere Mission",
+    "mission": {
+      "accurate": {
+        "title": "Präzise Analyse",
+        "description": "Angetrieben von modernster Gemini v2.5 KI für präzise Ernährungseinblicke, die auf Ihre Gesundheitszustände zugeschnitten sind."
+      },
+      "health": {
+        "title": "Gesundheit zuerst",
+        "description": "Personalisierte Empfehlungen basierend auf Ihren spezifischen Gesundheitszuständen wie Diabetes, Bluthochdruck und mehr."
+      },
+      "instant": {
+        "title": "Sofortige Ergebnisse",
+        "description": "Erhalten Sie in Sekunden, nicht Stunden, eine umfassende Ernährungsanalyse. Hochladen, scannen und sofort detaillierte Einblicke erhalten."
+      }
+    },
+    "ctaTitle": "Bereit, Ihre Gesundheitsreise zu beginnen?",
+    "tryScanner": "Jetzt Scanner ausprobieren"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",

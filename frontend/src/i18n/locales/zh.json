@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "返回主页",
+    "title": "关于 NutriVigil",
+    "subtitle": "您的个人AI健康扫描仪。即时分析餐食，让您的营养与健康目标完美契合。",
+    "hallTitle": "贡献者荣誉殿堂",
+    "hallDesc": "表彰积极为 NutriVigil 的成长和透明度做出贡献的个人。",
+    "projectAdmin": "项目管理员",
+    "contributor": "贡献者",
+    "missionTitle": "我们的使命",
+    "mission": {
+      "accurate": {
+        "title": "精准分析",
+        "description": "由尖端 Gemini v2.5 AI 驱动，提供针对您健康状况量身定制的精准营养洞察。"
+      },
+      "health": {
+        "title": "健康优先",
+        "description": "根据您的特定健康状况（如糖尿病、高血压等）提供个性化建议。"
+      },
+      "instant": {
+        "title": "即时结果",
+        "description": "几秒钟而非几小时内获得全面的营养分析。上传、扫描，即时获取详细洞察。"
+      }
+    },
+    "ctaTitle": "准备好开始您的健康之旅了吗？",
+    "tryScanner": "立即试用扫描仪"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 上传照片",

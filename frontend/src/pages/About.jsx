@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Target, Heart, Zap, Shield, Users, TrendingUp, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
   const { theme } = useTheme();
+  const { t } = useTranslation();
   const [allContributors, setAllContributors] = useState([]);
 
   useEffect(() => {
@@ -23,18 +25,18 @@ const About = () => {
   const missionCards = [
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Accurate Analysis",
-      description: "Powered by cutting-edge Gemini v2.5 AI for precise nutritional insights tailored to your health conditions."
+      title: t('about.mission.accurate.title'),
+      description: t('about.mission.accurate.description')
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Health First",
-      description: "Personalized recommendations based on your specific health conditions like diabetes, hypertension, and more."
+      title: t('about.mission.health.title'),
+      description: t('about.mission.health.description')
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Instant Results",
-      description: "Get comprehensive nutrition analysis in seconds, not hours. Upload, scan, and receive detailed insights instantly."
+      title: t('about.mission.instant.title'),
+      description: t('about.mission.instant.description')
     }
   ];
 
@@ -54,17 +56,17 @@ const About = () => {
             }`}
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            {t('about.backToHome')}
           </Link>
 
           <div className="text-center">
             <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              About NutriVigil
+              {t('about.title')}
             </h1>
             <p className={`text-xl max-w-3xl mx-auto leading-relaxed ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Your Personal AI Health Scanner. Instantly analyze meals to keep your nutrition perfectly aligned with your health goals.
+              {t('about.subtitle')}
             </p>
           </div>
         </div>
@@ -73,9 +75,9 @@ const About = () => {
       {/* Hall of Contributions Section */}
       <section className={`py-16 px-4 sm:px-6 lg:px-8 ${theme === 'dark' ? 'bg-[#0a0e1a]' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Hall of Contributions</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">{t('about.hallTitle')}</h2>
           <p className={`text-center mb-12 max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-            Recognizing the individuals who actively contribute to the growth and transparency of NutriVigil.
+            {t('about.hallDesc')}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -110,7 +112,7 @@ const About = () => {
                   <div className={`text-[10px] font-bold uppercase tracking-widest mt-0.5 ${
                     contributor.login.toLowerCase() === 'gagan021-5' ? 'text-purple-400' : 'text-gray-500'
                   }`}>
-                    {contributor.login.toLowerCase() === 'gagan021-5' ? 'Project Admin' : 'Contributor'}
+                    {contributor.login.toLowerCase() === 'gagan021-5' ? t('about.projectAdmin') : t('about.contributor')}
                   </div>
                 </div>
               </motion.div>
@@ -124,7 +126,7 @@ const About = () => {
         theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
       }`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-purple-400">Our Mission</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-purple-400">{t('about.missionTitle')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {missionCards.map((card, index) => (
               <div key={index} className="text-center p-6">
@@ -139,13 +141,13 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 text-center">
-        <h2 className="text-3xl font-bold mb-8">Ready to Start Your Health Journey?</h2>
-        <Link 
-          to="/scanner" 
+        <h2 className="text-3xl font-bold mb-8">{t('about.ctaTitle')}</h2>
+        <Link
+          to="/scanner"
           className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
         >
           <Zap className="w-5 h-5" />
-          Try Scanner Now
+          {t('about.tryScanner')}
         </Link>
       </section>
     </div>

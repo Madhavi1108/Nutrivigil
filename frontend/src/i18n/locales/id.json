@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "Kembali ke Beranda",
+    "title": "Tentang NutriVigil",
+    "subtitle": "Pemindai kesehatan pribadi bertenaga AI Anda. Analisis makanan secara instan untuk menjaga nutrisi Anda selaras dengan tujuan kesehatan Anda.",
+    "hallTitle": "Aula Kontribusi",
+    "hallDesc": "Menghargai individu yang aktif berkontribusi pada pertumbuhan dan transparansi NutriVigil.",
+    "projectAdmin": "Admin Proyek",
+    "contributor": "Kontributor",
+    "missionTitle": "Misi Kami",
+    "mission": {
+      "accurate": {
+        "title": "Analisis Akurat",
+        "description": "Didukung oleh AI Gemini v2.5 mutakhir untuk wawasan nutrisi yang tepat dan disesuaikan dengan kondisi kesehatan Anda."
+      },
+      "health": {
+        "title": "Kesehatan Utama",
+        "description": "Rekomendasi yang dipersonalisasi berdasarkan kondisi kesehatan spesifik Anda seperti diabetes, hipertensi, dan lainnya."
+      },
+      "instant": {
+        "title": "Hasil Instan",
+        "description": "Dapatkan analisis nutrisi lengkap dalam hitungan detik, bukan jam. Unggah, pindai, dan terima wawasan terperinci secara instan."
+      }
+    },
+    "ctaTitle": "Siap memulai perjalanan kesehatan Anda?",
+    "tryScanner": "Coba Scanner Sekarang"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Unggah Foto",

@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "Volver al inicio",
+    "title": "Acerca de NutriVigil",
+    "subtitle": "Tu escáner personal de salud con IA. Analiza comidas al instante para mantener tu nutrición perfectamente alineada con tus objetivos de salud.",
+    "hallTitle": "Salón de Contribuciones",
+    "hallDesc": "Reconociendo a las personas que contribuyen activamente al crecimiento y transparencia de NutriVigil.",
+    "projectAdmin": "Administrador del proyecto",
+    "contributor": "Colaborador",
+    "missionTitle": "Nuestra Misión",
+    "mission": {
+      "accurate": {
+        "title": "Análisis Preciso",
+        "description": "Impulsado por la IA Gemini v2.5 de última generación para obtener información nutricional precisa adaptada a tus condiciones de salud."
+      },
+      "health": {
+        "title": "Salud Primero",
+        "description": "Recomendaciones personalizadas basadas en tus condiciones de salud específicas como diabetes, hipertensión y más."
+      },
+      "instant": {
+        "title": "Resultados Instantáneos",
+        "description": "Obtén un análisis nutricional completo en segundos, no en horas. Sube, escanea y recibe información detallada al instante."
+      }
+    },
+    "ctaTitle": "¿Listo para comenzar tu viaje de salud?",
+    "tryScanner": "Probar el escáner ahora"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Subir foto",

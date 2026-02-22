@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "Retour à l'accueil",
+    "title": "À propos de NutriVigil",
+    "subtitle": "Votre scanner de santé personnel par IA. Analysez les repas instantanément pour maintenir votre nutrition parfaitement alignée avec vos objectifs de santé.",
+    "hallTitle": "Hall des Contributions",
+    "hallDesc": "Reconnaître les personnes qui contribuent activement à la croissance et à la transparence de NutriVigil.",
+    "projectAdmin": "Administrateur du projet",
+    "contributor": "Contributeur",
+    "missionTitle": "Notre Mission",
+    "mission": {
+      "accurate": {
+        "title": "Analyse Précise",
+        "description": "Propulsé par l'IA Gemini v2.5 de pointe pour des informations nutritionnelles précises adaptées à vos conditions de santé."
+      },
+      "health": {
+        "title": "La Santé d'abord",
+        "description": "Recommandations personnalisées basées sur vos conditions de santé spécifiques comme le diabète, l'hypertension et plus encore."
+      },
+      "instant": {
+        "title": "Résultats Instantanés",
+        "description": "Obtenez une analyse nutritionnelle complète en secondes, pas en heures. Téléchargez, scannez et recevez des informations détaillées instantanément."
+      }
+    },
+    "ctaTitle": "Prêt à commencer votre parcours santé ?",
+    "tryScanner": "Essayer le scanner maintenant"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Télécharger une photo",

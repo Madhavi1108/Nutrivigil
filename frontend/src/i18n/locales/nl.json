@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "Terug naar home",
+    "title": "Over NutriVigil",
+    "subtitle": "Uw persoonlijke AI-gezondheidsscanner. Analyseer maaltijden direct om uw voeding perfect af te stemmen op uw gezondheidsdoelen.",
+    "hallTitle": "Hall of Contributions",
+    "hallDesc": "Erkenning van de personen die actief bijdragen aan de groei en transparantie van NutriVigil.",
+    "projectAdmin": "Projectbeheerder",
+    "contributor": "Bijdrager",
+    "missionTitle": "Onze Missie",
+    "mission": {
+      "accurate": {
+        "title": "Nauwkeurige Analyse",
+        "description": "Aangedreven door geavanceerde Gemini v2.5 AI voor nauwkeurige voedingsinzichten afgestemd op uw gezondheidstoestand."
+      },
+      "health": {
+        "title": "Gezondheid Eerst",
+        "description": "Gepersonaliseerde aanbevelingen gebaseerd op uw specifieke gezondheidsbehoeften zoals diabetes, hypertensie en meer."
+      },
+      "instant": {
+        "title": "Directe Resultaten",
+        "description": "Ontvang uitgebreide voedingsanalyse in seconden, niet uren. Upload, scan en ontvang gedetailleerde inzichten direct."
+      }
+    },
+    "ctaTitle": "Klaar om uw gezondheidsreis te beginnen?",
+    "tryScanner": "Scanner nu proberen"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

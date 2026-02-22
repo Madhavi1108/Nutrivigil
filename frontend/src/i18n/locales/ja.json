@@ -80,6 +80,33 @@
     }
   },
 
+  "about": {
+    "backToHome": "ホームに戻る",
+    "title": "NutriVigilについて",
+    "subtitle": "あなたのパーソナルAIヘルススキャナー。健康目標に合わせた栄養管理のために、食事を即座に分析します。",
+    "hallTitle": "貢献者の殿堂",
+    "hallDesc": "NutriVigilの成長と透明性に積極的に貢献している方々を称えます。",
+    "projectAdmin": "プロジェクト管理者",
+    "contributor": "コントリビューター",
+    "missionTitle": "私たちのミッション",
+    "mission": {
+      "accurate": {
+        "title": "正確な分析",
+        "description": "あなたの健康状態に合わせた正確な栄養インサイトを提供する最先端のGemini v2.5 AIを搭載。"
+      },
+      "health": {
+        "title": "健康を最優先に",
+        "description": "糖尿病、高血圧などの特定の健康状態に基づいたパーソナライズされたレコメンデーション。"
+      },
+      "instant": {
+        "title": "即時結果",
+        "description": "時間ではなく秒単位で包括的な栄養分析を取得。アップロード、スキャン、詳細なインサイトを即座に受け取り。"
+      }
+    },
+    "ctaTitle": "健康の旅を始める準備はできていますか？",
+    "tryScanner": "今すぐスキャナーを試す"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 写真をアップロード",
