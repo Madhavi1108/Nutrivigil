@@ -64,6 +64,20 @@ function validateSchema(data) {
     }
   }
 
+  // Validate ingredients_classification (Added for Issue #60)
+  if (data.ingredients_classification) {
+    if (typeof data.ingredients_classification !== 'object' || data.ingredients_classification === null) {
+      errors.push('ingredients_classification must be an object');
+    } else {
+      const categories = ['healthy', 'risky', 'harmful'];
+      categories.forEach(category => {
+        if (data.ingredients_classification[category] && !Array.isArray(data.ingredients_classification[category])) {
+          errors.push(`ingredients_classification.${category} must be an array`);
+        }
+      });
+    }
+  }
+
   // Validate verdict_title
   if (data.verdict_title !== undefined && typeof data.verdict_title !== 'string') {
     errors.push('verdict_title must be a string');

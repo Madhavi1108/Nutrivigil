@@ -29,9 +29,10 @@ export const analyzeFood = async (req, res) => {
     const condition = req.body.condition; 
     const query = req.body.query;
     const existingFoodName = req.body.foodName;
+    const ingredientsText = req.body.ingredientsText; // Added for Issue #60
 
     // Handle follow-up queries without image
-    if (!req.file && query) {
+    if (!req.file && !ingredientsText && query) {
       if (!existingFoodName) {
         return res.status(400).json({
           success: false,
@@ -60,24 +61,12 @@ export const analyzeFood = async (req, res) => {
       try {
         const result = await generateGeminiContent(followUpPrompt);
         const responseText = result.response.candidates[0].content.parts[0].text;
-
-        try {
-          const parsedData = parseGeminiJson(responseText);
-          return res.json({
-            success: true,
-            food_name: existingFoodName,
-            ...parsedData,
-          });
-        } catch (parseError) {
-          logError(parseError, "[Analyze] Follow-up JSON parsing failed");
-          return res.status(500).json({
-            success: false,
-            error: {
-              message: "Failed to parse AI response. Please try again.",
-              code: "PARSE_ERROR",
-            },
-          });
-        }
+        const parsedData = parseGeminiJson(responseText);
+        return res.json({
+          success: true,
+          food_name: existingFoodName,
+          ...parsedData,
+        });
       } catch (error) {
         if (error instanceof APIError) {
           logError(error, "[Analyze] Follow-up Gemini call failed");
@@ -87,12 +76,13 @@ export const analyzeFood = async (req, res) => {
       }
     }
 
-    if (!req.file) {
+    // Validation: Require either an image or manual ingredient text
+    if (!req.file && !ingredientsText) {
       return res.status(400).json({
         success: false,
         error: {
-          message: "No image file provided. Please upload an image of the food.",
-          code: "NO_IMAGE",
+          message: "Please provide either a food image or a list of ingredients.",
+          code: "MISSING_INPUT",
         },
       });
     }
@@ -107,14 +97,16 @@ export const analyzeFood = async (req, res) => {
       });
     }
 
-    imagePath = req.file.path;
+    let foodName = ingredientsText ? "Manual Ingredient List" : "";
+    let base64 = "";
+    let mimeType = "";
 
-    try {
-      const base64 = imageToBase64(imagePath);
-      const mimeType = getMimeType(imagePath);
+    if (req.file) {
+      imagePath = req.file.path;
+      base64 = imageToBase64(imagePath);
+      mimeType = getMimeType(imagePath);
 
-      // Step 1: Identify food or product in image
-      let foodName;
+      // Identify food or product in image
       try {
         const identify = await generateGeminiContent({
           contents: [
@@ -127,12 +119,7 @@ export const analyzeFood = async (req, res) => {
             },
           ],
         });
-
         foodName = identify.response.candidates[0].content.parts[0].text.trim();
-
-        if (!foodName || foodName.length === 0) {
-          throw new Error("Could not identify the food in the image");
-        }
       } catch (error) {
         if (error instanceof APIError) {
           logError(error, "[Analyze] Food identification failed");
@@ -140,133 +127,76 @@ export const analyzeFood = async (req, res) => {
         }
         throw error;
       }
-
-      const cacheKey = `${foodName.toLowerCase()}_${condition.toLowerCase()}`;
-      const cachedResult = foodCache.get(cacheKey);
-
-      if (cachedResult) {
-        console.log(`✅ Cache HIT for ${cacheKey}`);
-        return res.json({
-          ...cachedResult,
-          fromCache: true
-        });
-      }
-
-      // Step 2: Get nutrition data (Only for non-packaged dishes)
-      let nutritionData = {};
-      if (foodName !== "packaged_food") {
-        try {
-          nutritionData = await getNutritionData(foodName);
-        } catch (error) {
-          if (error instanceof APIError) {
-            logError(error, "[Analyze] Nutrition data fetch failed");
-            console.warn("Nutrition data unavailable, continuing with analysis...");
-          } else {
-            throw error;
-          }
-        }
-      }
-
-      // Step 3: Analyze food or label based on multi-condition profile
-      const analysisPrompt = `
-        Context: The user has the health profile: "${condition}".
-        Target: ${foodName === "packaged_food" ? "Analyze the ingredient label in the image" : "Analyze the dish: " + foodName}.
-        ${foodName !== "packaged_food" ? "Nutritional Data: " + JSON.stringify(nutritionData) : ""}
-
-        CRITICAL INSTRUCTIONS:
-        1. If an ingredient label is present, extract all ingredients (OCR).
-        2. Identify specific ingredients, additives, or chemicals harmful across ALL listed conditions.
-        3. Check for interactions or risks across ALL listed conditions simultaneously.
-        4. If the food is unsafe or requires caution for ANY listed condition, the traffic light MUST be "red" or "yellow".
-        5. Provide a unified reason that explains the impact on the specific conditions listed.
-        6. Suggest 2-3 healthy alternatives safe for THIS specific multi-condition profile.
-
-        Output ONLY JSON in this exact format:
-        {
-          "traffic_light": "green" | "yellow" | "red",
-          "verdict_title": "Analysis Result",
-          "reason": "Identify specific harmful ingredients or nutritional risks found.",
-          "suggestion": "What the user should look for or avoid specifically for their condition.",
-          "alternatives": [
-            { "name": "Alternative Name", "why": "Why it is safe for all the listed conditions" }
-          ]
-        }
-      `;
-
-      let analysis;
-      try {
-        analysis = await generateGeminiContent({
-          contents: [{ role: "user", parts: [{ text: analysisPrompt }] }],
-        });
-      } catch (error) {
-        if (error instanceof APIError) {
-          logError(error, "[Analyze] Analysis generation failed");
-          return res.status(error.statusCode).json(formatErrorResponse(error));
-        }
-        throw error;
-      }
-
-      const analysisText = analysis.response.candidates[0].content.parts[0].text || "";
-
-      try {
-        const cleanJson = parseGeminiJson(analysisText);
-
-        const result = {
-          success: true,
-          food_name: foodName === "packaged_food" ? "Packaged Product" : foodName,
-          nutrition: nutritionData,
-          ...cleanJson,
-        };
-
-        if (result && !result.error) {
-          foodCache.set(cacheKey, result);
-        }
-
-        res.json({
-          ...result,
-          fromCache: false
-        });
-      } catch (parseError) {
-        logError(parseError, "[Analyze] Analysis JSON parsing failed");
-        return res.status(500).json({
-          success: false,
-          error: {
-            message: "Failed to parse AI analysis. Please try again.",
-            code: "PARSE_ERROR",
-          },
-        });
-      }
-    } catch (error) {
-      if (error instanceof APIError) {
-        logError(error, "[Analyze] API Error during analysis");
-        return res.status(error.statusCode).json(formatErrorResponse(error));
-      }
-
-      logError(error, "[Analyze] Unexpected error during processing");
-      return res.status(500).json({
-        success: false,
-        error: {
-          message: "An unexpected error occurred during analysis. Please try again.",
-          code: "ANALYSIS_ERROR",
-        },
-      });
     }
+
+    const cacheKey = `${(ingredientsText || foodName).toLowerCase()}_${condition.toLowerCase()}`;
+    const cachedResult = foodCache.get(cacheKey);
+
+    if (cachedResult) {
+      console.log(`✅ Cache HIT for ${cacheKey}`);
+      return res.json({ ...cachedResult, fromCache: true });
+    }
+
+    let nutritionData = {};
+    if (foodName && foodName !== "packaged_food" && foodName !== "Manual Ingredient List") {
+      try {
+        nutritionData = await getNutritionData(foodName);
+      } catch (error) {
+        logError(error, "[Analyze] Nutrition data fetch failed");
+      }
+    }
+
+    // Refined Prompt for Granular Ingredient Classification
+    const analysisPrompt = `
+      Context: User Health Profile: "${condition}".
+      Target: ${ingredientsText ? "Analyze this list: " + ingredientsText : (foodName === "packaged_food" ? "Analyze the label in the image" : "Analyze the dish: " + foodName)}.
+      ${nutritionData ? "Nutritional Data: " + JSON.stringify(nutritionData) : ""}
+
+      CRITICAL INSTRUCTIONS:
+      1. Extraction: Identify all ingredients. For dishes, estimate based on the name.
+      2. Classification: Categorize EACH ingredient as "healthy", "risky", or "harmful" specifically regarding the user's conditions (${condition}).
+      3. Traffic Light: Set "red" if any harmful ingredient is found, "yellow" if risky, and "green" only if entirely safe.
+      4. Suggest 2-3 specific alternatives for this health profile.
+
+      Output ONLY JSON:
+      {
+        "traffic_light": "green" | "yellow" | "red",
+        "verdict_title": "Safety Breakdown",
+        "ingredients_classification": {
+          "healthy": [{"name": "string", "reason": "string"}],
+          "risky": [{"name": "string", "reason": "string"}],
+          "harmful": [{"name": "string", "reason": "string"}]
+        },
+        "reason": "Unified explanation of safety risks.",
+        "suggestion": "Advice on what to avoid/check.",
+        "alternatives": [{"name": "string", "why": "string"}]
+      }
+    `;
+
+    const contents = req.file 
+      ? [{ role: "user", parts: [{ inlineData: { data: base64, mimeType } }, { text: analysisPrompt }] }]
+      : [{ role: "user", parts: [{ text: analysisPrompt }] }];
+
+    const analysis = await generateGeminiContent({ contents });
+    const analysisText = analysis.response.candidates[0].content.parts[0].text || "";
+    const cleanJson = parseGeminiJson(analysisText);
+
+    const result = {
+      success: true,
+      food_name: foodName,
+      nutrition: nutritionData,
+      ...cleanJson,
+    };
+
+    foodCache.set(cacheKey, result);
+    res.json({ ...result, fromCache: false });
+
   } catch (err) {
-    logError(err, "[Analyze] Top-level error handler");
-    return res.status(500).json({
-      success: false,
-      error: {
-        message: "A critical error occurred. Please check your internet connection.",
-        code: "CRITICAL_ERROR",
-      },
-    });
+    logError(err, "[Analyze] Error handler");
+    return res.status(500).json({ success: false, error: { message: err.message, code: "SERVER_ERROR" } });
   } finally {
     if (imagePath && fs.existsSync(imagePath)) {
-      try {
-        fs.unlinkSync(imagePath);
-      } catch (unlinkError) {
-        console.warn("Failed to delete uploaded file:", unlinkError.message);
-      }
+      fs.unlinkSync(imagePath);
     }
   }
 };
