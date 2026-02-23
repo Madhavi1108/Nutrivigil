@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "मुख्यपृष्ठावर परत जा",
+    "heroTitle": "संपर्क साधा",
+    "heroSubtitle": "प्रश्न किंवा अभिप्राय आहेत? आम्हाला तुमच्याकडून ऐकायला आवडेल. आम्हाला संदेश पाठवा आणि आम्ही शक्य तितक्या लवकर प्रतिसाद देऊ.",
+    "formTitle": "आम्हाला संदेश पाठवा",
+    "nameLabel": "नाव",
+    "emailLabel": "ईमेल",
+    "subjectLabel": "विषय",
+    "messageLabel": "संदेश",
+    "namePlaceholder": "तुमचे नाव",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "हे कशाबद्दल आहे?",
+    "messagePlaceholder": "आम्ही तुम्हाला कसे मदत करू शकतो ते सांगा...",
+    "sendingBtn": "पाठवत आहे...",
+    "sendBtn": "संदेश पाठवा",
+    "successMsg": "धन्यवाद! तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे. आम्ही लवकरच तुमच्याशी संपर्क करू.",
+    "errorMsg": "अरेरे! काहीतरी चुकले. कृपया पुन्हा प्रयत्न करा किंवा थेट आम्हाला ईमेल करा.",
+    "nameRequired": "नाव आवश्यक आहे",
+    "emailRequired": "ईमेल आवश्यक आहे",
+    "emailInvalid": "कृपया वैध ईमेल प्रविष्ट करा",
+    "messageRequired": "संदेश आवश्यक आहे",
+    "contactInfo": {
+      "email": "ईमेल",
+      "support": "सहाय्य",
+      "supportHours": "सहाय्य वेळ",
+      "supportHoursContent": "सोम-शुक्र: सकाळी ९ ते सायंकाळी ६ IST",
+      "location": "स्थान",
+      "locationContent": "रिमोट-फर्स्ट टीम"
+    },
+    "followUs": "आम्हाला फॉलो करा",
+    "faqTitle": "एखादा त्वरित प्रश्न आहे?",
+    "faqSubtitle": "सामान्य प्रश्नांची त्वरित उत्तरे मिळवण्यासाठी आमचे FAQ पृष्ठ पहा",
+    "faqBtn": "FAQ पृष्ठ भेट द्या"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. फोटो अपलोड करा",

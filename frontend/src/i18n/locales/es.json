@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "Volver al inicio",
+    "heroTitle": "Ponerse en contacto",
+    "heroSubtitle": "¿Tienes preguntas o comentarios? Nos encantaría saber de ti. Envíanos un mensaje y te responderemos lo antes posible.",
+    "formTitle": "Envíanos un mensaje",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo electrónico",
+    "subjectLabel": "Asunto",
+    "messageLabel": "Mensaje",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "¿De qué se trata?",
+    "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
+    "sendingBtn": "Enviando...",
+    "sendBtn": "Enviar mensaje",
+    "successMsg": "¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos pronto.",
+    "errorMsg": "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo o envíanos un correo electrónico directamente.",
+    "nameRequired": "El nombre es obligatorio",
+    "emailRequired": "El correo electrónico es obligatorio",
+    "emailInvalid": "Por favor, introduce un correo electrónico válido",
+    "messageRequired": "El mensaje es obligatorio",
+    "contactInfo": {
+      "email": "Correo electrónico",
+      "support": "Soporte",
+      "supportHours": "Horario de soporte",
+      "supportHoursContent": "Lun-Vie: 9:00 - 18:00 IST",
+      "location": "Ubicación",
+      "locationContent": "Equipo Remote-First"
+    },
+    "followUs": "Síguenos",
+    "faqTitle": "¿Tienes una pregunta rápida?",
+    "faqSubtitle": "Visita nuestra página de preguntas frecuentes para obtener respuestas instantáneas a preguntas comunes",
+    "faqBtn": "Visitar la página de FAQ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Subir foto",

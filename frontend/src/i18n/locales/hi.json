@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "होम पर वापस जाएं",
+    "heroTitle": "संपर्क करें",
+    "heroSubtitle": "कोई सवाल या सुझाव है? हम आपसे सुनना चाहते हैं। हमें एक संदेश भेजें और हम जल्द से जल्द जवाब देंगे।",
+    "formTitle": "हमें एक संदेश भेजें",
+    "nameLabel": "नाम",
+    "emailLabel": "ईमेल",
+    "subjectLabel": "विषय",
+    "messageLabel": "संदेश",
+    "namePlaceholder": "आपका नाम",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "यह किस बारे में है?",
+    "messagePlaceholder": "हमें बताएं कि हम आपकी कैसे मदद कर सकते हैं...",
+    "sendingBtn": "भेजा जा रहा है...",
+    "sendBtn": "संदेश भेजें",
+    "successMsg": "धन्यवाद! आपका संदेश सफलतापूर्वक भेज दिया गया है। हम जल्द ही आपसे संपर्क करेंगे।",
+    "errorMsg": "ओह! कुछ गलत हो गया। कृपया पुनः प्रयास करें या हमें सीधे ईमेल करें।",
+    "nameRequired": "नाम आवश्यक है",
+    "emailRequired": "ईमेल आवश्यक है",
+    "emailInvalid": "कृपया एक मान्य ईमेल दर्ज करें",
+    "messageRequired": "संदेश आवश्यक है",
+    "contactInfo": {
+      "email": "ईमेल",
+      "support": "समर्थन",
+      "supportHours": "समर्थन समय",
+      "supportHoursContent": "सोम-शुक्र: सुबह 9 बजे - शाम 6 बजे IST",
+      "location": "स्थान",
+      "locationContent": "रिमोट-फर्स्ट टीम"
+    },
+    "followUs": "हमें फॉलो करें",
+    "faqTitle": "कोई त्वरित प्रश्न है?",
+    "faqSubtitle": "सामान्य प्रश्नों के तुरंत उत्तर के लिए हमारे FAQ पेज देखें",
+    "faqBtn": "FAQ पेज पर जाएं"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. फोटो अपलोड करें",

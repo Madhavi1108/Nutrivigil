@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "Zurück zur Startseite",
+    "heroTitle": "Kontakt aufnehmen",
+    "heroSubtitle": "Haben Sie Fragen oder Feedback? Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine Nachricht und wir werden so schnell wie möglich antworten.",
+    "formTitle": "Senden Sie uns eine Nachricht",
+    "nameLabel": "Name",
+    "emailLabel": "E-Mail",
+    "subjectLabel": "Betreff",
+    "messageLabel": "Nachricht",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "Worum geht es?",
+    "messagePlaceholder": "Teilen Sie uns mit, wie wir Ihnen helfen können...",
+    "sendingBtn": "Wird gesendet...",
+    "sendBtn": "Nachricht senden",
+    "successMsg": "Danke! Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns bald bei Ihnen melden.",
+    "errorMsg": "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder senden Sie uns direkt eine E-Mail.",
+    "nameRequired": "Name ist erforderlich",
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "messageRequired": "Nachricht ist erforderlich",
+    "contactInfo": {
+      "email": "E-Mail",
+      "support": "Support",
+      "supportHours": "Support-Zeiten",
+      "supportHoursContent": "Mo-Fr: 9:00 - 18:00 Uhr IST",
+      "location": "Standort",
+      "locationContent": "Remote-First-Team"
+    },
+    "followUs": "Folgen Sie uns",
+    "faqTitle": "Haben Sie eine schnelle Frage?",
+    "faqSubtitle": "Besuchen Sie unsere FAQ-Seite für sofortige Antworten auf häufig gestellte Fragen",
+    "faqBtn": "FAQ-Seite besuchen"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",

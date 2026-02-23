@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "العودة إلى الرئيسية",
+    "heroTitle": "تواصل معنا",
+    "heroSubtitle": "هل لديك أسئلة أو ملاحظات؟ يسعدنا سماعك. أرسل لنا رسالة وسنرد في أقرب وقت ممكن.",
+    "formTitle": "أرسل لنا رسالة",
+    "nameLabel": "الاسم",
+    "emailLabel": "البريد الإلكتروني",
+    "subjectLabel": "الموضوع",
+    "messageLabel": "الرسالة",
+    "namePlaceholder": "اسمك",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "ما الموضوع؟",
+    "messagePlaceholder": "أخبرنا كيف يمكننا مساعدتك...",
+    "sendingBtn": "جارٍ الإرسال...",
+    "sendBtn": "إرسال الرسالة",
+    "successMsg": "شكراً لك! تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.",
+    "errorMsg": "عذراً! حدث خطأ ما. يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة.",
+    "nameRequired": "الاسم مطلوب",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+    "messageRequired": "الرسالة مطلوبة",
+    "contactInfo": {
+      "email": "البريد الإلكتروني",
+      "support": "الدعم",
+      "supportHours": "ساعات الدعم",
+      "supportHoursContent": "الإثنين-الجمعة: 9 صباحاً - 6 مساءً IST",
+      "location": "الموقع",
+      "locationContent": "فريق عمل عن بُعد"
+    },
+    "followUs": "تابعنا",
+    "faqTitle": "هل لديك سؤال سريع؟",
+    "faqSubtitle": "تفضل بزيارة صفحة الأسئلة الشائعة للحصول على إجابات فورية لأسئلة شائعة",
+    "faqBtn": "زيارة صفحة الأسئلة الشائعة"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. تحميل صورة",

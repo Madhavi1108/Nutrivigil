@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "Back to Home",
+    "heroTitle": "Get in Touch",
+    "heroSubtitle": "Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "formTitle": "Send us a Message",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "subjectLabel": "Subject",
+    "messageLabel": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "What is this about?",
+    "messagePlaceholder": "Tell us how we can help you...",
+    "sendingBtn": "Sending...",
+    "sendBtn": "Send Message",
+    "successMsg": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+    "errorMsg": "Oops! Something went wrong. Please try again or email us directly.",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email",
+    "messageRequired": "Message is required",
+    "contactInfo": {
+      "email": "Email",
+      "support": "Support",
+      "supportHours": "Support Hours",
+      "supportHoursContent": "Mon-Fri: 9AM - 6PM IST",
+      "location": "Location",
+      "locationContent": "Remote-First Team"
+    },
+    "followUs": "Follow Us",
+    "faqTitle": "Have a Quick Question?",
+    "faqSubtitle": "Check out our FAQ page for instant answers to common questions",
+    "faqBtn": "Visit FAQ Page"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Upload Photo",

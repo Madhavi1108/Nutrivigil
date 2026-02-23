@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "હોમ પર પાછા જાઓ",
+    "heroTitle": "સંપર્ક કરો",
+    "heroSubtitle": "કોઈ સવાલ અથવા સૂચનો છે? અમે તમારી પાસેથી સાંભળવા ઇચ્છીએ છીએ. અમને એક સંદેશ મોકલો અને અમે શક્ય તેટલી ઝડપથી જવાબ આપીશું.",
+    "formTitle": "અમને સંદેશ મોકલો",
+    "nameLabel": "નામ",
+    "emailLabel": "ઇમેઇલ",
+    "subjectLabel": "વિષય",
+    "messageLabel": "સંદેશ",
+    "namePlaceholder": "તમારું નામ",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "આ શેના વિશે છે?",
+    "messagePlaceholder": "અમને બતાવો કે અમે તમને કેવી રીતે મદદ કરી શકીએ...",
+    "sendingBtn": "મોકલી રહ્યા છીએ...",
+    "sendBtn": "સંદેશ મોકલો",
+    "successMsg": "આભાર! તમારો સંદેશ સફળતાપૂર્વક મોકલી દેવામાં આવ્યો છે. અમે ટૂંક સમયમાં સંપર્ક કરીશું.",
+    "errorMsg": "ઓહ! કંઈક ખોટું થઈ ગયું. કૃપા કરીને ફરી પ્રયાસ કરો અથવા સીધા ઇમેઇલ કરો.",
+    "nameRequired": "નામ જરૂરી છે",
+    "emailRequired": "ઇમેઇલ જરૂરી છે",
+    "emailInvalid": "કૃપા કરીને માન્ય ઇમેઇલ દાખલ કરો",
+    "messageRequired": "સંદેશ જરૂરી છે",
+    "contactInfo": {
+      "email": "ઇમેઇલ",
+      "support": "સહાય",
+      "supportHours": "સહાય સમય",
+      "supportHoursContent": "સોમ-શુક્ર: સવારે 9 - સાંજે 6 IST",
+      "location": "સ્થળ",
+      "locationContent": "રિમોટ-ફર્સ્ટ ટીમ"
+    },
+    "followUs": "અમને ફૉલો કરો",
+    "faqTitle": "કોઈ ઝડપી સવાલ છે?",
+    "faqSubtitle": "સામાન્ય પ્રશ્નોના તત્કાળ જવાબ માટે અમારો FAQ પેજ જુઓ",
+    "faqBtn": "FAQ પેજ જુઓ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ફોટો અપલોડ કરો",
