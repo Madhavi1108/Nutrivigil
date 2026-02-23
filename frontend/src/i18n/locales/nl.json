@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "Terug naar home",
+    "heroTitle": "Neem contact op",
+    "heroSubtitle": "Heeft u vragen of feedback? We horen graag van u. Stuur ons een bericht en we reageren zo snel mogelijk.",
+    "formTitle": "Stuur ons een bericht",
+    "nameLabel": "Naam",
+    "emailLabel": "E-mail",
+    "subjectLabel": "Onderwerp",
+    "messageLabel": "Bericht",
+    "namePlaceholder": "Uw naam",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "Waar gaat dit over?",
+    "messagePlaceholder": "Vertel ons hoe we u kunnen helpen...",
+    "sendingBtn": "Bezig met verzenden...",
+    "sendBtn": "Bericht versturen",
+    "successMsg": "Bedankt! Uw bericht is succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
+    "errorMsg": "Oeps! Er is iets misgegaan. Probeer het opnieuw of stuur ons een e-mail.",
+    "nameRequired": "Naam is verplicht",
+    "emailRequired": "E-mail is verplicht",
+    "emailInvalid": "Voer een geldig e-mailadres in",
+    "messageRequired": "Bericht is verplicht",
+    "contactInfo": {
+      "email": "E-mail",
+      "support": "Ondersteuning",
+      "supportHours": "Ondersteuningsuren",
+      "supportHoursContent": "Ma-vr: 9.00 - 18.00 IST",
+      "location": "Locatie",
+      "locationContent": "Remote-First Team"
+    },
+    "followUs": "Volg ons",
+    "faqTitle": "Heeft u een snelle vraag?",
+    "faqSubtitle": "Bekijk onze FAQ-pagina voor directe antwoorden op veelgestelde vragen",
+    "faqBtn": "Bezoek FAQ-pagina"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

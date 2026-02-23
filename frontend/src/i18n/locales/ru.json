@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "На главную",
+    "heroTitle": "Свяжитесь с нами",
+    "heroSubtitle": "Есть вопросы или отзывы? Мы рады вас слышать. Отправьте нам сообщение, и мы ответим как можно скорее.",
+    "formTitle": "Написать нам",
+    "nameLabel": "Имя",
+    "emailLabel": "Email",
+    "subjectLabel": "Тема",
+    "messageLabel": "Сообщение",
+    "namePlaceholder": "Ваше имя",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "О чём это?",
+    "messagePlaceholder": "Расскажите, как мы можем вам помочь...",
+    "sendingBtn": "Отправляю...",
+    "sendBtn": "Отправить сообщение",
+    "successMsg": "Спасибо! Ваше сообщение успешно отправлено. Мы скоро свяжемся с вами.",
+    "errorMsg": "Упс! Что-то пошло не так. Пожалуйста, попробуйте ещё раз или напишите нам на email напрямую.",
+    "nameRequired": "Имя обязательно",
+    "emailRequired": "Email обязателен",
+    "emailInvalid": "Пожалуйста, введите корректный email",
+    "messageRequired": "Сообщение обязательно",
+    "contactInfo": {
+      "email": "Email",
+      "support": "Поддержка",
+      "supportHours": "Часы работы поддержки",
+      "supportHoursContent": "Пн-Пт: 9:00 - 18:00 IST",
+      "location": "Местоположение",
+      "locationContent": "Удалённая команда"
+    },
+    "followUs": "Подписывайтесь на нас",
+    "faqTitle": "Есть быстрый вопрос?",
+    "faqSubtitle": "Загляните на страницу FAQ для мгновенных ответов на распространённые вопросы",
+    "faqBtn": "Перейти на страницу FAQ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Загрузите фото",

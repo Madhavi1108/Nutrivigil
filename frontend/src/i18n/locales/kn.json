@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ",
+    "heroTitle": "ಸಂಪರ್ಕಿಸಿ",
+    "heroSubtitle": "ಪ್ರಶ್ನೆಗಳು ಅಥವಾ ಸಲಹೆಗಳು ಇವೆಯೇ? ನಿಮ್ಮಿಂದ ಕೇಳಲು ನಮಗೆ ಇಷ್ಟ. ನಮಗೊಂದು ಸಂದೇಶ ಕಳುಹಿಸಿ ಮತ್ತು ಸಾಧ್ಯವಾದಷ್ಟು ಬೇಗ ನಾವು ಪ್ರತಿಸ್ಪಂದಿಸುತ್ತೇವೆ.",
+    "formTitle": "ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ",
+    "nameLabel": "ಹೆಸರು",
+    "emailLabel": "ಇಮೇಲ್",
+    "subjectLabel": "ವಿಷಯ",
+    "messageLabel": "ಸಂದೇಶ",
+    "namePlaceholder": "ನಿಮ್ಮ ಹೆಸರು",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "ಇದು ಯಾವ ಬಗ್ಗೆ?",
+    "messagePlaceholder": "ನಾವು ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು ಎಂದು ತಿಳಿಸಿ...",
+    "sendingBtn": "ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ...",
+    "sendBtn": "ಸಂದೇಶ ಕಳುಹಿಸಿ",
+    "successMsg": "ಧನ್ಯವಾದಗಳು! ನಿಮ್ಮ ಸಂದೇಶ ಯಶಸ್ವಿಯಾಗಿ ಕಳುಹಿಸಲಾಗಿದೆ. ನಾವು ಶೀಘ್ರದಲ್ಲೇ ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.",
+    "errorMsg": "ಓಹ್! ಏನೋ ತಪ್ಪಾಯಿತು. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ನೇರವಾಗಿ ಇಮೇಲ್ ಮಾಡಿ.",
+    "nameRequired": "ಹೆಸರು ಅಗತ್ಯವಿದೆ",
+    "emailRequired": "ಇಮೇಲ್ ಅಗತ್ಯವಿದೆ",
+    "emailInvalid": "ದಯವಿಟ್ಟು ಮಾನ್ಯ ಇಮೇಲ್ ನಮೂದಿಸಿ",
+    "messageRequired": "ಸಂದೇಶ ಅಗತ್ಯವಿದೆ",
+    "contactInfo": {
+      "email": "ಇಮೇಲ್",
+      "support": "ಬೆಂಬಲ",
+      "supportHours": "ಬೆಂಬಲ ಸಮಯ",
+      "supportHoursContent": "ಸೋಮ-ಶುಕ್ರ: ಬೆಳಿಗ್ಗೆ 9 - ಸಂಜೆ 6 IST",
+      "location": "ಸ್ಥಳ",
+      "locationContent": "ರಿಮೋಟ್-ಫರ್ಸ್ಟ್ ತಂಡ"
+    },
+    "followUs": "ನಮ್ಮನ್ನು ಫಾಲೋ ಮಾಡಿ",
+    "faqTitle": "ತ್ವರಿತ ಪ್ರಶ್ನೆ ಇದೆಯೇ?",
+    "faqSubtitle": "ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳಿಗೆ ತ್ವರಿತ ಉತ್ತರಗಳಿಗಾಗಿ ನಮ್ಮ FAQ ಪೇಜ್ ನೋಡಿ",
+    "faqBtn": "FAQ ಪೇಜ್ ಭೇಟಿ ಮಾಡಿ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",

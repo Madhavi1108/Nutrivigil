@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "Voltar ao Início",
+    "heroTitle": "Entre em Contacto",
+    "heroSubtitle": "Tem perguntas ou feedback? Adoraríamos ouvir de si. Envie-nos uma mensagem e responderemos o mais brevemente possível.",
+    "formTitle": "Envie-nos uma Mensagem",
+    "nameLabel": "Nome",
+    "emailLabel": "Email",
+    "subjectLabel": "Assunto",
+    "messageLabel": "Mensagem",
+    "namePlaceholder": "O seu nome",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "Sobre o que é isto?",
+    "messagePlaceholder": "Diga-nos como podemos ajudá-lo...",
+    "sendingBtn": "A enviar...",
+    "sendBtn": "Enviar Mensagem",
+    "successMsg": "Obrigado! A sua mensagem foi enviada com sucesso. Entraremos em contacto em breve.",
+    "errorMsg": "Ups! Algo correu mal. Por favor tente novamente ou envie-nos um email diretamente.",
+    "nameRequired": "O nome é obrigatório",
+    "emailRequired": "O email é obrigatório",
+    "emailInvalid": "Por favor introduza um email válido",
+    "messageRequired": "A mensagem é obrigatória",
+    "contactInfo": {
+      "email": "Email",
+      "support": "Suporte",
+      "supportHours": "Horário de Suporte",
+      "supportHoursContent": "Seg-Sex: 9h - 18h IST",
+      "location": "Localização",
+      "locationContent": "Equipa Remota"
+    },
+    "followUs": "Siga-nos",
+    "faqTitle": "Tem uma Pergunta Rápida?",
+    "faqSubtitle": "Consulte a nossa página de FAQ para respostas imediatas a perguntas comuns",
+    "faqBtn": "Visitar Página de FAQ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Carregar Foto",

@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "Retour à l'accueil",
+    "heroTitle": "Nous contacter",
+    "heroSubtitle": "Vous avez des questions ou des commentaires ? Nous serions ravis d'avoir de vos nouvelles. Envoyez-nous un message et nous vous répondrons dès que possible.",
+    "formTitle": "Envoyez-nous un message",
+    "nameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "subjectLabel": "Objet",
+    "messageLabel": "Message",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "De quoi s'agit-il ?",
+    "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+    "sendingBtn": "Envoi en cours...",
+    "sendBtn": "Envoyer le message",
+    "successMsg": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+    "errorMsg": "Oups ! Une erreur s'est produite. Veuillez réessayer ou nous envoyer un e-mail directement.",
+    "nameRequired": "Le nom est requis",
+    "emailRequired": "L'e-mail est requis",
+    "emailInvalid": "Veuillez saisir un e-mail valide",
+    "messageRequired": "Le message est requis",
+    "contactInfo": {
+      "email": "E-mail",
+      "support": "Support",
+      "supportHours": "Heures de support",
+      "supportHoursContent": "Lun-Ven : 9h - 18h IST",
+      "location": "Emplacement",
+      "locationContent": "Équipe Remote-First"
+    },
+    "followUs": "Suivez-nous",
+    "faqTitle": "Vous avez une question rapide ?",
+    "faqSubtitle": "Consultez notre page FAQ pour des réponses instantanées aux questions courantes",
+    "faqBtn": "Visiter la page FAQ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Télécharger une photo",

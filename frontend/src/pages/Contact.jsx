@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Mail, MapPin, Clock, Send, Github, Linkedin, Twitter, CheckCircle, AlertCircle, Loader } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
     const { theme } = useTheme();
-    
+    const { t } = useTranslation();
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -31,17 +33,17 @@ const Contact = () => {
         const newErrors = {};
 
         if (!formData.name.trim()) {
-            newErrors.name = 'Name is required';
+            newErrors.name = t('contactPage.nameRequired');
         }
 
         if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
+            newErrors.email = t('contactPage.emailRequired');
         } else if (!validateEmail(formData.email)) {
-            newErrors.email = 'Please enter a valid email';
+            newErrors.email = t('contactPage.emailInvalid');
         }
 
         if (!formData.message.trim()) {
-            newErrors.message = 'Message is required';
+            newErrors.message = t('contactPage.messageRequired');
         }
 
         setErrors(newErrors);
@@ -54,7 +56,6 @@ const Contact = () => {
             ...prev,
             [name]: value
         }));
-        // Clear error for this field when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
@@ -73,8 +74,6 @@ const Contact = () => {
         setFormStatus({ submitting: true, submitted: false, error: false });
 
         try {
-            // Replace with your actual form submission endpoint
-            // Example: formspree.io, emailjs, or your backend
             const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
                 method: 'POST',
                 headers: {
@@ -86,8 +85,6 @@ const Contact = () => {
             if (response.ok) {
                 setFormStatus({ submitting: false, submitted: true, error: false });
                 setFormData({ name: '', email: '', subject: '', message: '' });
-                
-                // Reset success message after 5 seconds
                 setTimeout(() => {
                     setFormStatus({ submitting: false, submitted: false, error: false });
                 }, 5000);
@@ -96,8 +93,6 @@ const Contact = () => {
             }
         } catch (error) {
             setFormStatus({ submitting: false, submitted: false, error: true });
-            
-            // Reset error message after 5 seconds
             setTimeout(() => {
                 setFormStatus({ submitting: false, submitted: false, error: false });
             }, 5000);
@@ -107,28 +102,28 @@ const Contact = () => {
     const contactInfo = [
         {
             icon: <Mail className="w-6 h-6" />,
-            title: "Email",
+            title: t('contactPage.contactInfo.email'),
             content: "contact@nutrivigil.com",
             link: "mailto:contact@nutrivigil.com",
             color: "from-purple-500 to-pink-500"
         },
         {
             icon: <Mail className="w-6 h-6" />,
-            title: "Support",
+            title: t('contactPage.contactInfo.support'),
             content: "support@nutrivigil.com",
             link: "mailto:support@nutrivigil.com",
             color: "from-blue-500 to-cyan-500"
         },
         {
             icon: <Clock className="w-6 h-6" />,
-            title: "Support Hours",
-            content: "Mon-Fri: 9AM - 6PM IST",
+            title: t('contactPage.contactInfo.supportHours'),
+            content: t('contactPage.contactInfo.supportHoursContent'),
             color: "from-green-500 to-emerald-500"
         },
         {
             icon: <MapPin className="w-6 h-6" />,
-            title: "Location",
-            content: "Remote-First Team",
+            title: t('contactPage.contactInfo.location'),
+            content: t('contactPage.contactInfo.locationContent'),
             color: "from-orange-500 to-red-500"
         }
     ];
@@ -163,14 +158,14 @@ const Contact = () => {
                 theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <Link 
-                        to="/" 
+                    <Link
+                        to="/"
                         className={`inline-flex items-center gap-2 transition-colors mb-8 ${
                             theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
                         }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to Home
+                        {t('contactPage.backToHome')}
                     </Link>
 
                     <div className="text-center">
@@ -180,12 +175,12 @@ const Contact = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                Get in Touch
+                                {t('contactPage.heroTitle')}
                             </h1>
                             <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                             }`}>
-                                Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                                {t('contactPage.heroSubtitle')}
                             </p>
                         </motion.div>
                     </div>
@@ -206,15 +201,15 @@ const Contact = () => {
                                     theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
                                 }`}
                             >
-                                <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-                                
+                                <h2 className="text-2xl font-bold mb-6">{t('contactPage.formTitle')}</h2>
+
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     {/* Name Field */}
                                     <div>
                                         <label htmlFor="name" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
                                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                         }`}>
-                                            Name <span className="text-red-500">*</span>
+                                            {t('contactPage.nameLabel')} <span className="text-red-500">*</span>
                                         </label>
                                         <input
                                             type="text"
@@ -225,7 +220,7 @@ const Contact = () => {
                                             className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors ${
                                                 errors.name ? 'border-red-500' : theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
                                             }`}
-                                            placeholder="Your name"
+                                            placeholder={t('contactPage.namePlaceholder')}
                                         />
                                         {errors.name && (
                                             <p className="mt-1 text-sm text-red-500">{errors.name}</p>
@@ -237,7 +232,7 @@ const Contact = () => {
                                         <label htmlFor="email" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
                                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                         }`}>
-                                            Email <span className="text-red-500">*</span>
+                                            {t('contactPage.emailLabel')} <span className="text-red-500">*</span>
                                         </label>
                                         <input
                                             type="email"
@@ -248,7 +243,7 @@ const Contact = () => {
                                             className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors ${
                                                 errors.email ? 'border-red-500' : theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
                                             }`}
-                                            placeholder="your.email@example.com"
+                                            placeholder={t('contactPage.emailPlaceholder')}
                                         />
                                         {errors.email && (
                                             <p className="mt-1 text-sm text-red-500">{errors.email}</p>
@@ -260,7 +255,7 @@ const Contact = () => {
                                         <label htmlFor="subject" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
                                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                         }`}>
-                                            Subject
+                                            {t('contactPage.subjectLabel')}
                                         </label>
                                         <input
                                             type="text"
@@ -271,7 +266,7 @@ const Contact = () => {
                                             className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors ${
                                                 theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
                                             }`}
-                                            placeholder="What is this about?"
+                                            placeholder={t('contactPage.subjectPlaceholder')}
                                         />
                                     </div>
 
@@ -280,7 +275,7 @@ const Contact = () => {
                                         <label htmlFor="message" className={`block text-sm font-medium mb-2 transition-colors duration-300 ${
                                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                         }`}>
-                                            Message <span className="text-red-500">*</span>
+                                            {t('contactPage.messageLabel')} <span className="text-red-500">*</span>
                                         </label>
                                         <textarea
                                             id="message"
@@ -291,7 +286,7 @@ const Contact = () => {
                                             className={`w-full px-4 py-3 border rounded-lg placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none ${
                                                 errors.message ? 'border-red-500' : theme === 'dark' ? 'bg-[#0a0e1a] border-gray-700 text-white' : 'bg-white border-gray-300 text-gray-900'
                                             }`}
-                                            placeholder="Tell us how we can help you..."
+                                            placeholder={t('contactPage.messagePlaceholder')}
                                         ></textarea>
                                         {errors.message && (
                                             <p className="mt-1 text-sm text-red-500">{errors.message}</p>
@@ -307,12 +302,12 @@ const Contact = () => {
                                         {formStatus.submitting ? (
                                             <>
                                                 <Loader className="w-5 h-5 animate-spin" />
-                                                Sending...
+                                                {t('contactPage.sendingBtn')}
                                             </>
                                         ) : (
                                             <>
                                                 <Send className="w-5 h-5" />
-                                                Send Message
+                                                {t('contactPage.sendBtn')}
                                             </>
                                         )}
                                     </button>
@@ -325,7 +320,7 @@ const Contact = () => {
                                             className="flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/50 rounded-lg text-green-400"
                                         >
                                             <CheckCircle className="w-5 h-5 flex-shrink-0" />
-                                            <span>Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                                            <span>{t('contactPage.successMsg')}</span>
                                         </motion.div>
                                     )}
 
@@ -337,7 +332,7 @@ const Contact = () => {
                                             className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/50 rounded-lg text-red-400"
                                         >
                                             <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                                            <span>Oops! Something went wrong. Please try again or email us directly.</span>
+                                            <span>{t('contactPage.errorMsg')}</span>
                                         </motion.div>
                                     )}
                                 </form>
@@ -346,7 +341,6 @@ const Contact = () => {
 
                         {/* Contact Information Sidebar */}
                         <div className="space-y-6">
-                            {/* Contact Info Cards */}
                             {contactInfo.map((info, index) => (
                                 <motion.div
                                     key={index}
@@ -364,7 +358,7 @@ const Contact = () => {
                                         <div>
                                             <h3 className="font-semibold mb-1">{info.title}</h3>
                                             {info.link ? (
-                                                <a 
+                                                <a
                                                     href={info.link}
                                                     className={`transition-colors ${
                                                         theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
@@ -382,7 +376,7 @@ const Contact = () => {
                                 </motion.div>
                             ))}
 
-                            {/* Social Media Links */}
+                            {/* Social Media */}
                             <motion.div
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -391,7 +385,7 @@ const Contact = () => {
                                     theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
                                 }`}
                             >
-                                <h3 className="font-semibold mb-4">Follow Us</h3>
+                                <h3 className="font-semibold mb-4">{t('contactPage.followUs')}</h3>
                                 <div className="flex gap-3">
                                     {socialLinks.map((social, index) => (
                                         <a
@@ -418,19 +412,19 @@ const Contact = () => {
             <section className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-2xl p-8 border border-purple-500/20 text-center transition-colors duration-300">
-                        <h2 className="text-2xl font-bold mb-4">Have a Quick Question?</h2>
+                        <h2 className="text-2xl font-bold mb-4">{t('contactPage.faqTitle')}</h2>
                         <p className={`mb-6 transition-colors duration-300 ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
                         }`}>
-                            Check out our FAQ page for instant answers to common questions
+                            {t('contactPage.faqSubtitle')}
                         </p>
-                        <Link 
-                            to="/faq" 
+                        <Link
+                            to="/faq"
                             className={`inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-lg border transition-all ${
                                 theme === 'dark' ? 'bg-[#1a1f2e] hover:bg-[#252a3a] text-white border-gray-700' : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
                             }`}
                         >
-                            Visit FAQ Page
+                            {t('contactPage.faqBtn')}
                             <ArrowLeft className="w-4 h-4 rotate-180" />
                         </Link>
                     </div>

@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "ホームに戻る",
+    "heroTitle": "お問い合わせ",
+    "heroSubtitle": "ご質問やご意見はありますか？ぜひお聞かせください。メッセージをお送りいただければ、できるだけ早くお返事いたします。",
+    "formTitle": "メッセージを送る",
+    "nameLabel": "お名前",
+    "emailLabel": "メールアドレス",
+    "subjectLabel": "件名",
+    "messageLabel": "メッセージ",
+    "namePlaceholder": "お名前",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "何についてのご質問ですか？",
+    "messagePlaceholder": "どのようにお手伝いできるかお知らせください...",
+    "sendingBtn": "送信中...",
+    "sendBtn": "メッセージを送る",
+    "successMsg": "ありがとうございます！メッセージが正常に送信されました。近日中にご連絡いたします。",
+    "errorMsg": "エラーが発生しました。もう一度お試しいただくか、直接メールにてお問い合わせください。",
+    "nameRequired": "お名前は必須です",
+    "emailRequired": "メールアドレスは必須です",
+    "emailInvalid": "有効なメールアドレスを入力してください",
+    "messageRequired": "メッセージは必須です",
+    "contactInfo": {
+      "email": "メールアドレス",
+      "support": "サポート",
+      "supportHours": "サポート時間",
+      "supportHoursContent": "月〜金：午前9時〜午後6時 IST",
+      "location": "所在地",
+      "locationContent": "リモートファーストチーム"
+    },
+    "followUs": "フォローする",
+    "faqTitle": "簡単な質問がありますか？",
+    "faqSubtitle": "よくある質問への即座の回答についてはFAQページをご覧ください",
+    "faqBtn": "FAQページへ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 写真をアップロード",

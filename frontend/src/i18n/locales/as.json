@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "হোমলৈ উভতি যাওক",
+    "heroTitle": "যোগাযোগ কৰক",
+    "heroSubtitle": "প্ৰশ্ন বা মতামত আছে? আমি আপোনাৰ পৰা শুনিবলৈ ভাল পাম। আমাক এটা বার্তা পঠাওক আৰু আমি যিমান সনকালে পাৰি সঁহাৰি দিম।",
+    "formTitle": "আমাক এটা বার্তা পঠাওক",
+    "nameLabel": "নাম",
+    "emailLabel": "ইমেইল",
+    "subjectLabel": "বিষয়",
+    "messageLabel": "বার্তা",
+    "namePlaceholder": "আপোনাৰ নাম",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "এইটো কিহৰ বিষয়ে?",
+    "messagePlaceholder": "আমি আপোনাক কেনেকৈ সহায় কৰিব পাৰোঁ কওক...",
+    "sendingBtn": "পঠাওঁ আছে...",
+    "sendBtn": "বার্তা পঠাওক",
+    "successMsg": "ধন্যবাদ! আপোনাৰ বার্তা সফলভাৱে পঠোৱা হৈছে। আমি শীঘ্ৰে আপোনাৰ সৈতে যোগাযোগ কৰিম।",
+    "errorMsg": "ওচ! কিবা ভুল হৈছে। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক বা আমাক পোনপতীয়াকৈ ইমেইল কৰক।",
+    "nameRequired": "নাম প্ৰয়োজনীয়",
+    "emailRequired": "ইমেইল প্ৰয়োজনীয়",
+    "emailInvalid": "অনুগ্ৰহ কৰি বৈধ ইমেইল দিয়ক",
+    "messageRequired": "বার্তা প্ৰয়োজনীয়",
+    "contactInfo": {
+      "email": "ইমেইল",
+      "support": "সহায়",
+      "supportHours": "সহায় সময়",
+      "supportHoursContent": "সোম-শুক্ৰ: ৰাতিপুৱা ৯ - আবেলি ৬ IST",
+      "location": "স্থান",
+      "locationContent": "ৰিমোট-ফাৰ্ষ্ট দল"
+    },
+    "followUs": "আমাক অনুসৰণ কৰক",
+    "faqTitle": "দ্ৰুত প্ৰশ্ন আছে?",
+    "faqSubtitle": "সাধাৰণ প্ৰশ্নৰ তাৎক্ষণিক উত্তৰৰ বাবে আমাৰ FAQ পৃষ্ঠা চাওক",
+    "faqBtn": "FAQ পৃষ্ঠ চাওক"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ফটো আপলোড কৰক",

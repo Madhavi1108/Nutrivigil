@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "홈으로 돌아가기",
+    "heroTitle": "문의하기",
+    "heroSubtitle": "질문이나 피드백이 있으신가요? 여러분의 의견을 듣고 싶습니다. 메시지를 보내주시면 최대한 빨리 답변드리겠습니다.",
+    "formTitle": "메시지 보내기",
+    "nameLabel": "이름",
+    "emailLabel": "이메일",
+    "subjectLabel": "제목",
+    "messageLabel": "메시지",
+    "namePlaceholder": "이름을 입력하세요",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "어떤 내용인가요?",
+    "messagePlaceholder": "어떻게 도와드릴 수 있는지 알려주세요...",
+    "sendingBtn": "전송 중...",
+    "sendBtn": "메시지 전송",
+    "successMsg": "감사합니다! 메시지가 성공적으로 전송되었습니다. 곧 연락드리겠습니다.",
+    "errorMsg": "오류가 발생했습니다. 다시 시도하시거나 직접 이메일을 보내주세요.",
+    "nameRequired": "이름을 입력해주세요",
+    "emailRequired": "이메일을 입력해주세요",
+    "emailInvalid": "유효한 이메일을 입력해주세요",
+    "messageRequired": "메시지를 입력해주세요",
+    "contactInfo": {
+      "email": "이메일",
+      "support": "지원",
+      "supportHours": "지원 시간",
+      "supportHoursContent": "월-금: 오전 9시 - 오후 6시 IST",
+      "location": "위치",
+      "locationContent": "원격 근무 팀"
+    },
+    "followUs": "팔로우하기",
+    "faqTitle": "빠른 질문이 있으신가요?",
+    "faqSubtitle": "일반적인 질문에 대한 즉각적인 답변을 위해 FAQ 페이지를 확인하세요",
+    "faqBtn": "FAQ 페이지 방문"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 사진 업로드",

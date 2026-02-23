@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "返回首页",
+    "heroTitle": "联系我们",
+    "heroSubtitle": "有问题或反馈？我们很乐意收到您的来信。给我们发送消息，我们将尽快回复。",
+    "formTitle": "给我们发送消息",
+    "nameLabel": "姓名",
+    "emailLabel": "邮箱",
+    "subjectLabel": "主题",
+    "messageLabel": "消息",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "这是关于什么的？",
+    "messagePlaceholder": "告诉我们如何能帮到您...",
+    "sendingBtn": "发送中...",
+    "sendBtn": "发送消息",
+    "successMsg": "感谢您！您的消息已成功发送。我们将尽快与您联系。",
+    "errorMsg": "糟糕！出了点问题。请重试或直接发送邮件给我们。",
+    "nameRequired": "姓名为必填项",
+    "emailRequired": "邮箱为必填项",
+    "emailInvalid": "请输入有效的邮箱地址",
+    "messageRequired": "消息为必填项",
+    "contactInfo": {
+      "email": "邮箱",
+      "support": "支持",
+      "supportHours": "支持时间",
+      "supportHoursContent": "周一至周五：上午9点 - 下午6点 IST",
+      "location": "地点",
+      "locationContent": "远程优先团队"
+    },
+    "followUs": "关注我们",
+    "faqTitle": "有快速问题吗？",
+    "faqSubtitle": "查看我们的FAQ页面，获取常见问题的即时解答",
+    "faqBtn": "访问FAQ页面"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 上传照片",

@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "ହୋମ୍‌କୁ ଫେରନ୍ତୁ",
+    "heroTitle": "ଯୋଗାଯୋଗ କରନ୍ତୁ",
+    "heroSubtitle": "ପ୍ରଶ୍ନ ବା ମତ ଅଛି? ଆମେ ଆପଣଙ୍କ ଠାରୁ ଶୁଣିବାକୁ ଚାହୁଁ। ଆମ'କୁ ଏକ ବାର୍ତ୍ତା ପଠାନ୍ତୁ ଏବଂ ଆମେ ଯଥାଶୀଘ୍ର ଉତ୍ତର ଦେବୁ।",
+    "formTitle": "ଆମ'କୁ ଏକ ବାର୍ତ୍ତା ପଠାନ୍ତୁ",
+    "nameLabel": "ନାମ",
+    "emailLabel": "ଇମେଲ୍",
+    "subjectLabel": "ବିଷୟ",
+    "messageLabel": "ବାର୍ତ୍ତା",
+    "namePlaceholder": "ଆପଣଙ୍କ ନାମ",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "ଏହା କ'ଣ ବିଷୟରେ?",
+    "messagePlaceholder": "ଆମେ ଆପଣଙ୍କୁ କେମିତି ସାହାଯ୍ୟ କରିପାରିବୁ ଜଣାନ୍ତୁ...",
+    "sendingBtn": "ପଠାଯାଉଛି...",
+    "sendBtn": "ବାର୍ତ୍ତା ପଠାନ୍ତୁ",
+    "successMsg": "ଧନ୍ୟବାଦ! ଆପଣଙ୍କ ବାର୍ତ୍ତା ସଫଳତାର ସହ ପଠାଯାଇଛି। ଆମେ ଶୀଘ୍ର ଆପଣଙ୍କ ସହ ଯୋଗାଯୋଗ କରିବୁ।",
+    "errorMsg": "ଆରେ! କିଛି ଭୁଲ ହୋଇଗଲା। ଦୟାକରି ଆଉ ଥରେ ଚେଷ୍ଟା କରନ୍ତୁ ବା ସିଧା ଆମ'କୁ ଇମେଲ୍ କରନ୍ତୁ।",
+    "nameRequired": "ନାମ ଆବଶ୍ୟକ",
+    "emailRequired": "ଇମେଲ୍ ଆବଶ୍ୟକ",
+    "emailInvalid": "ଦୟାକରି ବୈଧ ଇମେଲ୍ ଦିଅନ୍ତୁ",
+    "messageRequired": "ବାର୍ତ୍ତା ଆବଶ୍ୟକ",
+    "contactInfo": {
+      "email": "ଇମେଲ୍",
+      "support": "ସହାୟତା",
+      "supportHours": "ସହାୟତା ସମୟ",
+      "supportHoursContent": "ସୋମ-ଶୁକ୍ର: ସକାଳ ୯ - ସନ୍ଧ୍ୟା ୬ IST",
+      "location": "ଅବସ୍ଥାନ",
+      "locationContent": "ରିମୋଟ-ଫାର୍ଷ୍ଟ ଟିମ"
+    },
+    "followUs": "ଆମ'କୁ ଅନୁସରଣ କରନ୍ତୁ",
+    "faqTitle": "ତ୍ୱରିତ ପ୍ରଶ୍ନ ଅଛି?",
+    "faqSubtitle": "ସାଧାରଣ ପ୍ରଶ୍ନର ଉତ୍ତର ପାଇଁ ଆମ FAQ ପୃଷ୍ଠ ଦେଖନ୍ତୁ",
+    "faqBtn": "FAQ ପୃଷ୍ଠ ଦେଖନ୍ତୁ"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ଫଟୋ ଅପଲୋଡ୍ କରନ୍ତୁ",

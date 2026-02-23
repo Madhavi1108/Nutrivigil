@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "ہوم پر واپس جائیں",
+    "heroTitle": "رابطہ کریں",
+    "heroSubtitle": "سوالات یا رائے ہے؟ ہم آپ سے سننا پسند کریں گے۔ ہمیں ایک پیغام بھیجیں اور ہم جلد از جلد جواب دیں گے۔",
+    "formTitle": "ہمیں ایک پیغام بھیجیں",
+    "nameLabel": "نام",
+    "emailLabel": "ای میل",
+    "subjectLabel": "موضوع",
+    "messageLabel": "پیغام",
+    "namePlaceholder": "آپ کا نام",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "یہ کس بارے میں ہے؟",
+    "messagePlaceholder": "بتائیں کہ ہم آپ کی کیسے مدد کر سکتے ہیں...",
+    "sendingBtn": "بھیجا جا رہا ہے...",
+    "sendBtn": "پیغام بھیجیں",
+    "successMsg": "شکریہ! آپ کا پیغام کامیابی سے بھیج دیا گیا ہے۔ ہم جلد آپ سے رابطہ کریں گے۔",
+    "errorMsg": "اوہو! کچھ غلط ہو گیا۔ براہِ کرم دوبارہ کوشش کریں یا ہمیں براہِ راست ای میل کریں۔",
+    "nameRequired": "نام ضروری ہے",
+    "emailRequired": "ای میل ضروری ہے",
+    "emailInvalid": "براہِ کرم درست ای میل درج کریں",
+    "messageRequired": "پیغام ضروری ہے",
+    "contactInfo": {
+      "email": "ای میل",
+      "support": "سپورٹ",
+      "supportHours": "سپورٹ اوقات",
+      "supportHoursContent": "پیر-جمعہ: صبح 9 - شام 6 IST",
+      "location": "مقام",
+      "locationContent": "ریموٹ-فرسٹ ٹیم"
+    },
+    "followUs": "ہمیں فالو کریں",
+    "faqTitle": "کوئی فوری سوال ہے؟",
+    "faqSubtitle": "عام سوالوں کے فوری جوابات کے لیے ہمارا FAQ صفحہ دیکھیں",
+    "faqBtn": "FAQ صفحہ دیکھیں"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. تصویر اپ لوڈ کریں",

@@ -80,6 +80,41 @@
     }
   },
 
+  "contactPage": {
+    "backToHome": "హోమ్‌కు తిరిగి వెళ్ళండి",
+    "heroTitle": "సంప్రదించండి",
+    "heroSubtitle": "ప్రశ్నలు లేదా అభిప్రాయాలు ఉన్నాయా? మీ నుండి వినడం సంతోషం. మాకు ఒక సందేశం పంపండి, మేము వీలైనంత త్వరగా స్పందిస్తాం.",
+    "formTitle": "మాకు ఒక సందేశం పంపండి",
+    "nameLabel": "పేరు",
+    "emailLabel": "ఇమెయిల్",
+    "subjectLabel": "విషయం",
+    "messageLabel": "సందేశం",
+    "namePlaceholder": "మీ పేరు",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "ఇది దేని గురించి?",
+    "messagePlaceholder": "మేము మీకు ఎలా సహాయపడగలమో చెప్పండి...",
+    "sendingBtn": "పంపుతోంది...",
+    "sendBtn": "సందేశం పంపండి",
+    "successMsg": "ధన్యవాదాలు! మీ సందేశం విజయవంతంగా పంపబడింది. మేము త్వరలో మీతో సంప్రదిస్తాం.",
+    "errorMsg": "అయ్యో! ఏదో తప్పు జరిగింది. దయచేసి మళ్ళీ ప్రయత్నించండి లేదా నేరుగా మాకు ఇమెయిల్ పంపండి.",
+    "nameRequired": "పేరు అవసరం",
+    "emailRequired": "ఇమెయిల్ అవసరం",
+    "emailInvalid": "దయచేసి చెల్లుబాటు అయ్యే ఇమెయిల్‌ను నమోదు చేయండి",
+    "messageRequired": "సందేశం అవసరం",
+    "contactInfo": {
+      "email": "ఇమెయిల్",
+      "support": "మద్దతు",
+      "supportHours": "మద్దతు గంటలు",
+      "supportHoursContent": "సోమ-శుక్ర: ఉదయం 9 - సాయంత్రం 6 IST",
+      "location": "స్థానం",
+      "locationContent": "రిమోట్-ఫస్ట్ టీమ్"
+    },
+    "followUs": "మాను అనుసరించండి",
+    "faqTitle": "త్వరిత ప్రశ్న ఉందా?",
+    "faqSubtitle": "సాధారణ ప్రశ్నలకు తక్షణ సమాధానాల కోసం మా FAQ పేజీని చూడండి",
+    "faqBtn": "FAQ పేజీని సందర్శించండి"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ఫోటో అప్లోడ్ చేయండి",
