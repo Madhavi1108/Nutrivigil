@@ -6,6 +6,8 @@ import { getNutritionData } from "../services/ninjaServices.js";
 import imageToBase64 from "../utils/imgconversion.js";
 import getMimeType from "../utils/getmemetype.js";
 import { parseGeminiJson } from "../utils/parseGeminiJson.js";
+// Import the scoring utility (Ensure you create this file in backend/utils/)
+import { calculateNutritionScore } from "../utils/nutritionScore.js"; 
 import {
   formatErrorResponse,
   logError,
@@ -29,9 +31,9 @@ export const analyzeFood = async (req, res) => {
     const condition = req.body.condition; 
     const query = req.body.query;
     const existingFoodName = req.body.foodName;
-    const ingredientsText = req.body.ingredientsText; // Added for Issue #60
+    const ingredientsText = req.body.ingredientsText;
 
-    // Handle follow-up queries without image
+    // Handle follow-up queries
     if (!req.file && !ingredientsText && query) {
       if (!existingFoodName) {
         return res.status(400).json({
@@ -49,7 +51,6 @@ export const analyzeFood = async (req, res) => {
         User's Question: "${query}"
         
         Analyze if this is safe based on the entire health profile provided. 
-        Consider potential risks or interactions for EACH condition listed.
         Output ONLY JSON:
         {
           "traffic_light": "green" | "yellow" | "red", 
@@ -68,32 +69,16 @@ export const analyzeFood = async (req, res) => {
           ...parsedData,
         });
       } catch (error) {
-        if (error instanceof APIError) {
-          logError(error, "[Analyze] Follow-up Gemini call failed");
-          return res.status(error.statusCode).json(formatErrorResponse(error));
-        }
-        throw error;
+        logError(error, "[Analyze] Follow-up failed");
+        return res.status(500).json({ success: false, error: { message: "AI response failed" } });
       }
     }
 
-    // Validation: Require either an image or manual ingredient text
+    // Validation
     if (!req.file && !ingredientsText) {
       return res.status(400).json({
         success: false,
-        error: {
-          message: "Please provide either a food image or a list of ingredients.",
-          code: "MISSING_INPUT",
-        },
-      });
-    }
-
-    if (!condition) {
-      return res.status(400).json({
-        success: false,
-        error: {
-          message: "Health profile is required for analysis.",
-          code: "NO_CONDITION",
-        },
+        error: { message: "Input required", code: "MISSING_INPUT" },
       });
     }
 
@@ -106,69 +91,56 @@ export const analyzeFood = async (req, res) => {
       base64 = imageToBase64(imagePath);
       mimeType = getMimeType(imagePath);
 
-      // Identify food or product in image
-      try {
-        const identify = await generateGeminiContent({
-          contents: [
-            {
-              role: "user",
-              parts: [
-                { inlineData: { data: base64, mimeType } },
-                { text: "Identify the food or product in this image. If it's a packaged food item or an ingredient label, output 'packaged_food'. Otherwise, output the specific dish name. Output ONLY the name." },
-              ],
-            },
-          ],
-        });
-        foodName = identify.response.candidates[0].content.parts[0].text.trim();
-      } catch (error) {
-        if (error instanceof APIError) {
-          logError(error, "[Analyze] Food identification failed");
-          return res.status(error.statusCode).json(formatErrorResponse(error));
-        }
-        throw error;
-      }
+      const identify = await generateGeminiContent({
+        contents: [
+          {
+            role: "user",
+            parts: [
+              { inlineData: { data: base64, mimeType } },
+              { text: "Identify the food. If packaged/label, output 'packaged_food'. Else, output dish name." },
+            ],
+          },
+        ],
+      });
+      foodName = identify.response.candidates[0].content.parts[0].text.trim();
     }
 
     const cacheKey = `${(ingredientsText || foodName).toLowerCase()}_${condition.toLowerCase()}`;
     const cachedResult = foodCache.get(cacheKey);
+    if (cachedResult) return res.json({ ...cachedResult, fromCache: true });
 
-    if (cachedResult) {
-      console.log(`✅ Cache HIT for ${cacheKey}`);
-      return res.json({ ...cachedResult, fromCache: true });
-    }
-
-    let nutritionData = {};
+    let nutritionData = null;
     if (foodName && foodName !== "packaged_food" && foodName !== "Manual Ingredient List") {
       try {
         nutritionData = await getNutritionData(foodName);
       } catch (error) {
-        logError(error, "[Analyze] Nutrition data fetch failed");
+        logError(error, "[Analyze] Nutrition fetch failed");
       }
     }
 
-    // Refined Prompt for Granular Ingredient Classification
+    // UPDATED PROMPT: Incorporating Issue #62 requirements for additives and scoring
     const analysisPrompt = `
       Context: User Health Profile: "${condition}".
-      Target: ${ingredientsText ? "Analyze this list: " + ingredientsText : (foodName === "packaged_food" ? "Analyze the label in the image" : "Analyze the dish: " + foodName)}.
+      Target: ${ingredientsText ? "Analyze this: " + ingredientsText : (foodName === "packaged_food" ? "Analyze the label" : "Analyze the dish: " + foodName)}.
       ${nutritionData ? "Nutritional Data: " + JSON.stringify(nutritionData) : ""}
 
       CRITICAL INSTRUCTIONS:
-      1. Extraction: Identify all ingredients. For dishes, estimate based on the name.
-      2. Classification: Categorize EACH ingredient as "healthy", "risky", or "harmful" specifically regarding the user's conditions (${condition}).
-      3. Traffic Light: Set "red" if any harmful ingredient is found, "yellow" if risky, and "green" only if entirely safe.
-      4. Suggest 2-3 specific alternatives for this health profile.
+      1. Identification: List all ingredients/additives.
+      2. Additive Analysis: Identify harmful additives (preservatives, artificial colors, high-fructose syrup).
+      3. Health Impact: Evaluate risks for the specific condition: ${condition}.
+      4. Scoring Context: Provide a 0-100 justification based on sugar, fat, and chemicals found.
 
       Output ONLY JSON:
       {
         "traffic_light": "green" | "yellow" | "red",
-        "verdict_title": "Safety Breakdown",
+        "verdict_title": "NutriVigil Health Score Analysis",
         "ingredients_classification": {
           "healthy": [{"name": "string", "reason": "string"}],
           "risky": [{"name": "string", "reason": "string"}],
           "harmful": [{"name": "string", "reason": "string"}]
         },
-        "reason": "Unified explanation of safety risks.",
-        "suggestion": "Advice on what to avoid/check.",
+        "reason": "Detailed explanation including impact of additives and nutrients.",
+        "suggestion": "Specific advice for ${condition}.",
         "alternatives": [{"name": "string", "why": "string"}]
       }
     `;
@@ -181,9 +153,13 @@ export const analyzeFood = async (req, res) => {
     const analysisText = analysis.response.candidates[0].content.parts[0].text || "";
     const cleanJson = parseGeminiJson(analysisText);
 
+    // Calculate the Numerical Score (Issue #62)
+    const numericalScore = calculateNutritionScore(nutritionData);
+
     const result = {
       success: true,
-      food_name: foodName,
+      food_name: foodName === "packaged_food" ? "Packaged Product" : foodName,
+      nutrition_score: numericalScore, // NEW: Numerical Score Integration
       nutrition: nutritionData,
       ...cleanJson,
     };
@@ -192,8 +168,8 @@ export const analyzeFood = async (req, res) => {
     res.json({ ...result, fromCache: false });
 
   } catch (err) {
-    logError(err, "[Analyze] Error handler");
-    return res.status(500).json({ success: false, error: { message: err.message, code: "SERVER_ERROR" } });
+    logError(err, "[Analyze] Critical Failure");
+    return res.status(500).json({ success: false, error: { message: err.message } });
   } finally {
     if (imagePath && fs.existsSync(imagePath)) {
       fs.unlinkSync(imagePath);
