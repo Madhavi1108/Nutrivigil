@@ -4,6 +4,7 @@
  * Total: ~220 food items with complete nutrition information
  */
 
+import genericFood from '../assets/generic-food.jpg';
 import appleGrape from '../assets/baby-food/apple-grape.jpg';
 import applePeach from '../assets/baby-food/apple-peach.jpg';
 import appleCarrotSquash from '../assets/baby-food/apple-carrot-squash.jpg';
@@ -237,6 +238,9 @@ const FOOD_ITEMS = {
     { id: 10, name: 'Turkey & Turkey Broth', brand: 'Beech-Nut', isVegetarian: false, servingSize: '71g', image: turkeyBroth, nutrition: { calories: 50, protein: 8, carbs: 0, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 20, sugar: 0, fiber: 0 } },
     { id: 11, name: 'Beef & Beef Broth', brand: "Earth's Best", isVegetarian: false, servingSize: '71g', image: beefBroth, nutrition: { calories: 60, protein: 9, carbs: 0, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
     { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: stage2Bananas, nutrition: { calories: 100, protein: 1, carbs: 25, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 20, fiber: 1 } },
+    { id: 13, name: 'Pear Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 2 } },
+{ id: 14, name: 'Sweet Potato & Turkey', brand: 'Beech-Nut', isVegetarian: false, servingSize: '113g', image: null, nutrition: { calories: 70, protein: 3, carbs: 11, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 25, sugar: 4, fiber: 2 } },
+{ id: 15, name: 'Organic Mango Puree', brand: "Earth's Best", isVegetarian: true, servingSize: '113g', image: null, nutrition: { calories: 70, protein: 1, carbs: 16, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 13, fiber: 1 } }
   ],
 
   'baking': [
@@ -255,6 +259,9 @@ const FOOD_ITEMS = {
     { id: 13, name: 'Japanese Style Panko', brand: '4C', isVegetarian: true, servingSize: '28g', image: fourCJapanesePankoBreadcrumbs, nutrition: { calories: 110, protein: 4, carbs: 22, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 115, sugar: 1, fiber: 1 } },
     { id: 14, name: 'Seasoned Panko', brand: '4C', isVegetarian: true, servingSize: '28g', image: fourCAJapaneseSeasonedPanko, nutrition: { calories: 100, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 540, sugar: 1, fiber: 1 } },
     { id: 15, name: 'Plain Bread Crumbs', brand: '4C', isVegetarian: true, servingSize: '28g', image: fourCPlainBreadCrumbs, nutrition: { calories: 100, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 2, fiber: 1 } },
+    { id: 16, name: 'Active Dry Yeast', brand: 'Fleischmann\'s', isVegetarian: true, servingSize: '7g', image: null, nutrition: { calories: 20, protein: 3, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
+{ id: 17, name: 'Unsweetened Cocoa Powder', brand: 'Hershey\'s', isVegetarian: true, servingSize: '5g', image: null, nutrition: { calories: 10, protein: 1, carbs: 3, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 2 } },
+{ id: 18, name: 'Baking Soda', brand: 'Arm & Hammer', isVegetarian: true, servingSize: '1g', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 0, fiber: 0 } }
   ],
 
   'bread': [
@@ -271,6 +278,9 @@ const FOOD_ITEMS = {
     { id: 11, name: 'Cinnamon Raisin Bagel', brand: "Thomas'", isVegetarian: true, servingSize: '1 bagel (95g)', image: bread7SproutedGrainsCinnamonRaisinBread, nutrition: { calories: 260, protein: 9, carbs: 54, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 380, sugar: 10, fiber: 2 } },
     { id: 12, name: 'Soft Croissant (Vanilla)', brand: "7Days", isVegetarian: true, servingSize: '1 croissant (75g)', image: bread7DaysSoftCroissantChocolateBreakfastPastry, nutrition: { calories: 340, protein: 4, carbs: 32, totalFat: 21, saturatedFat: 8, transFat: 0, sodium: 120, sugar: 14, fiber: 1 } },
     { id: 13, name: 'GF Rosemary Baguette', brand: "Against the Grain", isVegetarian: true, servingSize: '1/3 baguette (71g)', image: breadAgainstTheGrainGlutenFreeRosemaryBaguettes, nutrition: { calories: 210, protein: 2, carbs: 30, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 240, sugar: 0, fiber: 0 } },
+    { id: 14, name: 'Classic Sourdough Loaf', brand: 'Boudin', isVegetarian: true, servingSize: '50g', image: null, nutrition: { calories: 130, protein: 4, carbs: 26, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 280, sugar: 1, fiber: 1 } },
+{ id: 15, name: 'Plain Bagels', brand: 'Thomas\'', isVegetarian: true, servingSize: '95g', image: null, nutrition: { calories: 250, protein: 9, carbs: 50, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 440, sugar: 6, fiber: 2 } },
+{ id: 16, name: 'English Muffins', brand: 'Thomas\'', isVegetarian: true, servingSize: '57g', image: null, nutrition: { calories: 120, protein: 4, carbs: 24, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 1, fiber: 1 } }
   ],
 
   'breakfast': [
@@ -288,6 +298,9 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Protein Oats & Honey Soft Baked', brand: 'belVita', isVegetarian: true, servingSize: '1 biscuit (50g)', image: belvitaProteinOatsHoneyAndChocolateBreakfast, nutrition: { calories: 200, protein: 10, carbs: 22, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 220, sugar: 10, fiber: 3 } },
     { id: 13, name: 'Original Pancake & Baking Mix', brand: "Bisquick", isVegetarian: true, servingSize: '1/3 cup dry (40g)', image: bettyCrockerBisquickPancake, nutrition: { calories: 140, protein: 3, carbs: 28, totalFat: 3, saturatedFat: 1, transFat: 0, sodium: 380, sugar: 2, fiber: 1 } },
     { id: 14, name: 'Shake \'n Pour Buttermilk', brand: 'Bisquick', isVegetarian: true, servingSize: '1/2 cup mix (74g)', image: bettyCrockerBisquickShake, nutrition: { calories: 230, protein: 6, carbs: 45, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 480, sugar: 10, fiber: 1 } },
+    { id: 15, name: 'Greek Yogurt (Plain)', brand: 'Chobani', isVegetarian: true, servingSize: '150g', image: null, nutrition: { calories: 80, protein: 15, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 55, sugar: 4, fiber: 0 } },
+{ id: 16, name: 'Blueberry Granola', brand: 'KIND', isVegetarian: true, servingSize: '65g', image: null, nutrition: { calories: 260, protein: 5, carbs: 42, totalFat: 10, saturatedFat: 1, transFat: 0, sodium: 45, sugar: 12, fiber: 6 } },
+{ id: 17, name: 'Hard Boiled Eggs', brand: 'Vital Farms', isVegetarian: true, servingSize: '44g', image: null, nutrition: { calories: 70, protein: 6, carbs: 0, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 60, sugar: 0, fiber: 0 } }
   ],
 
   'cakes': [
