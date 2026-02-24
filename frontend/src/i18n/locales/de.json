@@ -80,39 +80,31 @@
     }
   },
 
-  "contactPage": {
+  "about": {
     "backToHome": "Zurück zur Startseite",
-    "heroTitle": "Kontakt aufnehmen",
-    "heroSubtitle": "Haben Sie Fragen oder Feedback? Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine Nachricht und wir werden so schnell wie möglich antworten.",
-    "formTitle": "Senden Sie uns eine Nachricht",
-    "nameLabel": "Name",
-    "emailLabel": "E-Mail",
-    "subjectLabel": "Betreff",
-    "messageLabel": "Nachricht",
-    "namePlaceholder": "Ihr Name",
-    "emailPlaceholder": "your.email@example.com",
-    "subjectPlaceholder": "Worum geht es?",
-    "messagePlaceholder": "Teilen Sie uns mit, wie wir Ihnen helfen können...",
-    "sendingBtn": "Wird gesendet...",
-    "sendBtn": "Nachricht senden",
-    "successMsg": "Danke! Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns bald bei Ihnen melden.",
-    "errorMsg": "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder senden Sie uns direkt eine E-Mail.",
-    "nameRequired": "Name ist erforderlich",
-    "emailRequired": "E-Mail ist erforderlich",
-    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-    "messageRequired": "Nachricht ist erforderlich",
-    "contactInfo": {
-      "email": "E-Mail",
-      "support": "Support",
-      "supportHours": "Support-Zeiten",
-      "supportHoursContent": "Mo-Fr: 9:00 - 18:00 Uhr IST",
-      "location": "Standort",
-      "locationContent": "Remote-First-Team"
+    "title": "Über NutriVigil",
+    "subtitle": "Ihr persönlicher KI-Gesundheitsscanner. Analysieren Sie Mahlzeiten sofort, um Ihre Ernährung perfekt auf Ihre Gesundheitsziele abzustimmen.",
+    "hallTitle": "Beitragshalle",
+    "hallDesc": "Anerkennung der Personen, die aktiv zum Wachstum und zur Transparenz von NutriVigil beitragen.",
+    "projectAdmin": "Projektadmin",
+    "contributor": "Mitwirkender",
+    "missionTitle": "Unsere Mission",
+    "mission": {
+      "accurate": {
+        "title": "Präzise Analyse",
+        "description": "Angetrieben von modernster Gemini v2.5 KI für präzise Ernährungseinblicke, die auf Ihre Gesundheitszustände zugeschnitten sind."
+      },
+      "health": {
+        "title": "Gesundheit zuerst",
+        "description": "Personalisierte Empfehlungen basierend auf Ihren spezifischen Gesundheitszuständen wie Diabetes, Bluthochdruck und mehr."
+      },
+      "instant": {
+        "title": "Sofortige Ergebnisse",
+        "description": "Erhalten Sie in Sekunden, nicht Stunden, eine umfassende Ernährungsanalyse. Hochladen, scannen und sofort detaillierte Einblicke erhalten."
+      }
     },
-    "followUs": "Folgen Sie uns",
-    "faqTitle": "Haben Sie eine schnelle Frage?",
-    "faqSubtitle": "Besuchen Sie unsere FAQ-Seite für sofortige Antworten auf häufig gestellte Fragen",
-    "faqBtn": "FAQ-Seite besuchen"
+    "ctaTitle": "Bereit, Ihre Gesundheitsreise zu beginnen?",
+    "tryScanner": "Jetzt Scanner ausprobieren"
   },
 
   "howSteps": {

@@ -80,39 +80,31 @@
     }
   },
 
-  "contactPage": {
+  "about": {
     "backToHome": "홈으로 돌아가기",
-    "heroTitle": "문의하기",
-    "heroSubtitle": "질문이나 피드백이 있으신가요? 여러분의 의견을 듣고 싶습니다. 메시지를 보내주시면 최대한 빨리 답변드리겠습니다.",
-    "formTitle": "메시지 보내기",
-    "nameLabel": "이름",
-    "emailLabel": "이메일",
-    "subjectLabel": "제목",
-    "messageLabel": "메시지",
-    "namePlaceholder": "이름을 입력하세요",
-    "emailPlaceholder": "your.email@example.com",
-    "subjectPlaceholder": "어떤 내용인가요?",
-    "messagePlaceholder": "어떻게 도와드릴 수 있는지 알려주세요...",
-    "sendingBtn": "전송 중...",
-    "sendBtn": "메시지 전송",
-    "successMsg": "감사합니다! 메시지가 성공적으로 전송되었습니다. 곧 연락드리겠습니다.",
-    "errorMsg": "오류가 발생했습니다. 다시 시도하시거나 직접 이메일을 보내주세요.",
-    "nameRequired": "이름을 입력해주세요",
-    "emailRequired": "이메일을 입력해주세요",
-    "emailInvalid": "유효한 이메일을 입력해주세요",
-    "messageRequired": "메시지를 입력해주세요",
-    "contactInfo": {
-      "email": "이메일",
-      "support": "지원",
-      "supportHours": "지원 시간",
-      "supportHoursContent": "월-금: 오전 9시 - 오후 6시 IST",
-      "location": "위치",
-      "locationContent": "원격 근무 팀"
+    "title": "NutriVigil 소개",
+    "subtitle": "나만의 AI 건강 스캐너. 건강 목표에 맞게 영양을 유지하기 위해 식사를 즉시 분석합니다.",
+    "hallTitle": "기여자 명예의 전당",
+    "hallDesc": "NutriVigil의 성장과 투명성에 적극적으로 기여하는 분들을 인정합니다.",
+    "projectAdmin": "프로젝트 관리자",
+    "contributor": "기여자",
+    "missionTitle": "우리의 미션",
+    "mission": {
+      "accurate": {
+        "title": "정확한 분석",
+        "description": "건강 상태에 맞춘 정확한 영양 인사이트를 위한 최첨단 Gemini v2.5 AI 탑재."
+      },
+      "health": {
+        "title": "건강 최우선",
+        "description": "당뇨병, 고혈압 등 특정 건강 상태에 기반한 개인화된 추천."
+      },
+      "instant": {
+        "title": "즉시 결과",
+        "description": "시간이 아닌 초 단위로 포괄적인 영양 분석을 받으세요. 업로드하고 스캔하여 즉시 자세한 인사이트를 받으세요."
+      }
     },
-    "followUs": "팔로우하기",
-    "faqTitle": "빠른 질문이 있으신가요?",
-    "faqSubtitle": "일반적인 질문에 대한 즉각적인 답변을 위해 FAQ 페이지를 확인하세요",
-    "faqBtn": "FAQ 페이지 방문"
+    "ctaTitle": "건강 여정을 시작할 준비가 되셨나요?",
+    "tryScanner": "지금 스캐너 사용해보기"
   },
 
   "howSteps": {

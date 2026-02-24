@@ -80,39 +80,31 @@
     }
   },
 
-  "contactPage": {
+  "about": {
     "backToHome": "Kembali ke Beranda",
-    "heroTitle": "Hubungi Kami",
-    "heroSubtitle": "Punya pertanyaan atau masukan? Kami ingin mendengar dari Anda. Kirimkan pesan dan kami akan merespons sesegera mungkin.",
-    "formTitle": "Kirim Pesan kepada Kami",
-    "nameLabel": "Nama",
-    "emailLabel": "Email",
-    "subjectLabel": "Subjek",
-    "messageLabel": "Pesan",
-    "namePlaceholder": "Nama Anda",
-    "emailPlaceholder": "your.email@example.com",
-    "subjectPlaceholder": "Ini tentang apa?",
-    "messagePlaceholder": "Ceritakan bagaimana kami bisa membantu Anda...",
-    "sendingBtn": "Mengirim...",
-    "sendBtn": "Kirim Pesan",
-    "successMsg": "Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda.",
-    "errorMsg": "Ups! Terjadi kesalahan. Silakan coba lagi atau hubungi kami langsung melalui email.",
-    "nameRequired": "Nama wajib diisi",
-    "emailRequired": "Email wajib diisi",
-    "emailInvalid": "Masukkan email yang valid",
-    "messageRequired": "Pesan wajib diisi",
-    "contactInfo": {
-      "email": "Email",
-      "support": "Dukungan",
-      "supportHours": "Jam Dukungan",
-      "supportHoursContent": "Sen-Jum: 9.00 - 18.00 IST",
-      "location": "Lokasi",
-      "locationContent": "Tim Remote-First"
+    "title": "Tentang NutriVigil",
+    "subtitle": "Pemindai kesehatan pribadi bertenaga AI Anda. Analisis makanan secara instan untuk menjaga nutrisi Anda selaras dengan tujuan kesehatan Anda.",
+    "hallTitle": "Aula Kontribusi",
+    "hallDesc": "Menghargai individu yang aktif berkontribusi pada pertumbuhan dan transparansi NutriVigil.",
+    "projectAdmin": "Admin Proyek",
+    "contributor": "Kontributor",
+    "missionTitle": "Misi Kami",
+    "mission": {
+      "accurate": {
+        "title": "Analisis Akurat",
+        "description": "Didukung oleh AI Gemini v2.5 mutakhir untuk wawasan nutrisi yang tepat dan disesuaikan dengan kondisi kesehatan Anda."
+      },
+      "health": {
+        "title": "Kesehatan Utama",
+        "description": "Rekomendasi yang dipersonalisasi berdasarkan kondisi kesehatan spesifik Anda seperti diabetes, hipertensi, dan lainnya."
+      },
+      "instant": {
+        "title": "Hasil Instan",
+        "description": "Dapatkan analisis nutrisi lengkap dalam hitungan detik, bukan jam. Unggah, pindai, dan terima wawasan terperinci secara instan."
+      }
     },
-    "followUs": "Ikuti Kami",
-    "faqTitle": "Punya Pertanyaan Cepat?",
-    "faqSubtitle": "Kunjungi halaman FAQ kami untuk jawaban instan atas pertanyaan umum",
-    "faqBtn": "Kunjungi Halaman FAQ"
+    "ctaTitle": "Siap memulai perjalanan kesehatan Anda?",
+    "tryScanner": "Coba Scanner Sekarang"
   },
 
   "howSteps": {
