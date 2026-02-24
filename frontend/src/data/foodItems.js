@@ -314,6 +314,9 @@ const FOOD_ITEMS = {
     { id: 8, name: 'Perfectly Moist Peach Cobbler Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '1/12 package (43g)', image: peachPie, nutrition: { calories: 170, protein: 1, carbs: 37, totalFat: 2.5, saturatedFat: 1, transFat: 0, sodium: 290, sugar: 19, fiber: 0 } },
     { id: 9, name: 'Deluxe Raspberry Cheesecake Mix', brand: 'Betty Crocker', isVegetarian: true, servingSize: '1/8 package (45g)', image: raspberrySwirlCheesecake, nutrition: { calories: 180, protein: 2, carbs: 32, totalFat: 5, saturatedFat: 2.5, transFat: 0, sodium: 240, sugar: 22, fiber: 0 } },
     { id: 10, name: 'No Sugar Added Apple Pie', brand: "Entenmann's", isVegetarian: true, servingSize: '1/6 pie (113g)', image: sugarlessApplePie, nutrition: { calories: 240, protein: 3, carbs: 34, totalFat: 11, saturatedFat: 5, transFat: 0, sodium: 310, sugar: 4, fiber: 3 } },
+    { id: 11, name: 'Devil\'s Food Cake Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '43g', image: null, nutrition: { calories: 160, protein: 1, carbs: 35, totalFat: 2, saturatedFat: 1, transFat: 0, sodium: 340, sugar: 18, fiber: 1 } },
+{ id: 12, name: 'Carrot Cake Mix', brand: 'Betty Crocker', isVegetarian: true, servingSize: '43g', image: null, nutrition: { calories: 160, protein: 1, carbs: 36, totalFat: 1.5, saturatedFat: 1, transFat: 0, sodium: 310, sugar: 19, fiber: 0 } },
+{ id: 13, name: 'Red Velvet Cake Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '43g', image: null, nutrition: { calories: 160, protein: 1, carbs: 34, totalFat: 2, saturatedFat: 1, transFat: 0, sodium: 350, sugar: 19, fiber: 0 } }
   ],
 
   'canned-goods': [
@@ -331,6 +334,9 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Nacho Sliced Jalapeños', brand: 'Cajun Chef', isVegetarian: true, servingSize: '30g', image: cajunChefNachoSlices, nutrition: { calories: 10, protein: 0, carbs: 2, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 430, sugar: 0, fiber: 1 } },
     { id: 13, name: 'Castelvetrano Olives', brand: 'Mezzetta', isVegetarian: true, servingSize: '15g', image: castelvetranoOlives, nutrition: { calories: 25, protein: 0, carbs: 1, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 0, fiber: 0 } },
     { id: 14, name: 'Olive Tapenade', brand: 'Mezzetta', isVegetarian: true, servingSize: '30g', image: choppedOliveTapenade, nutrition: { calories: 90, protein: 1, carbs: 2, totalFat: 9, saturatedFat: 1.5, transFat: 0, sodium: 450, sugar: 0, fiber: 1 } },
+    { id: 15, name: 'Sweet Corn (Canned)', brand: 'Green Giant', isVegetarian: true, servingSize: '125g', image: null, nutrition: { calories: 90, protein: 2, carbs: 18, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 2 } },
+{ id: 16, name: 'Tomato Soup', brand: 'Campbell\'s', isVegetarian: true, servingSize: '245g', image: null, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 1 } },
+{ id: 17, name: 'Chunk Light Tuna in Water', brand: 'StarKist', isVegetarian: false, servingSize: '56g', image: null, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } }
   ],
 
   'cereal': [
@@ -348,6 +354,9 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Apple Cinnamon Instant Oatmeal', brand: 'Quaker', isVegetarian: true, servingSize: '1 packet (43g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 160, protein: 4, carbs: 33, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 220, sugar: 12, fiber: 3 } },
     { id: 13, name: 'Apple Zings (Bulk)', brand: 'Malt-O-Meal', isVegetarian: true, servingSize: '1 1/3 cup (39g)', image: appleJacksBreakfastCereal, nutrition: { calories: 150, protein: 2, carbs: 34, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 15, fiber: 1 } },
     { id: 14, name: 'Apple Cinnamon Protein Granola', brand: 'KIND', isVegetarian: true, servingSize: '2/3 cup (65g)', image: appleCinnamonGranola, nutrition: { calories: 270, protein: 10, carbs: 38, totalFat: 9, saturatedFat: 1, transFat: 0, sodium: 100, sugar: 12, fiber: 5 } },
+    { id: 15, name: 'Honey Nut Cheerios', brand: 'General Mills', isVegetarian: true, servingSize: '39g', image: null, nutrition: { calories: 140, protein: 3, carbs: 30, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 210, sugar: 12, fiber: 3 } },
+{ id: 16, name: 'Rice Krispies', brand: 'Kellogg\'s', isVegetarian: true, servingSize: '39g', image: null, nutrition: { calories: 150, protein: 3, carbs: 35, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 0 } },
+{ id: 17, name: 'Raisin Bran', brand: 'Kellogg\'s', isVegetarian: true, servingSize: '59g', image: null, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 17, fiber: 8 } }
   ],
 
   'cheese': [
@@ -363,6 +372,9 @@ const FOOD_ITEMS = {
     { id: 10, name: 'Aged Gouda Wheel', brand: 'Old Amsterdam', isVegetarian: true, servingSize: '1 oz (28g)', image: yearGouda, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 250, sugar: 0, fiber: 0 } },
     { id: 11, name: 'Vermont Sharp White Cheddar', brand: 'Cabot', isVegetarian: true, servingSize: '1 oz (28g)', image: yearVintageWhiteCheddar, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
     { id: 12, name: 'Seriously Sharp White Cheddar', brand: 'Cabot', isVegetarian: true, servingSize: '1 oz (28g)', image: yearWhiteCheddar, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 13, name: 'Shredded Mozzarella', brand: 'Sargento', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 80, protein: 7, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 190, sugar: 0, fiber: 0 } },
+{ id: 14, name: 'Pepper Jack Slices', brand: 'Cabot', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 100, protein: 7, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 170, sugar: 0, fiber: 0 } },
+{ id: 15, name: 'Crumbled Feta', brand: 'Athenos', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } }
   ],
 
 'coffee': [
