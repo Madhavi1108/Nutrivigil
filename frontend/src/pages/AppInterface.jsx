@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Smartphone, Layout, Palette, Zap, Eye, Moon, Accessibility, Gauge, Shield, Heart, Camera, BarChart3, User, CheckCircle } from 'lucide-react';
+import { 
+    ArrowLeft, Smartphone, Layout, Palette, Zap, Eye, Moon, 
+    Accessibility, Gauge, Shield, Heart, Camera, BarChart3, 
+    User, CheckCircle, Activity 
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -13,14 +17,14 @@ const AppInterface = () => {
             icon: <Camera className="w-8 h-8" />,
             color: 'from-purple-500 to-pink-500',
             description: 'Upload or capture food images with AI-powered recognition',
-            features: ['Instant capture', 'Image upload', 'Batch scanning', 'Camera integration']
+            features: ['Instant capture', 'Image upload', 'Label OCR analysis', 'Ingredient extraction']
         },
         {
             title: 'Analysis Results',
             icon: <BarChart3 className="w-8 h-8" />,
             color: 'from-blue-500 to-cyan-500',
             description: 'Comprehensive nutrition breakdown with safety signals',
-            features: ['Traffic light system', 'Nutrient details', 'Health alerts', 'Portion guidance']
+            features: ['0–100 Health Score', 'Traffic light system', 'Health alerts', 'Additive analysis']
         },
         {
             title: 'Health Profile',
@@ -40,14 +44,14 @@ const AppInterface = () => {
 
     const features = [
         {
-            icon: <Smartphone className="w-6 h-6" />,
-            title: 'Mobile-First Design',
-            description: 'Optimized for smartphones with touch-friendly interactions and responsive layouts'
+            icon: <Gauge className="w-6 h-6" />,
+            title: 'Numerical Scoring',
+            description: 'Advanced algorithm calculates a precise 0–100 score based on macro-nutrients, fiber, and sugar content'
         },
         {
-            icon: <Layout className="w-6 h-6" />,
-            title: 'Responsive Layout',
-            description: 'Seamlessly adapts from mobile to tablet to desktop for consistent experience'
+            icon: <Activity className="w-6 h-6" />,
+            title: 'Additive Detection',
+            description: 'AI-driven analysis identifies ultra-processed additives and harmful chemicals in packaged products'
         },
         {
             icon: <Moon className="w-6 h-6" />,
@@ -73,6 +77,17 @@ const AppInterface = () => {
 
     const designPrinciples = [
         {
+            icon: <Activity className="w-8 h-8" />,
+            title: 'Precision-Driven',
+            color: 'from-blue-500 to-cyan-500',
+            points: [
+                'Precise 0–100 scoring algorithm',
+                'Color-coded health verdicts',
+                'Detailed additive classification',
+                'Condition-specific risk assessment'
+            ]
+        },
+        {
             icon: <Eye className="w-8 h-8" />,
             title: 'User-Friendly',
             color: 'from-purple-500 to-pink-500',
@@ -81,17 +96,6 @@ const AppInterface = () => {
                 'Simple, jargon-free language',
                 'One-tap actions for common tasks',
                 'Helpful tooltips and onboarding'
-            ]
-        },
-        {
-            icon: <Accessibility className="w-8 h-8" />,
-            title: 'Accessibility-First',
-            color: 'from-blue-500 to-cyan-500',
-            points: [
-                'WCAG 2.1 AA compliance',
-                'Screen reader optimized',
-                'Keyboard navigation support',
-                'High contrast color ratios'
             ]
         },
         {
@@ -119,10 +123,10 @@ const AppInterface = () => {
     ];
 
     const uiComponents = [
-        { name: 'Color System', description: 'Purple, pink, blue gradient palette' },
-        { name: 'Typography', description: 'Clear, readable font hierarchy' },
-        { name: 'Cards', description: 'Rounded corners with subtle shadows' },
-        { name: 'Buttons', description: 'Gradient backgrounds with hover effects' },
+        { name: 'Health Score Widget', description: 'Dynamic circular visualization for 0–100 ratings' },
+        { name: 'Traffic Lights', description: 'Quick-glance safety signals (Red, Yellow, Green)' },
+        { name: 'Nutrition Charts', description: 'Interactive macro-nutrient distribution breakdowns' },
+        { name: 'Condition Badges', description: 'Visual indicators for personalized health risks' },
         { name: 'Icons', description: 'Lucide React icon library' },
         { name: 'Animations', description: 'Framer Motion smooth transitions' }
     ];
@@ -153,15 +157,15 @@ const AppInterface = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <div className="inline-flex items-center gap-3 mb-6">
-                                <Smartphone className="w-12 h-12 text-purple-400" />
+                                <Activity className="w-12 h-12 text-purple-400" />
                             </div>
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                Beautiful & Intuitive Interface
+                                Precise Health Insights
                             </h1>
                             <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                             }`}>
-                                Designed for simplicity, built for performance, crafted for health
+                                Driven by advanced scoring algorithms to give you a clear 0–100 rating for everything you eat.
                             </p>
                         </motion.div>
                     </div>
@@ -171,11 +175,11 @@ const AppInterface = () => {
             {/* Key Screens */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Key Screens</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Core Experience</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Every screen is designed with your health journey in mind
+                        Every screen is designed with your health journey and precision in mind
                     </p>
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -218,11 +222,11 @@ const AppInterface = () => {
                 theme === 'dark' ? 'bg-[#1a1f2e]/30' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Platform Features</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Scientific Features</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Built with modern technologies for the best user experience
+                        Built with precise algorithms for the most accurate nutritional assessment
                     </p>
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -257,7 +261,7 @@ const AppInterface = () => {
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Our core values that guide every design decision
+                        Core values that ensure accuracy and usability in every decision
                     </p>
                     
                     <div className="grid md:grid-cols-2 gap-8">
@@ -301,11 +305,11 @@ const AppInterface = () => {
                 theme === 'dark' ? 'bg-[#1a1f2e]/30' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">UI Components</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Intelligence Components</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Consistent design system across the entire platform
+                        Custom-built widgets to communicate complex nutritional data simply
                     </p>
                     
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -330,50 +334,22 @@ const AppInterface = () => {
                 </div>
             </section>
 
-            {/* Technology Stack */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">Built With Modern Technology</h2>
-                    <p className={`mb-8 transition-colors duration-300 ${
-                        theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                    }`}>
-                        Powered by cutting-edge frameworks and libraries
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {['React', 'Tailwind CSS', 'Framer Motion', 'Lucide Icons', 'Google Gemini AI', 'Vite'].map((tech, index) => (
-                            <motion.span
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className={`px-6 py-3 border rounded-full transition-all hover:border-purple-500/50 ${
-                                    theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800 text-gray-300' : 'bg-white border-gray-200 text-gray-700'
-                                }`}
-                            >
-                                {tech}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* CTA Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-12 text-center border border-purple-500/20 transition-colors duration-300">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Experience It Yourself</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Experience the Precision</h2>
                         <p className={`text-xl mb-8 max-w-2xl mx-auto transition-colors duration-300 ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
                         }`}>
-                            Try NutriVigil and discover how beautiful nutrition tracking can be
+                            Scan any food item and get its NutriVigil score instantly.
                         </p>
                         <Link 
                             to="/scan" 
                             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                         >
                             <Zap className="w-5 h-5" />
-                            Try the App
+                            Start Scanning
                         </Link>
                     </div>
                 </div>
