@@ -80,39 +80,31 @@
     }
   },
 
-  "contactPage": {
+  "about": {
     "backToHome": "Volver al inicio",
-    "heroTitle": "Ponerse en contacto",
-    "heroSubtitle": "¿Tienes preguntas o comentarios? Nos encantaría saber de ti. Envíanos un mensaje y te responderemos lo antes posible.",
-    "formTitle": "Envíanos un mensaje",
-    "nameLabel": "Nombre",
-    "emailLabel": "Correo electrónico",
-    "subjectLabel": "Asunto",
-    "messageLabel": "Mensaje",
-    "namePlaceholder": "Tu nombre",
-    "emailPlaceholder": "your.email@example.com",
-    "subjectPlaceholder": "¿De qué se trata?",
-    "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
-    "sendingBtn": "Enviando...",
-    "sendBtn": "Enviar mensaje",
-    "successMsg": "¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos pronto.",
-    "errorMsg": "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo o envíanos un correo electrónico directamente.",
-    "nameRequired": "El nombre es obligatorio",
-    "emailRequired": "El correo electrónico es obligatorio",
-    "emailInvalid": "Por favor, introduce un correo electrónico válido",
-    "messageRequired": "El mensaje es obligatorio",
-    "contactInfo": {
-      "email": "Correo electrónico",
-      "support": "Soporte",
-      "supportHours": "Horario de soporte",
-      "supportHoursContent": "Lun-Vie: 9:00 - 18:00 IST",
-      "location": "Ubicación",
-      "locationContent": "Equipo Remote-First"
+    "title": "Acerca de NutriVigil",
+    "subtitle": "Tu escáner personal de salud con IA. Analiza comidas al instante para mantener tu nutrición perfectamente alineada con tus objetivos de salud.",
+    "hallTitle": "Salón de Contribuciones",
+    "hallDesc": "Reconociendo a las personas que contribuyen activamente al crecimiento y transparencia de NutriVigil.",
+    "projectAdmin": "Administrador del proyecto",
+    "contributor": "Colaborador",
+    "missionTitle": "Nuestra Misión",
+    "mission": {
+      "accurate": {
+        "title": "Análisis Preciso",
+        "description": "Impulsado por la IA Gemini v2.5 de última generación para obtener información nutricional precisa adaptada a tus condiciones de salud."
+      },
+      "health": {
+        "title": "Salud Primero",
+        "description": "Recomendaciones personalizadas basadas en tus condiciones de salud específicas como diabetes, hipertensión y más."
+      },
+      "instant": {
+        "title": "Resultados Instantáneos",
+        "description": "Obtén un análisis nutricional completo en segundos, no en horas. Sube, escanea y recibe información detallada al instante."
+      }
     },
-    "followUs": "Síguenos",
-    "faqTitle": "¿Tienes una pregunta rápida?",
-    "faqSubtitle": "Visita nuestra página de preguntas frecuentes para obtener respuestas instantáneas a preguntas comunes",
-    "faqBtn": "Visitar la página de FAQ"
+    "ctaTitle": "¿Listo para comenzar tu viaje de salud?",
+    "tryScanner": "Probar el escáner ahora"
   },
 
   "howSteps": {
